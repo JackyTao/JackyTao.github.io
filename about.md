@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: /about/
-title: 关于
 tags: [about, jacky, zhu]
 modified: 2014-12-31
 ---
