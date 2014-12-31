@@ -1,5 +1,5 @@
 title:            RunningMaverick
-description:      JackyZhu 的个人站
+#description:      JackyZhu 的个人站
 logo:             site-logo.png
 disqus_shortname: runningmaverick
 search:           true
@@ -40,8 +40,8 @@ links:
     url: /articles/
   - title: 标签
     url: /tags/
-  - title: Theme Setup
-    url: /theme-setup/
+  #- title: Theme Setup
+  #  url: /theme-setup/
   #- title: 学习 
   #  url: /learn/
   - title: 推荐站点
