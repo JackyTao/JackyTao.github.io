@@ -3,11 +3,7 @@ layout: page
 permalink: /about/
 title: About the Jacky Zhu
 tags: [about, jacky, zhu]
-modified: 2014-06-15
-image:
-  feature: so-simple-sample-image-4.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
+modified: 2014-12-31
 ---
 
 Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the followup to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes) --- by designer slash illustrator [Michael Rose](http://mademistakes).
@@ -31,7 +27,3 @@ Looking for a simple, responsive, theme for your Jekyll powered blog? Well look 
 <a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
 
 [^1]: Example: *domain.com/category-name/post-title*
-<div id="pdBuy"  class="PDB2C_moban_warp">
-<img src="http://code.jiasale.com/pdbs/images/init_wait.gif"></div>
-<script type="text/javascript" id="pdB2C_js"></script>
-<script type="text/javascript" id="pdB2C_shell_js" src="http://code.jiasale.com/shoptemplet/7db97f816dfa445ea3b34ea69485489d/t17127.js"></script>
