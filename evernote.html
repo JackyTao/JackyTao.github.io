@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>奔跑的蜗牛</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'Thumbnail Gallery' Template -->
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+</head>
+
+<body ng-app="testApp">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div>&nbsp;</div>
+                <div id="table-container" class="table-responsive">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div>&nbsp;</div>
+                <div id="table-container-2" class="table-responsive">
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Jacky Zhu 2013</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <script id="calendar" type="text/template">
+        <div><%= month_name %>
+        <table class="table table-bordered">
+            <% _.each(month_matrix, function(item){ %>
+                <tr>
+                    <td height="70px"></td>
+                    <% _.each(item, function(sitem){ %>
+                        <td height="70px">
+                        <% if (sitem !== 0) { %>
+                            <%= sitem %>
+                            <hr/>
+                            <br/>
+                        <% } %>
+                        </td>
+                    <% }); %>
+                </tr>
+            <% }); %>
+        </table>
+    </script>
+<!--
+                -->
+    <!-- JavaScript -->
+    <script src="js/underscore-min.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script>
+        // gen month array: [] 
+        var month_matrix = [[0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0]];
+        var month_matrix_next = [[0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0, 0, 0]];
+        var i;
+        var d = new Date();
+        d.setDate(1);
+        var start_week_day = (d.getDay() + 6) % 7 + 1;
+        for (i = 0; i < 32; i++) {
+            d.setDate(i + 1);
+            console.log('day: ' + d.getDate() + ',mon' + d.getMonth());
+            if (d.getDate() != i + 1) {
+                break;
+            } else {
+                month_matrix[Math.floor((i + start_week_day - 1) / 7)][(i + start_week_day - 1) % 7] = i + 1;
+            }
+        }
+        var html = _.template(document.getElementById('calendar').innerHTML, {month_name: (d.getMonth() + 11) % 12 + 1, month_matrix: month_matrix});
+        document.getElementById('table-container').innerHTML = html;
+
+        var start_week_day_next = (d.getDay() + 6) % 7 + 1;
+        for (i = 0; i < 32; i++) {
+            d.setDate(i + 1);
+            console.log('day: ' + d.getDate() + ',mon' + d.getMonth());
+            if (d.getDate() != i + 1) {
+                break;
+            } else {
+                month_matrix_next[Math.floor((i + start_week_day_next - 1) / 7)][(i + start_week_day_next - 1) % 7] = i + 1;
+            }
+        }
+
+        var html_next = _.template(document.getElementById('calendar').innerHTML, {month_name: (d.getMonth() + 11) % 12 + 1, month_matrix: month_matrix_next});
+        document.getElementById('table-container-2').innerHTML = html_next;
+    </script>
+    <script>
+        var testApp = angular.module('testApp', ['ngRoute']);
+        testApp.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider
+            .when('/a', {
+                templateUrl: 'a.html',
+                controller: 'aCtr'
+            })
+            .when('/b', {
+                templateUrl: 'b.html',
+                controller: 'bCtr'
+            })
+            .otherwise({
+                redirectTo: '/a'
+            });
+        }]); 
+        testApp.controller('aCtr', function($scope){
+        
+        });
+        testApp.controller('bCtr', function($scope){
+        
+        });
+    </script>
+
+</body>
+
+</html>
