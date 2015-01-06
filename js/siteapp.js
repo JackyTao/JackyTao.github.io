@@ -224,6 +224,11 @@
             'name': 'genius',
             'category': '',
             'info': ''
+          }, {
+            'href': 'https://platform.html5.org/',
+            'name': 'html5',
+            'category': '',
+            'info': ''
           }
         ]
       }, {

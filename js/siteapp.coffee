@@ -50,6 +50,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.reddit.com/r/golang', 'name': 'reddit/go', 'category': '', 'info': ''}
                 {'href': 'http://www.reddit.com/r/webdev', 'name': 'reddit/webdev', 'category': '', 'info': ''}
                 {'href': 'http://genius.com/', 'name': 'genius', 'category': '', 'info': ''}
+                {'href': 'https://platform.html5.org/', 'name': 'html5', 'category': '', 'info': ''}
             ] 
         }, {
             title: 'mediaSites'
