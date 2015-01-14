@@ -229,6 +229,11 @@
             'name': 'html5',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://pycoders.com/archive/',
+            'name': 'pycoders',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
