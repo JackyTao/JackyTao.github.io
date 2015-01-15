@@ -70,6 +70,11 @@
             'category': '技术',
             'info': ''
           }, {
+            'href': 'http://www.quora.com/',
+            'name': 'quora',
+            'category': '技术',
+            'info': ''
+          }, {
             'href': 'http://toutiao.io/',
             'name': '开发者头条',
             'category': '技术',

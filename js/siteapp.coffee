@@ -19,6 +19,7 @@ siteapp.controller 'SiteController', ($scope) ->
             content: [
                 {'href': 'http://news.ycombinator.com', 'name': 'Hacker News', 'category': '技术 & 行业', 'info': '黑客和创业: 请认准，教父的网站'}
                 {'href': 'http://news.dbanotes.net/', 'name': '小道消息', 'category': '技术', 'info': ''}
+                {'href': 'http://www.quora.com/', 'name': 'quora', 'category': '技术', 'info': ''}
                 {'href': 'http://toutiao.io/', 'name': '开发者头条', 'category': '技术', 'info': ''}
                 {'href': 'http://weekly.manong.io/issues/', 'name': '码农周刊', 'category': '', 'info': ''}
                 {'href': 'http://www.ruanyifeng.com/blog/', 'name': '阮一峰', 'category': '', 'info': ''}
