@@ -69,7 +69,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.yixieshi.com', 'name': '互联网一些事', 'category': '', 'info': ''}
                 {'href': 'http://www.alibuybuy.com/', 'name': '互联玩的那些事', 'category': '', 'info': ''}
                 {'href': 'http://www.geekpark.net', 'name': '极客公园', 'category': '', 'info': ''}
-                {'href': 'http://www.zuitech.com', 'name': '最科技', 'category': '', 'info': ''}
                 {'href': 'http://www.iimedia.cn/', 'name': '艾媒网', 'category': '', 'info': ''}
                 {'href': 'http://baijia.baidu.com', 'name': '百度百家', 'category': '', 'info': ''}
                 {'href': 'http://www.iresearch.cn', 'name': '艾瑞', 'category': '', 'info': ''}

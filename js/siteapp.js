@@ -305,11 +305,6 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.zuitech.com',
-            'name': '最科技',
-            'category': '',
-            'info': ''
-          }, {
             'href': 'http://www.iimedia.cn/',
             'name': '艾媒网',
             'category': '',
