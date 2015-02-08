@@ -350,6 +350,11 @@
         title: 'study',
         content: [
           {
+            'href': 'http://readfree.me/',
+            'name': 'Read Free',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.jikexueyuan.com/',
             'name': '极客学院',
             'category': '',

@@ -84,6 +84,7 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: 'study'
             content: [
+                {'href': 'http://readfree.me/', 'name': 'Read Free', 'category': '', 'info': ''}
                 {'href': 'http://www.jikexueyuan.com/', 'name': '极客学院', 'category': '', 'info': ''}
                 {'href': 'http://study.163.com', 'name': '网易云课堂', 'category': '', 'info': ''}
                 {'href': 'http://www.duobei.com', 'name': '多贝', 'category': '', 'info': ''}
