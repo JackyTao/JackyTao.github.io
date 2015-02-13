@@ -87,9 +87,11 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://readfree.me/', 'name': 'Read Free', 'category': '', 'info': ''}
                 {'href': 'http://www.jikexueyuan.com/', 'name': '极客学院', 'category': '', 'info': ''}
                 {'href': 'http://study.163.com', 'name': '网易云课堂', 'category': '', 'info': ''}
+                {'href': 'https://www.coursera.org/', 'name': 'coursera', 'category': '', 'info': ''}
+                {'href': 'http://open.163.com/', 'name': '网易公开课', 'category': '', 'info': ''}
+                {'href': 'https://www.udemy.com/', 'name': 'udemy', 'category': '', 'info': ''}
                 {'href': 'http://www.duobei.com', 'name': '多贝', 'category': '', 'info': ''}
                 {'href': 'http://speakerdeck.com', 'name': 'speakerdeck', 'category': '', 'info': ''}
-                {'href': 'https://www.coursera.org/', 'name': 'coursera', 'category': '', 'info': ''}
             ]
         }, {
             title: 'tools'
