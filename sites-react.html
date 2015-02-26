@@ -109,6 +109,7 @@
                 var nodes = this.props.data.map(function(category){
                     return ( 
                         <div class="row">
+                        <div class="row">
                             <div class="col-lg-12">
                                 <h2 class="page-header">
                                     {category.title} 
@@ -116,6 +117,7 @@
                             </div>
                         </div>
                         <SiteList data={category.content} /> 
+                        </div>
                     );
                 }); 
                 return (
