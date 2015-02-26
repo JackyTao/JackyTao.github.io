@@ -127,12 +127,12 @@
     <div id="react-example"></div>
     <script type="text/jsx">
         var Clist = React.createClass({
-            var nodes = this.props.data.map(function(comment){
-                return (
-                    <div>{comment.text}</div>
-                ); 
-            });
             render: function() {
+                var nodes = this.props.data.map(function(comment){
+                    return (
+                        <div>{comment.text}</div>
+                    ); 
+                });
                 return (
                     <div className="commentList">
                         <nodes>
