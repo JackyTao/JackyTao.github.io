@@ -196,6 +196,17 @@
         
         });
     </script>
+    <script src="https://leancloud.cn/scripts/lib/av-0.4.9.min.js"></script>
+    <script>
+        AV.initialize("zlaphhyrui0uljj6jt04zf81r1tove3i6xavxc1azt25n250", "1qxdleizrp4ji1ctl94r0nd9fdrmyb0aqsn3ggt1kdl29e9s");
+        var TestObject = AV.Object.extend("TestObject");
+        var testObject = new TestObject();
+        testObject.save({foo: "foo"}, {
+              success: function(object) {
+                    alert("LeanCloud works!");
+                      }
+                  });
+    </script>
 
 </body>
 
