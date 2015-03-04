@@ -103,6 +103,13 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.cheat-sheets.org/', 'name': 'Cheat-Sheets', 'category': '', 'info': ''},
                 {'href': 'http://www.w3.org/Protocols/', 'name': 'W3C', 'category': '', 'info': ''},
             ]
+        }, {
+            title: 'wearable'
+            content: [
+                {'href': 'http://mashable.com/category/wearable-tech/', 'name': 'mashable', 'category': '', 'info': ''},
+                {'href': 'http://www.themakers.cn/', 'name': '创客星球', 'category': '', 'info': ''},
+                {'href': 'http://www.bjmakerspace.com/', 'name': '创客空间', 'category': '', 'info': ''},
+            ]
         }
     ]
 

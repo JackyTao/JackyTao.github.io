@@ -426,6 +426,26 @@
             'info': ''
           }
         ]
+      }, {
+        title: 'wearable',
+        content: [
+          {
+            'href': 'http://mashable.com/category/wearable-tech/',
+            'name': 'mashable',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.themakers.cn/',
+            'name': '创客星球',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.bjmakerspace.com/',
+            'name': '创客空间',
+            'category': '',
+            'info': ''
+          }
+        ]
       }
     ];
   });
