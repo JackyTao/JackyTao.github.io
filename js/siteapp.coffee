@@ -96,6 +96,8 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: 'tools'
             content: [
+                {'href': 'http://apistore.baidu.com/', 'name': 'Api Store', 'category': '', 'info': ''},
+                {'href': 'http://www.devstore.cn/', 'name': 'Dev Store', 'category': '', 'info': ''},
                 {'href': 'http://devdocs.io/', 'name': 'Dev Docs', 'category': '', 'info': ''},
                 {'href': 'https://www.taskworld.com/', 'name': 'TaskWorld', 'category': '', 'info': ''},
                 {'href': 'https://app.asana.com/', 'name': 'Asana', 'category': '', 'info': ''},
