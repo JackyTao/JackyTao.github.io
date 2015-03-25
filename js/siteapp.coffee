@@ -112,6 +112,13 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.themakers.cn/', 'name': '创客星球', 'category': '', 'info': ''},
                 {'href': 'http://www.bjmakerspace.com/', 'name': '创客空间', 'category': '', 'info': ''},
             ]
+        }, {
+            title: 'cloud'
+            content: [
+                {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
+                {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
+                {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
+            ]
         }
     ]
 

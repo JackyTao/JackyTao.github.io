@@ -456,6 +456,26 @@
             'info': ''
           }
         ]
+      }, {
+        title: 'cloud',
+        content: [
+          {
+            'href': 'https://www.ablecloud.cn/',
+            'name': 'ablecloud',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.ucloud.cn/',
+            'name': 'ucloud',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://leancloud.cn/',
+            'name': 'leancloud',
+            'category': '',
+            'info': ''
+          }
+        ]
       }
     ];
   });
