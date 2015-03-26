@@ -120,6 +120,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
                 {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
                 {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
+                {'href': 'http://www.apicloud.com/', 'name': 'apicloud', 'category': '', 'info': ''},
             ]
         }
     ]

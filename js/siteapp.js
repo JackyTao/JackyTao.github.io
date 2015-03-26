@@ -484,6 +484,11 @@
             'name': 'leancloud',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.apicloud.com/',
+            'name': 'apicloud',
+            'category': '',
+            'info': ''
           }
         ]
       }
