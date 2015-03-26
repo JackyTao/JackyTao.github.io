@@ -459,6 +459,11 @@
             'name': '电子产品世界',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.elecfans.com/',
+            'name': '电子发烧友',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
