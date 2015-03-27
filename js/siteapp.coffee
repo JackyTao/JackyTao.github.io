@@ -60,6 +60,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.woshipm.com', 'name': '人人都是产品经理', 'category': '', 'info': ''}
                 {'href': 'http://www.huxiu.com', 'name': '虎嗅', 'category': '', 'info': ''}
                 {'href': 'http://www.cyzone.cn/', 'name': '创业帮', 'category': '', 'info': ''}
+                {'href': 'http://next.36kr.com', 'name': 'NEXT', 'category': '', 'info': ''}
                 {'href': 'http://www.iheima.com/', 'name': '创业家', 'category': '', 'info': ''}
                 {'href': 'http://www.36kr.com', 'name': '36KR', 'category': '', 'info': ''}
                 {'href': 'http://www.businessinsider.com/', 'name': 'BI', 'category': '', 'info': ''}

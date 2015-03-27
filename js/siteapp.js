@@ -260,6 +260,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://next.36kr.com',
+            'name': 'NEXT',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.iheima.com/',
             'name': '创业家',
             'category': '',
