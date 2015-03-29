@@ -375,6 +375,21 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'https://www.udacity.com/',
+            'name': 'udacity',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.khanacademy.org/',
+            'name': 'khan',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.udemy.com/',
+            'name': 'udemy',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://open.163.com/',
             'name': '网易公开课',
             'category': '',
