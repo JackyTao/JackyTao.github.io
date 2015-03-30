@@ -511,6 +511,16 @@
             'info': ''
           }
         ]
+      }, {
+        title: '找钱',
+        content: [
+          {
+            'href': 'http://www.vchello.cn/',
+            'name': '微投网',
+            'category': '',
+            'info': ''
+          }
+        ]
       }
     ];
   });
