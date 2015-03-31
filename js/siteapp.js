@@ -509,6 +509,11 @@
             'name': 'apicloud',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://tongji.baidu.com/',
+            'name': '百度统计',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
@@ -517,6 +522,11 @@
           {
             'href': 'http://www.vchello.cn/',
             'name': '微投网',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://itjuzi.com/',
+            'name': 'IT桔子',
             'category': '',
             'info': ''
           }
