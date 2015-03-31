@@ -125,11 +125,13 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
                 {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
                 {'href': 'http://www.apicloud.com/', 'name': 'apicloud', 'category': '', 'info': ''},
+                {'href': 'http://tongji.baidu.com/', 'name': '百度统计', 'category': '', 'info': ''},
             ]
         }, {
             title: '找钱'
             content: [
                 {'href': 'http://www.vchello.cn/', 'name': '微投网', 'category': '', 'info': ''},
+                {'href': 'http://itjuzi.com/', 'name': 'IT桔子', 'category': '', 'info': ''},
             ]
         }
     ]
