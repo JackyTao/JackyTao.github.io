@@ -132,6 +132,7 @@ siteapp.controller 'SiteController', ($scope) ->
             content: [
                 {'href': 'http://www.vchello.cn/', 'name': '微投网', 'category': '', 'info': ''},
                 {'href': 'http://itjuzi.com/', 'name': 'IT桔子', 'category': '', 'info': ''},
+                {'href': 'http://top100.exponentialorgs.com/', 'name': '独角兽', 'category': '', 'info': ''},
             ]
         }
     ]
