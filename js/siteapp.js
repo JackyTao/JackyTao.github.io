@@ -484,6 +484,11 @@
             'name': '电子发烧友',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.ingdan.com/',
+            'name': '硬蛋',
+            'category': '',
+            'info': ''
           }
         ]
       }, {

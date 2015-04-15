@@ -117,6 +117,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.bjmakerspace.com/', 'name': '创客空间', 'category': '', 'info': ''},
                 {'href': 'http://www.eepw.com.cn/', 'name': '电子产品世界', 'category': '', 'info': ''},
                 {'href': 'http://www.elecfans.com/', 'name': '电子发烧友', 'category': '', 'info': ''},
+                {'href': 'http://www.ingdan.com/', 'name': '硬蛋', 'category': '', 'info': ''},
             ]
         }, {
             title: 'cloud'
