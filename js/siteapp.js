@@ -260,6 +260,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://www.svpd.cn/',
+            'name': 'svpd',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://next.36kr.com',
             'name': 'NEXT',
             'category': '',
