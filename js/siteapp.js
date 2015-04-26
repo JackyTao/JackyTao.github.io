@@ -260,7 +260,7 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.svpd.cn/',
+            'href': 'http://www.svpd.com/',
             'name': 'svpd',
             'category': '',
             'info': ''
