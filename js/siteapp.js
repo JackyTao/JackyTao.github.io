@@ -260,8 +260,8 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.svpd.com/',
-            'name': 'svpd',
+            'href': 'http://www.svpg.com/',
+            'name': 'svpg',
             'category': '',
             'info': ''
           }, {
