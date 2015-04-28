@@ -515,6 +515,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://gizwits.com/',
+            'name': '机智云',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.ucloud.cn/',
             'name': 'ucloud',
             'category': '',
@@ -540,6 +545,16 @@
         title: '找钱',
         content: [
           {
+            'href': 'https://www.indiegogo.com/',
+            'name': 'indiegogo',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.kickstarter.com/',
+            'name': 'kickstarter',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.vchello.cn/',
             'name': '微投网',
             'category': '',

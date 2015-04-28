@@ -126,6 +126,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: 'cloud'
             content: [
                 {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
+                {'href': 'http://gizwits.com/', 'name': '机智云', 'category': '', 'info': ''},
                 {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
                 {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
                 {'href': 'http://www.apicloud.com/', 'name': 'apicloud', 'category': '', 'info': ''},
@@ -134,6 +135,8 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: '找钱'
             content: [
+                {'href': 'https://www.indiegogo.com/', 'name': 'indiegogo', 'category': '', 'info': ''},
+                {'href': 'https://www.kickstarter.com/', 'name': 'kickstarter', 'category': '', 'info': ''},
                 {'href': 'http://www.vchello.cn/', 'name': '微投网', 'category': '', 'info': ''},
                 {'href': 'http://itjuzi.com/', 'name': 'IT桔子', 'category': '', 'info': ''},
                 {'href': 'http://top100.exponentialorgs.com/', 'name': '独角兽', 'category': '', 'info': ''},
