@@ -514,6 +514,11 @@
             'name': '星云',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.geekheal.com/',
+            'name': '奇点',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
