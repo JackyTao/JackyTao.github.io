@@ -121,6 +121,8 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.ingdan.com/', 'name': '硬蛋', 'category': '', 'info': ''},
                 {'href': 'http://www.shenzhenware.com/', 'name': '深圳湾', 'category': '', 'info': ''},
                 {'href': 'http://www.lkkdesign.com/', 'name': '洛可可', 'category': '', 'info': ''},
+                {'href': 'http://www.hqchip.com/', 'name': '华强芯城', 'category': '', 'info': ''},
+                {'href': 'http://www.stargeek.cn/', 'name': '星云', 'category': '', 'info': ''},
             ]
         }, {
             title: 'cloud'
