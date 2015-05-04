@@ -534,6 +534,11 @@
             'name': '制汇节',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.ingchuang.com/',
+            'name': '硬创邦',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
