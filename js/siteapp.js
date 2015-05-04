@@ -529,6 +529,11 @@
             'name': '奇点',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.makerfaireshenzhen.com/',
+            'name': '制汇节',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
