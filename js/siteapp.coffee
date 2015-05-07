@@ -116,6 +116,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: '医疗'
             content: [
                 {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
+                {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
             ]
         }, {
             title: 'wearable'
@@ -130,7 +131,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.lkkdesign.com/', 'name': '洛可可', 'category': '', 'info': ''},
                 {'href': 'http://www.hqchip.com/', 'name': '华强芯城', 'category': '', 'info': ''},
                 {'href': 'http://www.stargeek.cn/', 'name': '星云', 'category': '', 'info': ''},
-                {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
                 {'href': 'http://www.makerfaireshenzhen.com/', 'name': '制汇节', 'category': '', 'info': ''},
                 {'href': 'http://www.ingchuang.com/', 'name': '硬创邦', 'category': '', 'info': ''},
             ]
