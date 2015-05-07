@@ -113,6 +113,11 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.w3.org/Protocols/', 'name': 'W3C', 'category': '', 'info': ''},
             ]
         }, {
+            title: '医疗'
+            content: [
+                {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
+            ]
+        }, {
             title: 'wearable'
             content: [
                 {'href': 'http://mashable.com/category/wearable-tech/', 'name': 'mashable', 'category': '', 'info': ''},

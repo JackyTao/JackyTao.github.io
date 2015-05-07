@@ -472,6 +472,16 @@
           }
         ]
       }, {
+        title: '医疗',
+        content: [
+          {
+            'href': 'http://www.vcbeat.net/',
+            'name': '动脉网',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
         title: 'wearable',
         content: [
           {
