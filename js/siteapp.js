@@ -484,6 +484,11 @@
             'name': '奇点',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.medicool.cn/Drlist.aspx',
+            'name': 'Dr2',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
