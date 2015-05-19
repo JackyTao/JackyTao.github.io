@@ -2,7 +2,7 @@
 var appId = '515hu35d09fm52i8ysg97c5osn7uwfmfrii1kn3nr51ts7zi';
 
 // 请换成你自己的一个房间的 conversation id（这是服务器端生成的）
-var roomId = '551a2847e4b04d688d73dc54';
+var roomId = '555ae00de4b017f721d0a422';
 
 // 每个客户端自定义的 id
 var clientId = 'sohuhc';
