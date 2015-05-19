@@ -14,7 +14,7 @@ h1 {
 }
 
 input {
-    border: none;
+    border: 1px solid;
     font-size: 15px;
     height: 30px;
     width: 60%;
