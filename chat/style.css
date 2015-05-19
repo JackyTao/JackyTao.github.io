@@ -14,7 +14,7 @@ h1 {
 }
 
 input {
-    border: 0.6px dashed;
+    border: 1px inset;
     font-size: 15px;
     height: 30px;
     width: 50%;
