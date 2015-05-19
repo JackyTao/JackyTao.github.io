@@ -14,6 +14,11 @@
             'name': '名医在线',
             'category': '问答',
             'info': ''
+          }, {
+            'href': 'http://xingren.com/',
+            'name': '杏仁医生',
+            'category': '',
+            'info': ''
           }
         ]
       }
