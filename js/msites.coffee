@@ -61,7 +61,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.jpmedical.com.cn/', 'name': '佳平医疗', 'category': '', 'info': ''}
                 {'href': 'http://www.jpmedical.com.cn/', 'name': '佳平医疗', 'category': '', 'info': ''}
             ]
-        }
         },{
             title: '媒体'
             content: [
