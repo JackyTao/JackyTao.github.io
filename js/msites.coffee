@@ -53,6 +53,16 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.xingrong.cn/', 'name': '形容网', 'category': '', 'info': ''}
             ]
         },{
+            title: '服务'
+            content: [
+                {'href': 'http://www.5uyisheng.com/', 'name': '5U家庭医生', 'category': '', 'info': ''}
+                {'href': 'http://www.ememed.net/', 'name': '薏米医生', 'category': '', 'info': ''}
+                {'href': 'http://www.distinctclinic.com/', 'name': '卓正医疗', 'category': '', 'info': ''}
+                {'href': 'http://www.jpmedical.com.cn/', 'name': '佳平医疗', 'category': '', 'info': ''}
+                {'href': 'http://www.jpmedical.com.cn/', 'name': '佳平医疗', 'category': '', 'info': ''}
+            ]
+        }
+        },{
             title: '媒体'
             content: [
                 {'href': 'http://www.xjk.me/', 'name': '新健康', 'category': '', 'info': ''}
@@ -61,6 +71,32 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.yxj.org.cn/', 'name': '医学界', 'category': '', 'info': ''}
                 {'href': 'http://www.bioon.com/', 'name': '生物谷', 'category': '', 'info': ''}
                 {'href': 'http://www.ccmtv.cn/', 'name': '临床频道', 'category': '', 'info': ''}
+            ]
+        },{
+            title: '药店'
+            content: [
+                {'href': 'http://www.j1.com/', 'name': '健一网', 'category': '', 'info': ''}
+                {'href': 'http://www.ehaoyao.com/', 'name': '好药师', 'category': '', 'info': ''}
+                {'href': 'http://www.ehaoyao.com/', 'name': '好药师', 'category': '', 'info': ''}
+                {'href': 'http://www.800pharm.com/', 'name': '八百方', 'category': '', 'info': ''}
+                {'href': 'http://www.950958.com/', 'name': '医药平台', 'category': '', 'info': ''}
+                {'href': 'http://www.111.com.cn/', 'name': '壹药网', 'category': '', 'info': ''}
+                {'href': 'http://www.aixin666.com/', 'name': '爱心医药网', 'category': '', 'info': ''}
+                {'href': 'http://www.yaofang.cn/', 'name': '药房网', 'category': '', 'info': ''}
+                {'href': 'http://www.yaosuda.com/', 'name': '药速达', 'category': '', 'info': ''}
+                {'href': 'http://www.mypharma.com/', 'name': '我的医药网', 'category': '', 'info': ''}
+                {'href': '#', 'name': '掌上药店', 'category': '', 'info': ''}
+                {'href': 'http://www.edoctor.cn/', 'name': 'eDoctor', 'category': '', 'info': ''}
+            ]
+        },{
+            title: '健康管理'
+            content: [
+                {'href': 'http://www.51jkfw.com/', 'name': '51健康助手', 'category': '', 'info': ''}
+                {'href': 'http://www.360jiyin.com/', 'name': '360基因', 'category': '', 'info': ''}
+                {'href': 'http://www.jmdna.com/', 'name': '解码DNA', 'category': '', 'info': ''}
+                {'href': 'http://www.simpgene.com/', 'name': '心宝基因', 'category': '', 'info': ''}
+                {'href': 'http://www.genomics.cn/index', 'name': '华大基因', 'category': '', 'info': ''}
+                {'href': 'http://www.sh-ughealth.com/', 'name': '上海联合基因', 'category': '', 'info': ''}
             ]
         }
     ]
