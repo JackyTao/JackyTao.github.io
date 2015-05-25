@@ -5,19 +5,30 @@
 <meta name="MobileOptimized" content="320"/>
 <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width"/>
 <title>那些关于医加的激动人性的数据</title>
+<style>
+  body {
+      background-color: #FFD39B;
+  }
+  .words {
+      font-size: 20px;
+  }
+  .number {
+      font-size: 32px;
+      color: red;
+  }
+</style>
 </head>
 <body>
 
-<div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 id="download-count" class="text-center page-header">3396</h1>
-            </div>
+<div>
+    <div class="words">
+        医加已被下载
+            <div class="number"> 3396 </div>
+        次 
         </div>
 </div>
 
 <script src="js/jquery-1.10.2.js"></script>
-<script src="js/bootstrap.js"></script>
 <script type="text/javascript">
     setInterval(function(){
         $.get('http://smart.sohu.com/downloads/health_plus?type=2', function(data, status){
