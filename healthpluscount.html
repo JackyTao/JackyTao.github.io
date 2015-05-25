@@ -11,22 +11,26 @@
   }
   .words {
       font-size: 20px;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
   }
   .number {
       font-size: 32px;
       color: #6E8B3D;
+      display: inline-block;
   }
 </style>
 </head>
 <body>
 
-<div>
     <div class="words">
         医加已被下载
             <div class="number"> 3396 </div>
         次 
         </div>
-</div>
 
 <script src="js/jquery-1.10.2.js"></script>
 <script type="text/javascript">
