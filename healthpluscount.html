@@ -37,7 +37,7 @@
 <script src="js/jquery-1.10.2.js"></script>
 <script type="text/javascript">
     setInterval(function(){
-        $.get('http://smart.sohu.com/downloads/health_plus?type=2', function(data, status){
+        $.get('http://smart.sohu.com/downloads/health_plus/count', function(data, status){
             $('#download-count').html(data.data.count);
         });
     }, 1000);
