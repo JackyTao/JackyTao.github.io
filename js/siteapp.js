@@ -369,6 +369,11 @@
         title: 'study',
         content: [
           {
+            'href': 'http://www.swiftv.cn/',
+            'name': 'swiftv',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://readfree.me/',
             'name': 'Read Free',
             'category': '',
