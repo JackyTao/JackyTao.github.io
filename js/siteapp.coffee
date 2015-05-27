@@ -112,6 +112,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'https://hackpad.com/', 'name': 'Hackpad', 'category': '', 'info': ''},
                 {'href': 'http://www.cheat-sheets.org/', 'name': 'Cheat-Sheets', 'category': '', 'info': ''},
                 {'href': 'http://www.w3.org/Protocols/', 'name': 'W3C', 'category': '', 'info': ''},
+                {'href': 'https://www.debuggex.com/', 'name': '调试正则表达式', 'category': '', 'info': ''},
             ]
         }, {
             title: '医疗'

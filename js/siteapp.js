@@ -473,6 +473,11 @@
             'name': 'W3C',
             'category': '',
             'info': ''
+          }, {
+            'href': 'https://www.debuggex.com/',
+            'name': '调试正则表达式',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
