@@ -2,6 +2,16 @@ siteapp = angular.module 'siteapp', []
 siteapp.controller 'SiteController', ($scope) -> 
     $scope.sites = [
         {
+            title: '资讯'
+            content: [
+                {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''}
+                {'href': 'http://www.39.net/', 'name': '39健康网', 'category': '', 'info': ''}
+                {'href': 'http://www.iijk.net/', 'name': '爱健康', 'category': '', 'info': ''}
+                {'href': 'http://www.qqyy.com/', 'name': '全球医院', 'category': '', 'info': ''}
+                {'href': 'http://www.fx120.net/', 'name': '放心医苑', 'category': '', 'info': ''}
+                {'href': 'http://www.yx129.com/', 'name': '医享网', 'category': '', 'info': ''}
+            ]
+        },{
             title: '问诊'
             content: [
                 {'href': 'http://www.myzx.cn/', 'name': '名医在线', 'category': '问答', 'info': ''}
@@ -25,15 +35,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'http://www.daanhealth.com/', 'name': '达安健康', 'category': '', 'info': ''}
                 {'http://www.91160.com/', 'name': '就医160', 'category': '', 'info': ''}
                 {'http://www.91160.com/', 'name': '就医160', 'category': '', 'info': ''}
-            ]
-        },{
-            title: '门户'
-            content: [
-                {'href': 'http://www.39.net/', 'name': '39健康网', 'category': '', 'info': ''}
-                {'href': 'http://www.iijk.net/', 'name': '爱健康', 'category': '', 'info': ''}
-                {'href': 'http://www.qqyy.com/', 'name': '全球医院', 'category': '', 'info': ''}
-                {'href': 'http://www.fx120.net/', 'name': '放心医苑', 'category': '', 'info': ''}
-                {'href': 'http://www.yx129.com/', 'name': '医享网', 'category': '', 'info': ''}
             ]
         },{
             title: '垂直就医'
