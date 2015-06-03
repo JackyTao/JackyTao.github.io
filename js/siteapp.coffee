@@ -156,6 +156,13 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://itjuzi.com/', 'name': 'IT桔子', 'category': '', 'info': ''},
                 {'href': 'http://top100.exponentialorgs.com/', 'name': '独角兽', 'category': '', 'info': ''},
             ]
+        }, {
+            title: '微信群'
+            content: [
+                {'href': 'http://www.haoduoqun.com/', 'name': '好多群', 'category': '', 'info': ''},
+                {'href': 'http://www.weixinqun.cc/', 'name': '微信群', 'category': '', 'info': ''},
+                {'href': 'http://www.weixinqun.cn/', 'name': '微信群CN', 'category': '', 'info': ''},
+            ]
         }
     ]
 
