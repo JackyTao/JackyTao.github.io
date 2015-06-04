@@ -648,6 +648,11 @@
             'name': '微信群CN',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.91weixinqun.com/',
+            'name': '微信群',
+            'category': '',
+            'info': ''
           }
         ]
       }

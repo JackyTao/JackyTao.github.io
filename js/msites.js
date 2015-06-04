@@ -14,6 +14,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://www.hit180.com/',
+            'name': 'hit180',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.39.net/',
             'name': '39健康网',
             'category': '',

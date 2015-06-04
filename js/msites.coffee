@@ -5,6 +5,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: '资讯'
             content: [
                 {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''}
+                {'href': 'http://www.hit180.com/', 'name': 'hit180', 'category': '', 'info': ''}
                 {'href': 'http://www.39.net/', 'name': '39健康网', 'category': '', 'info': ''}
                 {'href': 'http://www.iijk.net/', 'name': '爱健康', 'category': '', 'info': ''}
                 {'href': 'http://www.qqyy.com/', 'name': '全球医院', 'category': '', 'info': ''}
