@@ -117,6 +117,7 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: '医疗'
             content: [
+                {'href': 'http://www.hibor.com.cn/', 'name': '行业报告', 'category': '', 'info': ''},
                 {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
                 {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
                 {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},

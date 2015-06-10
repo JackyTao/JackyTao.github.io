@@ -484,6 +484,11 @@
         title: '医疗',
         content: [
           {
+            'href': 'http://www.hibor.com.cn/',
+            'name': '行业报告',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.vcbeat.net/',
             'name': '动脉网',
             'category': '',
