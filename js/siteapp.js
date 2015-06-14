@@ -593,6 +593,11 @@
             'name': 'Dr2',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://jeapie.com',
+            'name': 'jeapie推送',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
