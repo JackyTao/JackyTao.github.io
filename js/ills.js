@@ -6,7 +6,7 @@
   siteapp.controller('SiteController', function($scope) {
     return $scope.sites = [
       {
-        title: 'everydaySites',
+        title: '疾病库',
         content: [
           {
             "baike_link": "http://baike.baidu.com/view/9070.htm",
