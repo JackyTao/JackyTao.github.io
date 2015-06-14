@@ -139,6 +139,14 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.ingchuang.com/', 'name': '硬创邦', 'category': '', 'info': ''},
             ]
         }, {
+            title: '工具'
+            content: [
+                {'href': 'https://shimo.im', 'name': '石墨', 'category': '', 'info': '文档协同'},
+                {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
+                {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
+                {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},
+            ]
+        }, {
             title: 'cloud'
             content: [
                 {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
