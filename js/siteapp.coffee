@@ -105,6 +105,7 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: 'tools'
             content: [
+                {'href': 'http://www.mmtrix.com/', 'name': '性能魔方', 'category': '', 'info': ''},
                 {'href': 'http://apistore.baidu.com/', 'name': 'Api Store', 'category': '', 'info': ''},
                 {'href': 'http://www.devstore.cn/', 'name': 'Dev Store', 'category': '', 'info': ''},
                 {'href': 'http://devdocs.io/', 'name': 'Dev Docs', 'category': '', 'info': ''},
