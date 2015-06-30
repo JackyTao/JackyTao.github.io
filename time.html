@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>网络状况</title>
+    <style>
+        html {
+              background: rgba(237,237,237,1);
+          }
+          body {
+                margin:auto;
+                  padding:0;
+                    font-size: 2em;
+                }
+                .r div {
+                      text-align: center;
+                  }
+    </style>
+</head>
+<body>
+  <div class="r">
+    <div class="r-baidu">
+      百度: <span></span>
+    </div>
+    <div class="r-sohu">
+      搜狐: <span></span>
+    </div>
+    <div class="r-kuaizhan">
+      快站: <span></span>
+    </div>
+    <div class="r-sub_kuaizhan">
+      快站二级域名: <span></span>
+    </div>
+    <div class="r-pfile">
+      pfile: <span></span>
+    </div>
+    <div class="r-s0">
+      s0: <span></span>
+    </div>
+    <div class="r-itc">
+      itc: <span></span>
+    </div>
+    <div class="r-pic">
+      图片: <span></span>
+    </div>
+    <hr />
+    <div class="ua">
+      User-Agent: <span></span>
+    </div>
+    <div class="ip">
+      ip: <span></span>
+    </div>
+    <div class="country">
+      国家: <span></span>
+    </div>
+    <div class="area">
+      地区: <span></span>
+    </div>
+    <div class="province">
+      省: <span></span>
+    </div>
+    <div class="city">
+      城市: <span></span>
+    </div>
+    <div class="carrier">
+      运营商: <span></span>
+    </div>
+  <div>
+
+  <script src="js/jquery-1.10.2.js"></script>
+  <script>
+    $(function(){
+      var hosts = {
+        "baidu": "http://www.baidu.com",
+        "sohu": "http://www.sohu.com",
+        "kuaizhan": "http://www.kuaizhan.com",
+        "sub_kuaizhan": "http://m.kuaizhan.com/?embed=true",
+        "pfile": "http://pfile.kuaizhan.com/files/editing_all.js",
+        "s0": "http://s0.kuaizhan.com/res/skin/css/mod.css",
+        "itc": "http://kzcdn.itc.cn/res/skin/css/mod.css",
+        "pic": "http://pic.kuaizhan.com/g1/M00/05/69/wKjmqVSRjGWAfI_BAABOwDXn-xU248.log"
+      };
+
+      var get_time = function (host,dom) {
+        var start = new Date();
+        var img = new Image();
+        img.onerror = function() {
+            var response_time = new Date() - start;
+            $("." + dom).find('span').html(response_time + "毫秒");
+        };
+        img.src = host;
+      };
+
+      get_time(hosts.baidu, "r-baidu");
+      get_time(hosts.sohu, "r-sohu");
+      get_time(hosts.kuaizhan, "r-kuaizhan");
+      get_time(hosts.sub_kuaizhan, "r-sub_kuaizhan");
+      get_time(hosts.pfile, "r-pfile");
+      get_time(hosts.s0, "r-s0");
+      get_time(hosts.itc, "r-itc");
+      get_time(hosts.pic, "r-pic");
+
+      $(".ua").find("span").html(navigator.userAgent);
+
+      $.ajax({
+        url: "http://httpbin.org/ip",
+        type: "GET",
+        success: function(data) {
+          var _ip = data.origin;
+          $(".ip").find("span").html(_ip);
+          $.ajax({
+            url: "http://arch.kuaizhan.com/ip?ip=" + _ip,
+            type: "GET",
+            success: function(data) {
+              var data = JSON.parse(data);
+              if (data.errNum == 0) {
+                $(".country").find("span").html(data.retData.country);
+                $(".area").find("span").html(data.retData.area);
+                $(".province").find("span").html(data.retData.province);
+                $(".city").find("span").html(data.retData.city);
+                $(".carrier").find("span").html(data.retData.carrier);
+              }
+            },
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
