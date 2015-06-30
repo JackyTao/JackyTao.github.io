@@ -108,6 +108,7 @@
         success: function(data) {
           var _ip = data.origin;
           $(".ip").find("span").html(_ip);
+          /*
           $.ajax({
             url: "http://arch.kuaizhan.com/ip?ip=" + _ip,
             type: "GET",
@@ -122,6 +123,7 @@
               }
             },
           });
+          */
         }
       });
     });
