@@ -444,6 +444,11 @@
             'category': '',
             'info': '文档协同'
           }, {
+            'href': 'http://b3c4.com/',
+            'name': '导航',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.mmtrix.com/',
             'name': '性能魔方',
             'category': '',
@@ -646,31 +651,6 @@
           }, {
             'href': 'http://top100.exponentialorgs.com/',
             'name': '独角兽',
-            'category': '',
-            'info': ''
-          }
-        ]
-      }, {
-        title: '微信群',
-        content: [
-          {
-            'href': 'http://www.haoduoqun.com/',
-            'name': '好多群',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.weixinqun.cc/',
-            'name': '微信群',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.weixinqun.cn/',
-            'name': '微信群CN',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.91weixinqun.com/',
-            'name': '微信群',
             'category': '',
             'info': ''
           }
