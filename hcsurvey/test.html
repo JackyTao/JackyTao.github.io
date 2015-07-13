@@ -180,7 +180,7 @@
             $('.process').removeClass('answered');
 
             $('.quiz-num').html(index + 1);
-            $('.quiz-desc').html('你是否' + quiz['body'][cur]['symptom'] + '?');
+            $('.quiz-desc').html('你是否' + quiz['body'][index]['symptom'] + '?');
 
             if (index >= quiz.body.length) {
                 $('.next-btn').html('查看结果');
