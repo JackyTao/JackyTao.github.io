@@ -106,6 +106,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: 'tools'
             content: [
                 {'href': 'https://shimo.im', 'name': '石墨', 'category': '', 'info': '文档协同'},
+                {'href': 'http://www.zcool.com.cn/', 'name': '站酷', 'category': '', 'info': ''},
                 {'href': 'http://b3c4.com/', 'name': '导航', 'category': '', 'info': ''},
                 {'href': 'http://www.mmtrix.com/', 'name': '性能魔方', 'category': '', 'info': ''},
                 {'href': 'http://apistore.baidu.com/', 'name': 'Api Store', 'category': '', 'info': ''},
