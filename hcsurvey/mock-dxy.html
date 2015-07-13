@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>「睡商」大挑战</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <!--
+    <script src="http://assets.dxycdn.com/app/event/20150311/dist/js/main.min.js?t=2015050701"></script>
+    -->
+
+    <!--
+    <script src="http://assets.dxycdn.com/docs/plugin/dxy_get_install/getInstall.js"></script>
+    -->
+</head>
+<body>
+    <div class="container pos-start">
+        <!-- 起始页 -->
+        <div class="start blk">
+            <h1><img src="http://assets.dxycdn.com/app/event/20150311/img/heading.png?t=2015031208" alt="“睡商”大挑战"></h1>
+            <img src="http://assets.dxycdn.com/app/event/20150311/img/topic.png?t=2015031203" alt="一个在睡觉的人" class="topic">
+            <a href="javascript:;" class="start-btn btn">开始测试</a>
+            <p class="source">
+                内容来源：美国国家睡眠基金会<br>丁香医生出品 dxy.com
+            </p>
+        </div>
+
+        <!-- 过程页 -->
+        <div class="process blk">
+            <div class="quiz-blk">
+                <div class="center-box quiz-top-box">
+                    <p class="quiz-top">第 <span class="quiz-num"></span> 题&nbsp;&nbsp;(<span class="quiz-num"></span>/<span class="quiz-total"></span>)</p>
+                </div>
+                <div class="center-box quiz-desc-box">
+                    <p class="quiz-desc"></p>
+                </div>
+            </div>
+            <div class="opt-blk sub-blk">
+                <a href="javascript:;" class="right-btn opt-btn">正确</a>
+                <a href="javascript:;" class="wrong-btn opt-btn">错误</a>
+            </div>
+            <div class="answer-blk sub-blk">
+                <p class="right-sign sign show">回答正确</p>
+                <p class="wrong-sign sign">回答错误</p>
+                <p class="quiz-text">
+                </p>
+                <a href="javascript:;" class="btn next-btn">下一题</a>
+            </div>
+        </div>
+
+        <!-- 结果页 -->
+        <div class="result blk">
+            <div class="result-blk">
+                <p class="result-heading">
+                </p>
+                <p class="result-text">
+                </p>
+            </div>
+            <div class="prom-box">
+                <p class="prom-heading">为了让床上的时间更幸福</p>
+                <p class="prom-text">
+                    医加为您准备几篇文章
+                </p>
+                <a href="http://health.sohu.com" schema="http://health.sohu.com" data-link="dxy-aspirin://news/2504" class="btn view-btn">前往查看</a>
+                <img src="./logo.png" alt="丁香医生" class="logo">
+            </div>
+        </div>
+    </div>
+    <script src="./zepto.min.js"></script>
+    <script>
+
+        var quiz = {
+            'cur': 0,
+            'body': [],
+        }
+        var cur = 0;
+        var total = 6;
+
+        $('.start-btn').on('click', function() {
+            initQuiz();
+            pushQuestion(cur + 1);
+            cur = cur + 1;
+        });
+        $('.opt-btn').on('click', function() {
+            $('.process').addClass('answered');
+            // TODO: judge
+            if ($(this).hasClass('right-btn')) {
+                judgeQuestion(cur, 0);
+            } else {
+                judgeQuestion(cur, 1);
+            }
+        });
+        $('.next-btn').on('click', function() {
+            if (cur < total) {
+                pushQuestion(cur + 1);
+                cur = cur + 1;
+            } else {
+                showResult();
+            }
+        });
+
+        function initQuiz() {
+            $('.quiz-total').html('6');
+
+        }
+
+        function judgeQuestion(index, answer) {
+            // TODO: judge
+            $('.process').addClass('right');
+            $('.quiz-text').html('这是结果');
+        }
+
+        function pushQuestion(index) {
+            $('.container').addClass('pos-process');
+            $('.container').removeClass('pos-start');
+            $('.process').removeClass('answered');
+
+            $('.quiz-num').html('' + index);
+            $('.quiz-desc').html('当你的身体入睡时，大脑也睡着了。');
+
+            if (index >= total) {
+                $('.next-btn').html('查看结果');
+            }
+        }
+        function showResult() {
+            $('.container').removeClass('pos-process');
+            $('.container').removeClass('pos-start');
+            $('.container').addClass('pos-result');
+            $('.process').removeClass('answered');
+
+            $('.result-heading').html('不及格，你知道得太少了');
+            $('.result-text').html('你确定是在清醒状态下做完这些题的吗？说真的，你太需要了解一下睡眠这件事儿了。');
+        }
+
+    </script>
+</body>
+</html>
