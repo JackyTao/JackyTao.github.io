@@ -78,13 +78,24 @@
                 <p class="prom-text">
                     医加为您准备几篇文章
                 </p>
-                <a href="http://health.sohu.com" schema="http://health.sohu.com" data-link="dxy-aspirin://news/2504" class="btn view-btn">前往查看</a>
+                <a href="http://health.sohu.com" schema="http://health.sohu.com" class="btn view-btn">前往查看</a>
+                <a href="javascript:;" id="quiz-restart" class="btn view-btn">重新测试</a>
+                <a href="javascript:;" id="quiz-share" class="btn view-btn">分享求助</a>
+                <!--
                 <img src="./logo.png" alt="医加健康" class="logo">
+                -->
             </div>
         </div>
     </div>
     <script src="./zepto.min.js"></script>
     <script>
+
+        $('#quiz-restart').on('click', function() {
+            stepIntoStart();
+        });
+        $('#quiz-share').on('click', function() {
+            alert('暂未开通，敬请期待!');
+        });
 
         var quiz = {
             'cur': 0,
@@ -105,7 +116,7 @@
 
         $('.start-btn').on('click', function() {
             initQuiz();
-            pushQuestion(cur);
+            stepIntoProcess();
         });
         $('.opt-btn').on('click', function() {
             $('.process').addClass('answered');
@@ -126,8 +137,9 @@
         });
 
         function initQuiz() {
-            $('.quiz-total').html('6');
-
+            $('.quiz-total').html(quiz.body.length);
+            cur = 0;
+            pushQuestion(cur);
         }
 
         function judgeQuestion(index, answer) {
@@ -139,15 +151,32 @@
                     pushQuestion(cur + 1);
                     cur = cur + 1;
                 }
+            } else if ( cur === quiz.body.length - 1) {
+                if ( answer === 0) {
+                    showResult(); 
+                } else {
+                    showDefaultResult();
+                }
             } else {
                 showDefaultResult();
             }
 
         }
 
-        function pushQuestion(index) {
+        function stepIntoStart() {
+            $('.container').addClass('pos-start');
+            $('.container').removeClass('pos-process');
+            $('.container').removeClass('pos-result');
+            $('.process').removeClass('answered');
+        }
+        function stepIntoProcess() {
             $('.container').addClass('pos-process');
             $('.container').removeClass('pos-start');
+            $('.container').removeClass('pos-result');
+            $('.process').removeClass('answered');
+        }
+
+        function pushQuestion(index) {
             $('.process').removeClass('answered');
 
             $('.quiz-num').html(index + 1);
