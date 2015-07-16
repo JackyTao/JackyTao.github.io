@@ -604,6 +604,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://www.yuntongxun.com/',
+            'name': '云通讯',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://gizwits.com/',
             'name': '机智云',
             'category': '',

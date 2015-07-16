@@ -147,6 +147,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: 'cloud'
             content: [
                 {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
+                {'href': 'http://www.yuntongxun.com/', 'name': '云通讯', 'category': '', 'info': ''},
                 {'href': 'http://gizwits.com/', 'name': '机智云', 'category': '', 'info': ''},
                 {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
                 {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
