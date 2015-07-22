@@ -114,6 +114,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://devdocs.io/', 'name': 'Dev Docs', 'category': '', 'info': ''},
                 {'href': 'https://www.taskworld.com/', 'name': 'TaskWorld', 'category': '', 'info': ''},
                 {'href': 'https://app.asana.com/', 'name': 'Asana', 'category': '', 'info': ''},
+                {'href': 'https://tower.im', 'name': 'tower', 'category': '', 'info': ''},
                 {'href': 'https://hackpad.com/', 'name': 'Hackpad', 'category': '', 'info': ''},
                 {'href': 'http://www.cheat-sheets.org/', 'name': 'Cheat-Sheets', 'category': '', 'info': ''},
                 {'href': 'http://www.w3.org/Protocols/', 'name': 'W3C', 'category': '', 'info': ''},

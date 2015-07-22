@@ -484,6 +484,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'https://tower.im',
+            'name': 'tower',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://hackpad.com/',
             'name': 'Hackpad',
             'category': '',
