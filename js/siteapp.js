@@ -356,21 +356,6 @@
           }
         ]
       }, {
-        title: 'misc',
-        content: [
-          {
-            'href': 'http://yedingding.com/',
-            'name': 'Dingding Ye',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://phtv.ifeng.com/program/qqsrx',
-            'name': '三人行',
-            'category': '',
-            'info': ''
-          }
-        ]
-      }, {
         title: 'study',
         content: [
           {
@@ -536,6 +521,56 @@
           }
         ]
       }, {
+        title: 'cloud',
+        content: [
+          {
+            'href': 'http://www.ucloud.cn/',
+            'name': 'ucloud',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://leancloud.cn/',
+            'name': 'leancloud',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.qingcloud.com',
+            'name': '青云',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.jiankongbao.com/',
+            'name': '监控宝',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.yuntongxun.com/',
+            'name': '云通讯',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.apicloud.com/',
+            'name': 'apicloud',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://tongji.baidu.com/',
+            'name': '百度统计',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.ablecloud.cn/',
+            'name': 'ablecloud',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://gizwits.com/',
+            'name': '机智云',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
         title: 'wearable',
         content: [
           {
@@ -601,41 +636,16 @@
           }
         ]
       }, {
-        title: 'cloud',
+        title: 'misc',
         content: [
           {
-            'href': 'https://www.ablecloud.cn/',
-            'name': 'ablecloud',
+            'href': 'http://yedingding.com/',
+            'name': 'Dingding Ye',
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.yuntongxun.com/',
-            'name': '云通讯',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://gizwits.com/',
-            'name': '机智云',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.ucloud.cn/',
-            'name': 'ucloud',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'https://leancloud.cn/',
-            'name': 'leancloud',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.apicloud.com/',
-            'name': 'apicloud',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://tongji.baidu.com/',
-            'name': '百度统计',
+            'href': 'http://phtv.ifeng.com/program/qqsrx',
+            'name': '三人行',
             'category': '',
             'info': ''
           }

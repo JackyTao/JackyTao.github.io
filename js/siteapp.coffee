@@ -81,12 +81,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://zaodula.com', 'name': '早读啦', 'category': '', 'info': ''}
             ]
         }, {
-            title: 'misc'
-            content: [
-                {'href': 'http://yedingding.com/', 'name': 'Dingding Ye', 'category': '', 'info': ''}
-                {'href': 'http://phtv.ifeng.com/program/qqsrx', 'name': '三人行', 'category': '', 'info': ''}
-            ]
-        }, {
             title: 'study'
             content: [
                 {'href': 'http://www.swiftv.cn/', 'name': 'swiftv', 'category': '', 'info': ''}
@@ -129,6 +123,19 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},
             ]
         }, {
+            title: 'cloud'
+            content: [
+                {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
+                {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
+                {'href': 'https://www.qingcloud.com', 'name': '青云', 'category': '', 'info': ''},
+                {'href': 'http://www.jiankongbao.com/', 'name': '监控宝', 'category': '', 'info': ''},
+                {'href': 'http://www.yuntongxun.com/', 'name': '云通讯', 'category': '', 'info': ''},
+                {'href': 'http://www.apicloud.com/', 'name': 'apicloud', 'category': '', 'info': ''},
+                {'href': 'http://tongji.baidu.com/', 'name': '百度统计', 'category': '', 'info': ''},
+                {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
+                {'href': 'http://gizwits.com/', 'name': '机智云', 'category': '', 'info': ''},
+            ]
+        }, {
             title: 'wearable'
             content: [
                 {'href': 'http://mashable.com/category/wearable-tech/', 'name': 'mashable', 'category': '', 'info': ''},
@@ -145,15 +152,10 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.ingchuang.com/', 'name': '硬创邦', 'category': '', 'info': ''},
             ]
         }, {
-            title: 'cloud'
+            title: 'misc'
             content: [
-                {'href': 'https://www.ablecloud.cn/', 'name': 'ablecloud', 'category': '', 'info': ''},
-                {'href': 'http://www.yuntongxun.com/', 'name': '云通讯', 'category': '', 'info': ''},
-                {'href': 'http://gizwits.com/', 'name': '机智云', 'category': '', 'info': ''},
-                {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
-                {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
-                {'href': 'http://www.apicloud.com/', 'name': 'apicloud', 'category': '', 'info': ''},
-                {'href': 'http://tongji.baidu.com/', 'name': '百度统计', 'category': '', 'info': ''},
+                {'href': 'http://yedingding.com/', 'name': 'Dingding Ye', 'category': '', 'info': ''}
+                {'href': 'http://phtv.ifeng.com/program/qqsrx', 'name': '三人行', 'category': '', 'info': ''}
             ]
         }, {
             title: '找钱'
