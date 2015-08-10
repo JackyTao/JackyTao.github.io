@@ -128,6 +128,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.ucloud.cn/', 'name': 'ucloud', 'category': '', 'info': ''},
                 {'href': 'https://leancloud.cn/', 'name': 'leancloud', 'category': '', 'info': ''},
                 {'href': 'https://www.qingcloud.com', 'name': '青云', 'category': '', 'info': ''},
+                {'href': 'https://www.jpush.cn', 'name': '极光', 'category': '', 'info': ''},
                 {'href': 'http://www.jiankongbao.com/', 'name': '监控宝', 'category': '', 'info': ''},
                 {'href': 'http://www.yuntongxun.com/', 'name': '云通讯', 'category': '', 'info': ''},
                 {'href': 'http://www.apicloud.com/', 'name': 'apicloud', 'category': '', 'info': ''},

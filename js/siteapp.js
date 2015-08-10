@@ -539,6 +539,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'https://www.jpush.cn',
+            'name': '极光',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.jiankongbao.com/',
             'name': '监控宝',
             'category': '',
