@@ -121,6 +121,8 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
                 {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
                 {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},
+                {'href': 'http://www.healthpoint.cn/', 'name': '健康点', 'category': '', 'info': ''},
+                {'href': 'http://www.cn-healthcare.com/', 'name': '健康界', 'category': '', 'info': ''},
             ]
         }, {
             title: 'cloud'

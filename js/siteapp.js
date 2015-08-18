@@ -518,6 +518,16 @@
             'name': 'Dr2',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.healthpoint.cn/',
+            'name': '健康点',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.cn-healthcare.com/',
+            'name': '健康界',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
