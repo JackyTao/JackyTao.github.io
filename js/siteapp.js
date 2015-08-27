@@ -489,6 +489,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'https://readthedocs.org',
+            'name': 'readthedocs',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://www.debuggex.com/',
             'name': '调试正则表达式',
             'category': '',
