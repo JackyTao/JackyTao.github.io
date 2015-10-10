@@ -504,13 +504,18 @@
         title: '医疗',
         content: [
           {
-            'href': 'http://www.hibor.com.cn/',
-            'name': '行业报告',
+            'href': 'http://www.healthpoint.cn/',
+            'name': '健康点',
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.vcbeat.net/',
-            'name': '动脉网',
+            'href': 'http://www.cn-healthcare.com/',
+            'name': '健康界',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://share.cn-healthcare.com/',
+            'name': '医享库',
             'category': '',
             'info': ''
           }, {
@@ -524,13 +529,13 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.healthpoint.cn/',
-            'name': '健康点',
+            'href': 'http://www.hibor.com.cn/',
+            'name': '行业报告',
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.cn-healthcare.com/',
-            'name': '健康界',
+            'href': 'http://www.vcbeat.net/',
+            'name': '动脉网',
             'category': '',
             'info': ''
           }
