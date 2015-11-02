@@ -99,6 +99,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://fex.baidu.com/',
+            'name': 'FEX',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.ruanyifeng.com/blog/',
             'name': '阮一峰',
             'category': '',

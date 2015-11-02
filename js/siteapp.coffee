@@ -25,6 +25,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.quora.com/', 'name': 'quora', 'category': '技术', 'info': ''}
                 {'href': 'http://toutiao.io/', 'name': '开发者头条', 'category': '技术', 'info': ''}
                 {'href': 'http://weekly.manong.io/issues/', 'name': '码农周刊', 'category': '', 'info': ''}
+                {'href': 'http://fex.baidu.com/', 'name': 'FEX', 'category': '', 'info': ''}
                 {'href': 'http://www.ruanyifeng.com/blog/', 'name': '阮一峰', 'category': '', 'info': ''}
                 {'href': 'http://www.ituring.com.cn/minibook', 'name': '图灵社区', 'category': '', 'info': ''}
                 {'href': 'http://hackerspaces.org/wiki/Hackerspaces', 'name': 'HackerSpaces', 'category': '技术', 'info': ''}
