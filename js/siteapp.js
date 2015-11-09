@@ -429,6 +429,11 @@
         title: 'tools',
         content: [
           {
+            'href': 'http://stackshare.io/',
+            'name': 'stackshare',
+            'category': '',
+            'info': '各种工具'
+          }, {
             'href': 'https://shimo.im',
             'name': '石墨',
             'category': '',

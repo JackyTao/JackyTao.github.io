@@ -100,6 +100,7 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: 'tools'
             content: [
+                {'href': 'http://stackshare.io/', 'name': 'stackshare', 'category': '', 'info': '各种工具'},
                 {'href': 'https://shimo.im', 'name': '石墨', 'category': '', 'info': '文档协同'},
                 {'href': 'http://www.zcool.com.cn/', 'name': '站酷', 'category': '', 'info': ''},
                 {'href': 'http://b3c4.com/', 'name': '导航', 'category': '', 'info': ''},
