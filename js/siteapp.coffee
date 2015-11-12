@@ -21,6 +21,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://blog.samaltman.com/', 'name': 'samaltman', 'category': '技术 & 行业', 'info': ''}
                 {'href': 'http://www.paulgraham.com/', 'name': 'paulgraham', 'category': '技术 & 行业', 'info': ''}
                 {'href': 'http://news.dbanotes.net/', 'name': '小道消息', 'category': '技术', 'info': ''}
+                {'href': 'https://www.gitbook.com/explore', 'name': 'gitbook', 'category': '技术', 'info': ''}
                 {'href': 'http://www.yunweipai.com/', 'name': '运维派', 'category': '技术', 'info': ''}
                 {'href': 'http://www.quora.com/', 'name': 'quora', 'category': '技术', 'info': ''}
                 {'href': 'http://toutiao.io/', 'name': '开发者头条', 'category': '技术', 'info': ''}

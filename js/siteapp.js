@@ -79,6 +79,11 @@
             'category': '技术',
             'info': ''
           }, {
+            'href': 'https://www.gitbook.com/explore',
+            'name': 'gitbook',
+            'category': '技术',
+            'info': ''
+          }, {
             'href': 'http://www.yunweipai.com/',
             'name': '运维派',
             'category': '技术',
