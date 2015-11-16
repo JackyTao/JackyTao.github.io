@@ -534,6 +534,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://www.yigoonet.com/',
+            'name': '医谷',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.geekheal.com/',
             'name': '奇点',
             'category': '',
