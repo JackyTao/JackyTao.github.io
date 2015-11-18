@@ -534,6 +534,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://www.yx129.com/',
+            'name': '医享网',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.yigoonet.com/',
             'name': '医谷',
             'category': '',
