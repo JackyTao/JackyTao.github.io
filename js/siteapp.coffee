@@ -18,6 +18,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: 'techSites'
             content: [
                 {'href': 'http://news.ycombinator.com', 'name': 'Hacker News', 'category': '技术 & 行业', 'info': '黑客和创业: 请认准，教父的网站'}
+                {'href': 'http://macro.ycombinator.com/', 'name': 'macro', 'category': '技术 & 行业', 'info': '黑客和创业: 请认准，教父的网站'}
                 {'href': 'http://blog.samaltman.com/', 'name': 'samaltman', 'category': '技术 & 行业', 'info': ''}
                 {'href': 'http://www.paulgraham.com/', 'name': 'paulgraham', 'category': '技术 & 行业', 'info': ''}
                 {'href': 'http://news.dbanotes.net/', 'name': '小道消息', 'category': '技术', 'info': ''}
