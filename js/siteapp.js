@@ -449,6 +449,11 @@
             'category': '',
             'info': '各种工具'
           }, {
+            'href': 'http://www.iconfont.cn/',
+            'name': 'iconfont',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://shimo.im',
             'name': '石墨',
             'category': '',
