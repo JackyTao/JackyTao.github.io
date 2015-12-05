@@ -454,6 +454,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://caniuse.com/',
+            'name': 'caniuse: browsersupportcheck',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://shimo.im',
             'name': '石墨',
             'category': '',
