@@ -459,6 +459,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'https://www.cloudflare.com/',
+            'name': 'cloudflare',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://shimo.im',
             'name': '石墨',
             'category': '',
