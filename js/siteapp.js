@@ -49,8 +49,8 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'https://github.com/',
-            'name': 'GitHub',
+            'href': 'http://www.shurufa.me/',
+            'name': '书入法',
             'category': '',
             'info': ''
           }

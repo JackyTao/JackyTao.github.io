@@ -12,7 +12,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://baijia.baidu.com', 'name': '百度百家', 'category': '', 'info': ''}
                 {'href': 'http://www.iresearch.cn', 'name': '艾瑞', 'category': '', 'info': ''}
                 {'href': 'http://www.geekpark.net', 'name': '极客公园', 'category': '', 'info': ''}
-                {'href': 'https://github.com/', 'name': 'GitHub', 'category': '', 'info': ''}
+                {'href': 'http://www.shurufa.me/', 'name': '书入法', 'category': '', 'info': ''}
             ]
         }, {
             title: 'techSites'
