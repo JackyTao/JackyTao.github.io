@@ -60,7 +60,7 @@ set autoread
 let mapleader = ','
 let g:mapleader = ','
 let &termencoding=&encoding
-set fileencodings=utf-8
+set fileencodings=utf-8,gbk
 
 let g:syntastic_python_checker_args = "--max-complexity 13 --ignore=E501"
 let g:syntastic_always_populate_loc_list=1
