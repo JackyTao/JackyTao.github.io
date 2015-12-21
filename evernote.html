@@ -15,7 +15,7 @@
     <link href="css/thumbnail-gallery.css" rel="stylesheet">
 </head>
 
-<body ng-app="testApp">
+<body>
 
     <div class="container">
 
@@ -84,8 +84,6 @@
     <script src="js/underscore-min.js"></script>
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
     <script>
         // gen month array: [] 
         var month_matrix = [[0, 0, 0, 0, 0, 0, 0],
@@ -182,30 +180,6 @@
     </script>
 
 
-    <!-- Route expample of Angularjs -->
-    <script>
-        var testApp = angular.module('testApp', ['ngRoute']);
-        testApp.config(['$routeProvider', function ($routeProvider) {
-            $routeProvider
-            .when('/a', {
-                templateUrl: 'a.html',
-                controller: 'aCtr'
-            })
-            .when('/b', {
-                templateUrl: 'b.html',
-                controller: 'bCtr'
-            })
-            .otherwise({
-                redirectTo: '/a'
-            });
-        }]); 
-        testApp.controller('aCtr', function($scope){
-        
-        });
-        testApp.controller('bCtr', function($scope){
-        
-        });
-    </script>
     <script src="https://leancloud.cn/scripts/lib/av-0.4.9.min.js"></script>
     <script>
         AV.initialize("515hu35d09fm52i8ysg97c5osn7uwfmfrii1kn3nr51ts7zi", "bhgimrn599q9vzzc5p890qgqkrrn8lgb62evekxk0dpqx07f");
