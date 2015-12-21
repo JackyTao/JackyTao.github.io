@@ -111,7 +111,9 @@
                 month_matrix[Math.floor((i + start_week_day - 1) / 7)][(i + start_week_day - 1) % 7] = i + 1;
             }
         }
-        var html = _.template(document.getElementById('calendar').innerHTML, {month_name: (d.getMonth() + 11) % 12 + 1, month_matrix: month_matrix});
+        var html = _.template(
+            document.getElementById('calendar').innerHTML,
+            {month_name: (d.getMonth() + 11) % 12 + 1, month_matrix: month_matrix});
         document.getElementById('table-container').innerHTML = html;
 
         var start_week_day_next = (d.getDay() + 6) % 7 + 1;
@@ -125,7 +127,9 @@
             }
         }
 
-        var html_next = _.template(document.getElementById('calendar').innerHTML, {month_name: (d.getMonth() + 11) % 12 + 1, month_matrix: month_matrix_next});
+        var html_next = _.template(
+            document.getElementById('calendar').innerHTML,
+            {month_name: (d.getMonth() + 11) % 12 + 1, month_matrix: month_matrix_next});
         document.getElementById('table-container-2').innerHTML = html_next;
     </script>
 
