@@ -14,6 +14,11 @@
             'category': '技术 & 行业',
             'info': '黑客和创业: 请认准，教父的网站'
           }, {
+            'href': 'http://g.zhutao.xyz',
+            'name': 'google',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://highscalability.com/',
             'name': 'highscalability',
             'category': '',

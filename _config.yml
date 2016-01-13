@@ -50,6 +50,7 @@ links:
     url: /books/
   - title: google
     url: http://g.zhutao.xyz
+    external: true
 #  - title: 搜狐
 #    url: http://www.sohu.com
 #    external: true
