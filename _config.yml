@@ -48,6 +48,8 @@ links:
     url: /sites
   - title: 书单
     url: /books/
+  - title: google
+    url: http://g.zhutao.xyz
 #  - title: 搜狐
 #    url: http://www.sohu.com
 #    external: true
