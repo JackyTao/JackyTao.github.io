@@ -3,17 +3,21 @@ set nocompatible " be iMproved
 filetype off " required!
 
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
+
 
 " My Bundles here:
 "
 " original repos on github
 " autocompletion
+" Golang
+Bundle 'fatih/vim-go'
 Bundle 'davidhalter/jedi-vim'
 " file tree
 Bundle 'scrooloose/nerdtree'
@@ -25,6 +29,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 " syntax checking plugin
 Bundle 'vim-scripts/Syntastic'
+"Bundle 'scrooloose/syntastic'
 " comment code
 Bundle 'scrooloose/nerdcommenter'
 " tag of code
@@ -36,7 +41,9 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Lokaltog/vim-easymotion'
 
 " 配色
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'stephenmckinney/vim-solarized-powerline'
+
 Bundle 'Lokaltog/vim-powerline'
 
 " vim-scripts repos
@@ -45,8 +52,12 @@ Bundle 'L9'
 " Mark down
 Bundle 'plasticboy/vim-markdown'
 
+
 " coffee-script
 Bundle 'kchmck/vim-coffee-script'
+
+" stylus
+Bundle 'wavded/vim-stylus'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -54,6 +65,7 @@ Bundle 'kchmck/vim-coffee-script'
 "
 " 一些基本配置
 "
+call vundle#end()
 filetype plugin indent on " required!
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -100,7 +112,10 @@ set laststatus =2 "always has status line
 
 "colorscheme desert
 let g:molokai_original = 1
-colorscheme molokai
+colorscheme desert
+
+" comments in vim invisible when use molokai
+"colorscheme molokai
 
 
 "
@@ -137,3 +152,12 @@ filetype plugin indent on
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
+"
+" Golang map
+" au: automatic
+" FileType go: golang file
+" <leader> is defined previously: ','
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>ds <Plug>(go-def-split)
+au FileType go nmap <leader>gd <Plug>(go-doc)
