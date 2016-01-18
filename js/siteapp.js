@@ -384,8 +384,8 @@
         title: 'study',
         content: [
           {
-            'href': 'http://www.swiftv.cn/',
-            'name': 'swiftv',
+            'href': 'https://www.edx.org/',
+            'name': 'edx',
             'category': '',
             'info': ''
           }, {
@@ -441,6 +441,11 @@
           }, {
             'href': 'http://speakerdeck.com',
             'name': 'speakerdeck',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.swiftv.cn/',
+            'name': 'swiftv',
             'category': '',
             'info': ''
           }
