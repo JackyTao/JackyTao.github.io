@@ -464,6 +464,11 @@
             'category': '',
             'info': '各种工具'
           }, {
+            'href': 'http://www.startupfuckingadvice.com/',
+            'name': 'startupfuckingadvice',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.iconfont.cn/',
             'name': 'iconfont',
             'category': '',

@@ -107,6 +107,7 @@ siteapp.controller 'SiteController', ($scope) ->
             content: [
                 {'href': 'http://finda.photo/', 'name': 'findaphoto', 'category': '', 'info': ''},
                 {'href': 'http://stackshare.io/', 'name': 'stackshare', 'category': '', 'info': '各种工具'},
+                {'href': 'http://www.startupfuckingadvice.com/', 'name': 'startupfuckingadvice', 'category': '', 'info': ''},
                 {'href': 'http://www.iconfont.cn/', 'name': 'iconfont', 'category': '', 'info': ''},
                 {'href': 'http://caniuse.com/', 'name': 'caniuse: browsersupportcheck', 'category': '', 'info': ''},
                 {'href': 'https://www.cloudflare.com/', 'name': 'cloudflare', 'category': '', 'info': ''},
