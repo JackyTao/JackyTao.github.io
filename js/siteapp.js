@@ -454,6 +454,11 @@
         title: 'tools',
         content: [
           {
+            'href': 'http://finda.photo/',
+            'name': 'findaphoto',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://stackshare.io/',
             'name': 'stackshare',
             'category': '',
