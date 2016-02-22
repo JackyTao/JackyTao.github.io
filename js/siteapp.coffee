@@ -14,6 +14,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.iresearch.cn', 'name': '艾瑞', 'category': '', 'info': ''}
                 {'href': 'http://www.geekpark.net', 'name': '极客公园', 'category': '', 'info': ''}
                 {'href': 'http://www.shurufa.me/', 'name': '书入法', 'category': '', 'info': ''}
+                {'href': 'http://pmdaniu.com/', 'name': '产品大牛', 'category': '', 'info': ''}
             ]
         }, {
             title: 'techSites'

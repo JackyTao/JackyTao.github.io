@@ -58,6 +58,11 @@
             'name': '书入法',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://pmdaniu.com/',
+            'name': '产品大牛',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
