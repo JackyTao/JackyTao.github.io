@@ -464,6 +464,11 @@
         title: 'tools',
         content: [
           {
+            'href': 'https://developers.google.com/speed/pagespeed/insights/',
+            'name': 'googleinsight',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://finda.photo/',
             'name': 'findaphoto',
             'category': '',

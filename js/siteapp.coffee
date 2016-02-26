@@ -107,6 +107,7 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: 'tools'
             content: [
+                {'href': 'https://developers.google.com/speed/pagespeed/insights/', 'name': 'googleinsight', 'category': '', 'info': ''},
                 {'href': 'http://finda.photo/', 'name': 'findaphoto', 'category': '', 'info': ''},
                 {'href': 'http://stackshare.io/', 'name': 'stackshare', 'category': '', 'info': '各种工具'},
                 {'href': 'http://www.startupfuckingadvice.com/', 'name': 'startupfuckingadvice', 'category': '', 'info': ''},
