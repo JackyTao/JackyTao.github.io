@@ -129,6 +129,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.w3.org/Protocols/', 'name': 'W3C', 'category': '', 'info': ''},
                 {'href': 'https://readthedocs.org', 'name': 'readthedocs', 'category': '', 'info': ''},
                 {'href': 'https://www.debuggex.com/', 'name': '调试正则表达式', 'category': '', 'info': ''},
+                {'href': 'http://chrome-extension-downloader.com/', 'name': 'downloadcrx', 'category': '', 'info': ''},
             ]
         }, {
             title: '医疗'

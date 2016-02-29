@@ -573,6 +573,11 @@
             'name': '调试正则表达式',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://chrome-extension-downloader.com/',
+            'name': 'downloadcrx',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
