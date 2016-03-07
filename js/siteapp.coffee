@@ -181,6 +181,12 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://phtv.ifeng.com/program/qqsrx', 'name': '三人行', 'category': '', 'info': ''}
             ]
         }, {
+            title: 'awesomes'
+            content: [
+                {'href': 'http://vimawesome.com', 'name': 'vimawesome', 'category': '', 'info': ''}
+                {'href': 'https://github.com/avelino/awesome-go', 'name': 'goawesome', 'category': '', 'info': ''}
+            ]
+        }, {
             title: '找钱'
             content: [
                 {'href': 'https://www.indiegogo.com/', 'name': 'indiegogo', 'category': '', 'info': ''},
