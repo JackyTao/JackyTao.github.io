@@ -469,6 +469,11 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://appmarketingstack.com/',
+            'name': 'app marketing',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://finda.photo/',
             'name': 'findaphoto',
             'category': '',
