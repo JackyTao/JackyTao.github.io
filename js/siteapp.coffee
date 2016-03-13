@@ -184,6 +184,10 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: '找钱'
             content: [
+                {'href': 'https://www.freelancer.cn', 'name': 'freelancer', 'category': '', 'info': ''},
+                {'href': 'https://www.elance.com/', 'name': 'elance', 'category': '', 'info': ''},
+                {'href': 'https://www.upwork.com/', 'name': 'upwork', 'category': '', 'info': ''},
+                {'href': 'http://www.csto.com/', 'name': 'CSTO', 'category': '', 'info': ''},
                 {'href': 'https://www.indiegogo.com/', 'name': 'indiegogo', 'category': '', 'info': ''},
                 {'href': 'https://www.kickstarter.com/', 'name': 'kickstarter', 'category': '', 'info': ''},
                 {'href': 'http://www.vchello.cn/', 'name': '微投网', 'category': '', 'info': ''},
