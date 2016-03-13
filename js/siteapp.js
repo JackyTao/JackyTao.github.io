@@ -771,6 +771,21 @@
           }
         ]
       }, {
+        title: 'awesomes',
+        content: [
+          {
+            'href': 'http://vimawesome.com',
+            'name': 'vimawesome',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://github.com/avelino/awesome-go',
+            'name': 'goawesome',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
         title: '找钱',
         content: [
           {
