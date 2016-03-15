@@ -773,6 +773,11 @@
             'name': 'testuniversallink',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://api.super.haomee.cn/?m=Html&a=appDownload',
+            'name': 'test: chaonengbu',
+            'category': '',
+            'info': ''
           }
         ]
       }, {

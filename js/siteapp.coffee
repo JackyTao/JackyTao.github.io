@@ -181,6 +181,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://yedingding.com/', 'name': 'Dingding Ye', 'category': '', 'info': ''}
                 {'href': 'http://phtv.ifeng.com/program/qqsrx', 'name': '三人行', 'category': '', 'info': ''}
                 {'href': 'https://fds.so/d/38CCA4C77072DDC9/3T9riEAiKQ', 'name': 'testuniversallink', 'category': '', 'info': ''}
+                {'href': 'http://api.super.haomee.cn/?m=Html&a=appDownload', 'name': 'test: chaonengbu', 'category': '', 'info': ''}
             ]
         }, {
             title: 'awesomes'
