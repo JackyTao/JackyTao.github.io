@@ -53,35 +53,6 @@
     </nav>
 
     <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 id="test-header" class="page-header">从业必读</h1>
-            </div>
-        </div>
-
-        <div ng-repeat="category in sites">
-            <div class="row">
-                <div class="col-lg-12"> <h2 class="page-header" ng-bind="category.title"></h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-xs-6 card" ng-repeat="site in category.content">
-                    <h3><a target="_blank" href="{{ site.href }}" ng-bind="site.name"></a></h3>
-                </div>
-            </div>
-        </div>
-        <hr>
-
-
-        <!-- placeholder of changyan 
-            <div id="SOHUCS"></div>
-        -->
-
-        <!-- placeholder of share.js -->
-        <div class="social-share"></div>
-
-
-        <footer>
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Jacky Zhu 2015</p>
@@ -91,51 +62,9 @@
                     <a href="ds38CCA4C77072DDC9://com.misingularity.linuxcommand?click_id=3U3mqsHDGg">ds38CCA4C77072DDC9://com.misingularity.linuxcommand?click_id=3U3mqsHDGg</a>
                 </div>
             </div>
-        </footer>
 
     </div>
     <!-- /container -->
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="https://cdn.firebase.com/js/client/1.1.0/firebase.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/siteapp.js"></script>
-    <!-- share.js -->
-    <script src="js/share.min.js"></script>
-
-    <!-- changyan -->
-    <!--
-    <script>
-          (function(){
-              var appid = 'cyqU2kr6K',
-                  conf = 'prod_5a7b238ba0f6502e5d6be14424b20ded';
-              var doc = document,
-                  s = doc.createElement('script'),
-                  h = doc.getElementsByTagName('head')[0] ||
-                          doc.head || doc.documentElement;
-                  s.type = 'text/javascript';
-                  s.charset = 'utf-8';
-                  s.src = 'http://assets.changyan.sohu.com/upload/changyan.js?conf='+
-                              conf +'&appid=' + appid;
-                  h.insertBefore(s,h.firstChild);
-           })()
-    </script>
-    -->
-    <script>
-        $('#test-header').on('click', function() {
-            alert('in go to ..');
-            location.href = 'https://fds.so/d/38CCA4C77072DDC9/3T9riEAiKQ'; 
-        });
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?61f9ece03516be465b81e188c12406a6";
-          var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 
 
 </body>
