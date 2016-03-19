@@ -26,28 +26,30 @@ DeepShare.dsLogDebug = function(msg) {
 };
 
 DeepShare.DEBUG = true;
-DeepShare.BIND_STATUS = {
-    INITIAL: 0,
-    BINDED: 1,
-    DISMISSED: 2,
-};
 
-//-----------------------------------------------------------------------------
-// Constants List
-//-----------------------------------------------------------------------------
-DeepShare.kPostVerb = 'POST';
-DeepShare.kRequestProtocol = 'https://';
-DeepShare.kServerName = 'fds.so/';
-DeepShare.kVersionName = 'v2/';
-DeepShare.kAPIJS = 'jsapi/';
-DeepShare.kAPIUrl = 'url/';
-DeepShare.kDSTag = 'ds_tag';
 
 
 function DeepShare(params) {
+    //-----------------------------------------------------------------------------
+    // Constants List
+    //-----------------------------------------------------------------------------
+    var BIND_STATUS = {
+        INITIAL: 0,
+        BINDED: 1,
+        DISMISSED: 2,
+    };
+    var DS_kPostVerb = 'POST';
+    var DS_kRequestProtocol = 'https://';
+    var DS_kServerName = 'fds.so/';
+    var DS_kVersionName = 'v2/';
+    var DS_kAPIJS = 'jsapi/';
+    var DS_kAPIUrl = 'url/';
+    var DS_kDSTag = 'ds_tag';
+
+
     var _deeplinkLocation = '';
     var _dstLocation = '';
-    var _bindedDeepLink = DeepShare.BIND_STATUS.INITIAL;
+    var _bindedDeepLink = BIND_STATUS.INITIAL;
 
     var _AppData = {
         inapp_data:      '',
@@ -122,9 +124,9 @@ function DeepShare(params) {
             window.addEventListener(type, listener);
         },
         windowUrlAddTag: function () {
-            if (window.location.search.indexOf(DeepShare.kDSTag) < 0) {
+            if (window.location.search.indexOf(DS_kDSTag) < 0) {
                 var tag = Math.floor((Math.random() * 1000000));
-                var queryStr = "?" + DeepShare.kDSTag + "=" + tag;
+                var queryStr = "?" + DS_kDSTag + "=" + tag;
                 window.location.search = queryStr;
                 DeepShare.dsLogDebug("Url Add Tag:" + queryStr);
             }
@@ -221,17 +223,17 @@ function DeepShare(params) {
         DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink);
 
         // !force: [null|undefined|''|0] all can be true 
-        if (!force && _bindedDeepLink === DeepShare.BIND_STATUS.BINDED) {
+        if (!force && _bindedDeepLink === BIND_STATUS.BINDED) {
             return;
         }
 
         // FIXME: add for test
         // _Params = Params
 
-        var requestUrl = DeepShare.kRequestProtocol +
-                         DeepShare.kServerName +
-                         DeepShare.kVersionName +
-                         DeepShare.kAPIJS +
+        var requestUrl = DS_kRequestProtocol +
+                         DS_kServerName +
+                         DS_kVersionName +
+                         DS_kAPIJS +
                          _AppData.app_id;
 
         $.ajax({
@@ -241,7 +243,7 @@ function DeepShare(params) {
             xhrFields: {withCredentials: true,},
             success: function(result) {
                 _Params = result;
-                _bindedDeepLink = DeepShare.BIND_STATUS.BINDED;
+                _bindedDeepLink = BIND_STATUS.BINDED;
                 DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
             },
             error: function() {
@@ -260,8 +262,8 @@ function DeepShare(params) {
                 "ds_tag": _Params.ds_tag
             }
         };
-        var requestUrl = DeepShare.kRequestProtocol +
-                         DeepShare.kServerName +
+        var requestUrl = DS_kRequestProtocol +
+                         DS_kServerName +
                          _DSAction.trackingUrl +
                          _Params.app_id;
         var paramsJson = JSON.stringify(params);
@@ -281,8 +283,8 @@ function DeepShare(params) {
                 "ds_tag": _Params.ds_tag
             }
         };
-        var requestUrl = DeepShare.kRequestProtocol +
-                         DeepShare.kServerName +
+        var requestUrl = DS_kRequestProtocol +
+                         DS_kServerName +
                          _DSAction.trackingUrl +
                          _Params.app_id;
         var paramsJson = JSON.stringify(params);
@@ -575,7 +577,7 @@ function DeepShare(params) {
        
         /* 
          * Maybe use later 
-        if (_bindedDeepLink === DeepShare.BIND_STATUS.INITIAL) {
+        if (_bindedDeepLink === BIND_STATUS.INITIAL) {
             // Just ignore, have not bind yet,
             // BINDED or DISMISSED both will fall through
             //
@@ -695,7 +697,7 @@ function DeepShare(params) {
                             case _AppInsStatus.NotInstall:
                                 _gotoUrl(_Params.url);
                                 break;
-                            case instance._AppInsStatus.Unclear:
+                            case _AppInsStatus.Unclear:
                                 _gotoIOSLandingPage();
                                 break;
                             default:
@@ -711,7 +713,7 @@ function DeepShare(params) {
                 DeepShare.dsLogDebug("is safari");
 
                 _deeplinkLaunch(deeplinkurl, 500, function () {
-                    _gotoUrl(instance._Params.url);
+                    _gotoUrl(_Params.url);
                     });
                 }
             }
@@ -784,7 +786,7 @@ function DeepShare(params) {
             }
         }
 
-        _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
+        _bindedDeepLink = BIND_STATUS.DISMISSED;
     };
 
     this.SetParam = function(params) {
