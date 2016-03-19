@@ -742,7 +742,7 @@ function DeepShare(params) {
                     DeepShare.dsLogDebug(_Params.yyb_url);
 
                     // In QQ browser open yyburl without page event!
-                    _refreshBind(true);
+                    _refreshBind();
                     _gotoUrl(_Params.yyb_url);
                 } else {
                     _gotoCannotDeeplink();
