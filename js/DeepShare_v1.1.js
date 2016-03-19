@@ -47,6 +47,9 @@ function DeepShare(params) {
     var DS_kDSTag = 'ds_tag';
 
 
+    //-----------------------------------------------------------------------------
+    // Private
+    //-----------------------------------------------------------------------------
     var _deeplinkLocation = '';
     var _dstLocation = '';
     var _bindedDeepLink = BIND_STATUS.INITIAL;
@@ -582,6 +585,7 @@ function DeepShare(params) {
             // BINDED or DISMISSED both will fall through
             //
             // currently the same effect of `_isIosNotAvailable` and `_isAndroidNotAvailable`
+            // because, the default params of INITIAL equals to `_isIosNotAvailable` `_isAndroidNotAvailable`
             return;
         }
         */
