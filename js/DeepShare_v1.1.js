@@ -741,6 +741,8 @@ function DeepShare(params) {
                 if (_shouldGotoYYB()) {
                     DeepShare.dsLogDebug(_Params.yyb_url);
 
+                    // In QQ browser open yyburl without page event!
+                    _refreshBind(true);
                     _gotoUrl(_Params.yyb_url);
                 } else {
                     _gotoCannotDeeplink();
