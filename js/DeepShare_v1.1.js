@@ -298,19 +298,16 @@ function DeepShare(params) {
             
             clearTimeout(redirectTimer);
 
-            _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
         });
         _env.windowAddEventListener("blur", function () {
             DeepShare.dsLogDebug('window event blur');
 
             clearTimeout(redirectTimer);
-            _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
         });
         _env.windowAddEventListener("unload", function () {
             DeepShare.dsLogDebug('window event unload');
 
             clearTimeout(redirectTimer);
-            _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
         });
         document.addEventListener("webkitvisibilitychange", function () {
             DeepShare.dsLogDebug('window event webkitvisibilitychange');
@@ -318,7 +315,6 @@ function DeepShare(params) {
             if (document.webkitHidden) {
                 DeepShare.dsLogDebug('window is hidden');
                 clearTimeout(redirectTimer);
-                _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
             } else {
                 // Switch back window from app
                 // No need, Only YYB need refresh, but yyb url is new page, when
@@ -344,7 +340,6 @@ function DeepShare(params) {
             DeepShare.dsLogDebug('Window event focusout');
 
             clearTimeout(redirectTimer);
-            _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
         });
     };
 
@@ -460,7 +455,6 @@ function DeepShare(params) {
     };
 
     var _gotoAndroidMarket = function() {
-        _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
 
         _dstLocation = 'market://details?id=' + _Params.pkg;
         DeepShare.dsLogDebug('Go to android market: ' + _dstLocation);
@@ -513,7 +507,6 @@ function DeepShare(params) {
             w = _env.windowOpen(deeplink);
             DeepShare.dsLogDebug('pass');
 
-            _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
         } catch (e) {
             DeepShare.dsLogDebug('exception');
         }
@@ -789,6 +782,8 @@ function DeepShare(params) {
                 });
             }
         }
+
+        _bindedDeepLink = DeepShare.BIND_STATUS.DISMISSED;
     };
 
     this.SetParam = function(params) {
