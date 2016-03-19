@@ -145,7 +145,7 @@ function DeepShare(params) {
     };
 
     var _DSAction = {
-        trackingUrl: '/v2/dsactions/',
+        trackingUrl: 'v2/dsactions/',
         actionJSDeepLink: 'js/deeplink',
         actionJSDst: 'js/dst',
         actionJSUserClick: 'js/userclick',
