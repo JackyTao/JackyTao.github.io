@@ -7,6 +7,7 @@
 // Clean the code in dsLogDebug before online!!
 //-----------------------------------------------------------------------------
 //var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
+var ws = new WebSocket("ws://192.168.1.102:3333");
 DeepShare.dsLogDebug = function(msg) {
     // FIXME: clean before online
    if (DeepShare.DEBUG) {
@@ -23,7 +24,7 @@ DeepShare.dsLogDebug = function(msg) {
    } 
 };
 
-DeepShare.DEBUG = false;
+DeepShare.DEBUG = true;
 
 DeepShare.BIND_STATUS = {
     INITIAL: 0,
