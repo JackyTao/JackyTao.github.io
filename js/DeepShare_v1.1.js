@@ -505,10 +505,10 @@ function DeepShare(params) {
         try {
             _reportDSJSEvent(_DSAction.actionJSDeepLink, deeplink);
             w = _env.windowOpen(deeplink);
-            DeepShare.dsLogDebug('pass');
+            DeepShare.dsLogDebug('chrome ios open pass');
 
         } catch (e) {
-            DeepShare.dsLogDebug('exception');
+            DeepShare.dsLogDebug('chrome ios open exception');
         }
         if (w) {
             _env.windowClose();
@@ -681,6 +681,7 @@ function DeepShare(params) {
                     DeepShare.dsLogDebug("isUniversallink = true");
 
 
+                    // TODO: universal link problem!
                     _gotoUrl(_Params.ds_url);
                     /*
                     if (_env.cookieEnabled()){
