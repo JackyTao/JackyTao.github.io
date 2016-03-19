@@ -513,7 +513,7 @@ function DeepShare(params) {
             DeepShare.dsLogDebug('chrome ios open exception');
         }
         if (w) {
-            _env.windowClose();
+            //_env.windowClose();
         } else {
             timeoutCallback();
         }
