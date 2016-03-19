@@ -182,29 +182,29 @@ function DeepShare(params) {
         //     document.write("<script src='../../jsserver/chs/langconfig.js'><\/script>");
         // }
 
-        if (!IsNullOrUndefined(params.appID)) {
-            _AppData.app_id = params.appID;
+        if (!IsNullOrUndefined(params.app_id)) {
+            _AppData.app_id = params.app_id;
         }
-        if (!IsNullOrUndefined(params.inAppData)) {
-            _AppData.inapp_data     = JSON.stringify(params.inAppData);
+        if (!IsNullOrUndefined(params.inapp_data)) {
+            _AppData.inapp_data     = JSON.stringify(params.inapp_data);
         }
-        if (!IsNullOrUndefined(params.senderID)) {
-            _AppData.sender_id      = params.senderID;
+        if (!IsNullOrUndefined(params.sender_id)) {
+            _AppData.sender_id      = params.sender_id;
         }
-        if (!IsNullOrUndefined(params.downloadTitle)) {
-            _AppData.download_title = params.downloadTitle;
+        if (!IsNullOrUndefined(params.download_title)) {
+            _AppData.download_title = params.download_title;
         }
-        if (!IsNullOrUndefined(params.downloadMsg)) {
-            _AppData.download_msg   = params.downloadMsg;
+        if (!IsNullOrUndefined(params.download_msg)) {
+            _AppData.download_msg   = params.download_msg;
         }
-        if (!IsNullOrUndefined(params.downloadBtnText)) {
-            _AppData.download_btn_text  = params.downloadBtnText;
+        if (!IsNullOrUndefined(params.download_btn_text)) {
+            _AppData.download_btn_text  = params.download_btn_text;
         }
-        if (!IsNullOrUndefined(params.downloadUrlIOS)) {
-            _AppData.download_url_ios   = params.downloadUrlIOS;
+        if (!IsNullOrUndefined(params.download_url_ios)) {
+            _AppData.download_url_ios   = params.download_url_ios;
         }
-        if (!IsNullOrUndefined(params.downloadUrlAndroid)) {
-            _AppData.download_url_android   = params.downloadUrlAndroid;
+        if (!IsNullOrUndefined(params.download_url_android)) {
+            _AppData.download_url_android   = params.download_url_android;
         }
         if (!IsNullOrUndefined(params.channels)) {
             _AppData.channels     = JSON.stringify(params.channels);
