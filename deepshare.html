@@ -65,7 +65,7 @@
     </section>
   </div>
   
-  <script src="/js/DeepShare_v1.1.api-2.min.js"></script>
+  <script src="/js/DeepShare_v1.1.api-2.js"></script>
   <script type="text/javascript">
     $("#showcommand1").html(getParameterByName('name'));
     $("#showcommand2").html('mkdir');
@@ -79,6 +79,7 @@
 
     // Generate by 3rd party
     var params1 = {
+        ds_worker_id: 0,
         inapp_data : {
             name: getParameterByName('name'),
         },
@@ -86,6 +87,7 @@
         app_id: getParameterByName('appid'),
     }
     var params2 = {
+        ds_worker_id: 1,
         inapp_data : {
             name: 'mkdir',
         },
@@ -97,13 +99,12 @@
         // wait just to see the full log!!
         // Entrance call
         var deepshare = new DeepShare(getParameterByName('appid'));
-        var dsworker1 = deepshare.BindParams(params1);
+        deepshare.BindParams([params1, params2]);
         $('#openurl1').click(function() {
-            dsworker1.Start();
+            deepshare.Start(0);
         });
-        var dsworker2 = deepshare.BindParams(params2);
         $('#openurl2').click(function() {
-            dsworker2.Start();
+            deepshare.Start(1);
         });
     }, 2000);
 

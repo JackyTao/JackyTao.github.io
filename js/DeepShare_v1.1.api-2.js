@@ -8,7 +8,7 @@
 // Clean the code in dsLogDebug before online!!
 //-----------------------------------------------------------------------------
 //var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
-var ws = new WebSocket("ws://192.168.1.102:3333/");
+//var ws = new WebSocket("ws://192.168.1.102:3333/");
 
 DeepShare.dsLogDebug = function(msg) {
     // FIXME: clean before online
@@ -26,10 +26,17 @@ DeepShare.dsLogDebug = function(msg) {
    } 
 };
 
-DeepShare.DEBUG = true;
+DeepShare.DEBUG = false;
+DS_kPostVerb = 'POST';
+DS_kRequestProtocol = 'https://';
+DS_kServerName = 'fds.so/';
+DS_kVersionName = 'v2/';
+DS_kAPIJS = 'jsapi/';
+DS_kDSTag = 'ds_tag';
 
 
 function DeepShare(app_id) {
+    var instance = this;
 
      this._DSCallbacks = {
         weixinIOSTipCallback: null,
@@ -47,15 +54,59 @@ function DeepShare(app_id) {
         androidPlatformNotAvailCallback: null,
     };
     
+    var workers = {};
 
-    this.app_id = app_id;
+    var _createWorker = function(params, deepinfos) {
+        for (var i = 0; i < params.length; i++) {
+            var item = params[i];
+            var item.app_id = app_id;
+            var worker = new DeepShareWorker(item);
+            // Be careful, worker only has the read access!!
+            worker.__proto__ = instance;
+            // TODO: parse deepinfos
+            worker.SetBindInfo(deepinfos[worker_id]);
+            workers[item.ds_worker_id] = worker 
+    }
+    
 
     this.BindParams = function(params) {
-        params.app_id = this.app_id;
-        var worker = new DeepShareWorker(params);
-        // Be careful, worker only has the read access!!
-        worker.__proto__ = this;
-        return worker;
+        DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink + ', inapp_data: ' + JSON.stringify(params));
+        if (!(params instanceof Array)) {
+            params = [params];
+        }
+
+        // TODO: new api url && params
+        var requestUrl = DS_kRequestProtocol +
+                         DS_kServerName +
+                         DS_kVersionName +
+                         DS_kAPIJS +
+                         app_id;
+
+        $.ajax({
+            url: requestUrl,
+            type: 'POST',
+            data: JSON.stringify(params),
+            xhrFields: {withCredentials: true,},
+            success: function(result) {
+                // TODO: parse result
+                _createWorker(params, result);
+                DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
+            },
+            error: function(xhr, info) {
+                DeepShare.dsLogDebug('Refresh Params Error: ' + JSON.stringify(xhr) + ', info: ' + info);
+            },
+            dataType: 'json',
+        });
+    };
+
+    this.Start = function(worker_id) {
+        //worker_id = +worker_id;
+        // null, undefined, 0, ''
+        if (!worker_id) {
+            workers[0].Start();  
+        } else if (workers.hasOwnProperty(worker_id)) {
+            workers[worker_id].Start();  
+        }
     }
 
     this.SetCallbackWeixinIOSTip = function(callback) {
@@ -114,13 +165,6 @@ function DeepShareWorker(params) {
         BINDED: 1,
         DISMISSED: 2,
     };
-    var DS_kPostVerb = 'POST';
-    var DS_kRequestProtocol = 'https://';
-    var DS_kServerName = 'fds.so/';
-    var DS_kVersionName = 'v2/';
-    var DS_kAPIJS = 'jsapi/';
-    var DS_kAPIUrl = 'url/';
-    var DS_kDSTag = 'ds_tag';
 
 
     //-----------------------------------------------------------------------------
@@ -253,8 +297,9 @@ function DeepShareWorker(params) {
             instance._DSCallbacks = params.callbacks;
         }
 
-        _refreshBind(true);
+        //_refreshBind(true);
     };
+
 
     var _refreshBind = function(force) {
         DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink + ', inapp_data: ' + JSON.stringify(_AppData));
@@ -864,9 +909,6 @@ function DeepShareWorker(params) {
         _bindedDeepLink = BIND_STATUS.DISMISSED;
     };
 
-    this.SetParam = function(params) {
-        _initialize(params);    
-    };
     this.SetBindInfo = function(params) {
         _Params = params;
     };
