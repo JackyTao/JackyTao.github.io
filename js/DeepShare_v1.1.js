@@ -530,7 +530,7 @@ function DeepShareWorker(params) {
 
     var _gotoUrl = function(url) {
         DeepShare.dsLogDebug('Goto url: ' + url);
-        _refreshBind();
+        _refreshBind(true);
 
         // Page changed, no need to refresh
 
