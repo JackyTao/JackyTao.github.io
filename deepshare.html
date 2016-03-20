@@ -68,7 +68,7 @@
   <script src="/js/DeepShare_v1.1.js"></script>
   <script type="text/javascript">
     $("#showcommand1").html(getParameterByName('name'));
-    $("#showcommand2").html('mkdir');
+    $("#showcommand2").html(getParameterByName('name'));
 	function getParameterByName(name) {
 	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -84,13 +84,15 @@
         },
         sender_id : getParameterByName('sender_id'),
         app_id: getParameterByName('appid'),
+        channels: ['top'],
     }
     var params2 = {
         inapp_data : {
-            name: 'mkdir',
+            name: getParameterByName('name'),
         },
         sender_id : getParameterByName('sender_id'),
         app_id: getParameterByName('appid'),
+        channels: ['bottom'],
     }
 
     setTimeout(function(){
