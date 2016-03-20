@@ -48,17 +48,27 @@
     <section>
       <div class="row col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3" style="margin-top:5.5%;">
         <p class="text-center" style="font-size: 4vw; font-family:PingFang SC">命&nbsp;&nbsp;&nbsp;&nbsp;令:</p>
-        <button id="showcommand" type="button" class="btn btn-default btn-large btn-block disabled"></button>
+        <button id="showcommand1" type="button" class="btn btn-default btn-large btn-block disabled"></button>
       </div>
       <div class="row col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3" style="margin-top:2.5%;">
-        <button id="openurl" type="button" class="btn-down btn-primary btn-large btn-block ">查&nbsp;&nbsp;&nbsp;&nbsp;看</button>
+        <button id="openurl2" type="button" class="btn-down btn-primary btn-large btn-block ">查&nbsp;&nbsp;&nbsp;&nbsp;看</button>
+      </div>
+    </section>
+    <section>
+      <div class="row col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3" style="margin-top:5.5%;">
+        <p class="text-center" style="font-size: 4vw; font-family:PingFang SC">命&nbsp;&nbsp;&nbsp;&nbsp;令:</p>
+        <button id="showcommand2" type="button" class="btn btn-default btn-large btn-block disabled"></button>
+      </div>
+      <div class="row col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3" style="margin-top:2.5%;">
+        <button id="openurl2" type="button" class="btn-down btn-primary btn-large btn-block ">查&nbsp;&nbsp;&nbsp;&nbsp;看</button>
       </div>
     </section>
   </div>
   
-  <script src="/js/DeepShare_v1.1.min.js"></script>
+  <script src="/js/DeepShare_v1.1.js"></script>
   <script type="text/javascript">
-    $("#showcommand").html(getParameterByName('name'));
+    $("#showcommand1").html(getParameterByName('name'));
+    $("#showcommand2").html('mkdir');
 	function getParameterByName(name) {
 	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -68,9 +78,16 @@
 
 
     // Generate by 3rd party
-    var params = {
+    var params1 = {
         inapp_data : {
             name: getParameterByName('name'),
+        },
+        sender_id : getParameterByName('sender_id'),
+        app_id: getParameterByName('appid'),
+    }
+    var params2 = {
+        inapp_data : {
+            name: 'mkdir',
         },
         sender_id : getParameterByName('sender_id'),
         app_id: getParameterByName('appid'),
@@ -79,9 +96,14 @@
     setTimeout(function(){
         // wait just to see the full log!!
         // Entrance call
-        var deepshare = new DeepShare(params);
-        $('#openurl').click(function() {
-            deepshare.Start();
+        var deepshare = new DeepShare(getParameterByName('appid'));
+        var dsworker = deepshare.BindParams(params);
+        $('#openurl1').click(function() {
+            dsworker.Start();
+        });
+        var dsworker2 = deepshare.BindParams(params);
+        $('#openurl2').click(function() {
+            dsworker2.Start();
         });
     }, 2000);
 
