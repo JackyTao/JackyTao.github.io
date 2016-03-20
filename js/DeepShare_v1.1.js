@@ -530,6 +530,7 @@ function DeepShareWorker(params) {
 
     var _gotoUrl = function(url) {
         DeepShare.dsLogDebug('Goto url: ' + url);
+        _refreshBind();
 
         // Page changed, no need to refresh
 
@@ -802,7 +803,6 @@ function DeepShareWorker(params) {
                     DeepShare.dsLogDebug(_Params.yyb_url);
 
                     // In QQ browser open yyburl without page event!
-                    _refreshBind();
                     _gotoUrl(_Params.yyb_url);
                 } else {
                     _gotoCannotDeeplink();
