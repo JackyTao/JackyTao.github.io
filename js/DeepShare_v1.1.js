@@ -530,7 +530,6 @@ function DeepShareWorker(params) {
 
     var _gotoUrl = function(url) {
         DeepShare.dsLogDebug('Goto url: ' + url);
-        _refreshBind(true);
 
         // Page changed, no need to refresh
 
@@ -636,6 +635,15 @@ function DeepShareWorker(params) {
     // Public Functions
     //-----------------------------------------------------------------------------
     this.Start = function() {
+        // To bypass mutiple deeplink in one page
+        // Refresh before to make it active!!
+        // But, when redirect by click_id, the refresh is slow!!
+        _refreshBind(true);
+        setTimeout(function(){
+            this._Start();
+        }, 500);
+    }
+    this._Start = function() {
         _reportDSJSEvent('ds_jssdk_click', '');
         var deeplinkurl = '';
        
