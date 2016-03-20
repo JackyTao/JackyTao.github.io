@@ -283,7 +283,7 @@ function DeepShareWorker(params) {
     };
 
     var _refreshBind = function(force) {
-        DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink);
+        DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink + ', inapp_data: ' + JSON.stringify(_AppData));
 
         // !force: [null|undefined|''|0] all can be true 
         if (!force && _bindedDeepLink === BIND_STATUS.BINDED) {
