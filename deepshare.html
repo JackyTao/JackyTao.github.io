@@ -97,11 +97,11 @@
         // wait just to see the full log!!
         // Entrance call
         var deepshare = new DeepShare(getParameterByName('appid'));
-        var dsworker = deepshare.BindParams(params);
+        var dsworker = deepshare.BindParams(params1);
         $('#openurl1').click(function() {
             dsworker.Start();
         });
-        var dsworker2 = deepshare.BindParams(params);
+        var dsworker2 = deepshare.BindParams(params2);
         $('#openurl2').click(function() {
             dsworker2.Start();
         });
