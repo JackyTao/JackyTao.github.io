@@ -80,6 +80,7 @@ function DeepShare(app_id) {
     this.BindParams = function(params) {
         params.app_id = this.app_id;
         var worker = new DeepShareWorker(params);
+        // Be careful, worker only has the read access!!
         worker.__proto__ = this;
         return worker;
     }
@@ -635,12 +636,13 @@ function DeepShareWorker(params) {
     // Public Functions
     //-----------------------------------------------------------------------------
     this.Start = function() {
+        var instance = this;
         // To bypass mutiple deeplink in one page
         // Refresh before to make it active!!
         // But, when redirect by click_id, the refresh is slow!!
         _refreshBind(true);
         setTimeout(function(){
-            this._Start();
+            instance._Start();
         }, 500);
     }
     this._Start = function() {
