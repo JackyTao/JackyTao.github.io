@@ -637,13 +637,14 @@ function DeepShareWorker(params) {
     //-----------------------------------------------------------------------------
     this.Start = function() {
         var instance = this;
+        // **Temprary solution!**
         // To bypass mutiple deeplink in one page
         // Refresh before to make it active!!
         // But, when redirect by click_id, the refresh is slow!!
         _refreshBind(true);
         setTimeout(function(){
             instance._Start();
-        }, 500);
+        }, 300);
     }
     this._Start = function() {
         _reportDSJSEvent('ds_jssdk_click', '');
