@@ -62,11 +62,12 @@ function DeepShare(app_id) {
             item.app_id = app_id;
             var worker = new DeepShareWorker(item);
             // Be careful, worker only has the read access!!
-            worker.__proto__ = instance;
+            worker.base = instance;
             // TODO: parse deepinfos
             worker.SetBindInfo(deepinfos[worker_id]);
-            workers[item.ds_worker_id] = worker 
-    }
+            workers[item.ds_worker_id] = worker;
+        }
+    };
     
 
     this.BindParams = function(params) {
@@ -107,7 +108,7 @@ function DeepShare(app_id) {
         } else if (workers.hasOwnProperty(worker_id)) {
             workers[worker_id].Start();  
         }
-    }
+    };
 
     this.SetCallbackWeixinIOSTip = function(callback) {
         this._DSCallbacks.weixinIOSTipCallback = callback; 
@@ -294,7 +295,7 @@ function DeepShareWorker(params) {
         }
 
         if (!IsNullOrUndefined(params.callbacks)) {
-            instance._DSCallbacks = params.callbacks;
+            instance.base._DSCallbacks = params.callbacks;
         }
 
         //_refreshBind(true);
@@ -434,22 +435,22 @@ function DeepShareWorker(params) {
         if (type === "ios") {
             switch (dst) {
                 case _DSAction.destination.dstweixintipios:
-                    if (!IsNullOrUndefined(instance._DSCallbacks.weixinIOSTipCallback)) {
-                        instance._DSCallbacks.weixinIOSTipCallback();
+                    if (!IsNullOrUndefined(instance.base._DSCallbacks.weixinIOSTipCallback)) {
+                        instance.base._DSCallbacks.weixinIOSTipCallback();
                     } else {
                         DeepShare.dsLogDebug('weixin ios tip');                     
                     }
                     break;
                 case _DSAction.destination.dstweibotipios:
-                    if (!IsNullOrUndefined(instance._DSCallbacks.weiboIOSTipCallback)) {
-                        instance._DSCallbacks.weiboIOSTipCallback();
+                    if (!IsNullOrUndefined(instance.base._DSCallbacks.weiboIOSTipCallback)) {
+                        instance.base._DSCallbacks.weiboIOSTipCallback();
                     } else {
                         DeepShare.dsLogDebug('weibo ios tip');                     
                     }
                     break;
                 case _DSAction.destination.dstqqtipios:
-                    if (!IsNullOrUndefined(instance._DSCallbacks.qqIOSTipCallback)) {
-                        instance._DSCallbacks.qqIOSTipCallback();
+                    if (!IsNullOrUndefined(instance.base._DSCallbacks.qqIOSTipCallback)) {
+                        instance.base._DSCallbacks.qqIOSTipCallback();
                     } else {
                         DeepShare.dsLogDebug('qq ios tip');                     
                     }
@@ -458,22 +459,22 @@ function DeepShareWorker(params) {
         } else if (type === "android") {
             switch (dst) {
                 case _DSAction.destination.dstweixintipandroid:
-                    if (!IsNullOrUndefined(instance._DSCallbacks.weixinAndroidTipCallback)) {
-                        instance._DSCallbacks.weixinAndroidTipCallback();
+                    if (!IsNullOrUndefined(instance.base._DSCallbacks.weixinAndroidTipCallback)) {
+                        instance.base._DSCallbacks.weixinAndroidTipCallback();
                     } else {
                         DeepShare.dsLogDebug('weixin android tip');                     
                     }
                     break;
                 case _DSAction.destination.dstweibotipandroid:
-                    if (!IsNullOrUndefined(instance._DSCallbacks.weiboAndroidTipCallback)) {
-                        instance._DSCallbacks.weiboAndroidTipCallback();
+                    if (!IsNullOrUndefined(instance.base._DSCallbacks.weiboAndroidTipCallback)) {
+                        instance.base._DSCallbacks.weiboAndroidTipCallback();
                     } else {
                         DeepShare.dsLogDebug('weibo android tip');                     
                     }
                     break;
                 case _DSAction.destination.dstqqtipandroid:
-                    if (!IsNullOrUndefined(instance._DSCallbacks.qqAndroidTipCallback)) {
-                        instance._DSCallbacks.qqAndroidTipCallback();
+                    if (!IsNullOrUndefined(instance.base._DSCallbacks.qqAndroidTipCallback)) {
+                        instance.base._DSCallbacks.qqAndroidTipCallback();
                     } else {
                         DeepShare.dsLogDebug('qq android tip');                     
                     }
@@ -488,8 +489,8 @@ function DeepShareWorker(params) {
     var _gotoCannotDeeplink = function() {
         DeepShare.dsLogDebug('cannot deeplink');
 
-        if (!IsNullOrUndefined(instance._DSCallbacks.cannotDeeplinkCallback)) {
-            instance._DSCallbacks.cannotDeeplinkCallback();
+        if (!IsNullOrUndefined(instance.base._DSCallbacks.cannotDeeplinkCallback)) {
+            instance.base._DSCallbacks.cannotDeeplinkCallback();
         } else {
             DeepShare.dsLogDebug('cannot deeplink');                     
         }
@@ -516,8 +517,8 @@ function DeepShareWorker(params) {
         _dstLocation = _DSAction.destination.dstios9UniversalLinkLandPage;
         DeepShare.dsLogDebug('Go to iOS landing page: ' + _dstLocation);
 
-        if (!IsNullOrUndefined(instance._DSCallbacks.iosLandingCallback)) {
-            instance._DSCallbacks.iosLandingCallback();
+        if (!IsNullOrUndefined(instance.base._DSCallbacks.iosLandingCallback)) {
+            instance.base._DSCallbacks.iosLandingCallback();
         } else {
             DeepShare.dsLogDebug('ios landing');                     
         }
@@ -528,8 +529,8 @@ function DeepShareWorker(params) {
         _dstLocation = _DSAction.destination.dstandroidMarketLandPage;
         DeepShare.dsLogDebug('Go to android market landing page: ' + _dstLocation);
 
-        if (!IsNullOrUndefined(instance._DSCallbacks.androidMarketLandingCallback)) {
-            instance._DSCallbacks.androidMarketLandingCallback();
+        if (!IsNullOrUndefined(instance.base._DSCallbacks.androidMarketLandingCallback)) {
+            instance.base._DSCallbacks.androidMarketLandingCallback();
         } else {
             DeepShare.dsLogDebug('android market');                     
         }
@@ -540,8 +541,8 @@ function DeepShareWorker(params) {
         _dstLocation = _DSAction.destination.dstandroidCannotGoMarketLandPage;
         DeepShare.dsLogDebug('Go to android can not go to market landing page: ' + _dstLocation);
 
-        if (!IsNullOrUndefined(instance._DSCallbacks.androidCannotGoMarketLandingCallback)) {
-            instance._DSCallbacks.androidCannotGoMarketLandingCallback();
+        if (!IsNullOrUndefined(instance.base._DSCallbacks.androidCannotGoMarketLandingCallback)) {
+            instance.base._DSCallbacks.androidCannotGoMarketLandingCallback();
         } else {
             DeepShare.dsLogDebug('android cannot go market');                     
         }
@@ -552,8 +553,8 @@ function DeepShareWorker(params) {
         _dstLocation = _DSAction.destination.dstandroidDirectDownloadLandPage;
         DeepShare.dsLogDebug('Go to android download landing page: ' + _dstLocation);
 
-        if (!IsNullOrUndefined(instance._DSCallbacks.androidDownloadLandingCallback)) {
-            instance._DSCallbacks.androidDownloadLandingCallback();
+        if (!IsNullOrUndefined(instance.base._DSCallbacks.androidDownloadLandingCallback)) {
+            instance.base._DSCallbacks.androidDownloadLandingCallback();
         } else {
             DeepShare.dsLogDebug('android downloading...');                     
             _gotoUrl(_Params.url);
@@ -582,14 +583,14 @@ function DeepShareWorker(params) {
 
     var _gotoPlatformNotAvail = function(platform) {
         if (platform === "ios") {
-            if (!IsNullOrUndefined(instance._DSCallbacks.iosPlatformNotAvailCallback)) {
-                instance._DSCallbacks.iosPlatformNotAvailCallback();
+            if (!IsNullOrUndefined(instance.base._DSCallbacks.iosPlatformNotAvailCallback)) {
+                instance.base._DSCallbacks.iosPlatformNotAvailCallback();
             } else {
                 DeepShare.dsLogDebug('ios platform not available');                     
             }
         } else if (platform === "android") {
-            if (!IsNullOrUndefined(instance._DSCallbacks.androidPlatformNotAvailCallback)) {
-                instance._DSCallbacks.androidPlatformNotAvailCallback();
+            if (!IsNullOrUndefined(instance.base._DSCallbacks.androidPlatformNotAvailCallback)) {
+                instance.base._DSCallbacks.androidPlatformNotAvailCallback();
             } else {
                 DeepShare.dsLogDebug('android platform not available');                     
             }
@@ -690,7 +691,7 @@ function DeepShareWorker(params) {
         setTimeout(function(){
             instance._Start();
         }, 300);
-    }
+    };
     this._Start = function() {
         _reportDSJSEvent('ds_jssdk_click', '');
         var deeplinkurl = '';
