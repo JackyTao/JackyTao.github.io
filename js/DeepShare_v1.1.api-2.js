@@ -59,7 +59,7 @@ function DeepShare(app_id) {
     var _createWorker = function(params, deepinfos) {
         for (var i = 0; i < params.length; i++) {
             var item = params[i];
-            var item.app_id = app_id;
+            item.app_id = app_id;
             var worker = new DeepShareWorker(item);
             // Be careful, worker only has the read access!!
             worker.__proto__ = instance;
