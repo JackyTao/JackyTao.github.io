@@ -309,8 +309,8 @@ function DeepShareWorker(params) {
                 _bindedDeepLink = BIND_STATUS.BINDED;
                 DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
             },
-            error: function() {
-                DeepShare.dsLogDebug('Refresh Params Error');
+            error: function(xhr, info) {
+                DeepShare.dsLogDebug('Refresh Params Error: ' + JSON.stringify(xhr) + ', info: ' + info);
             },
             dataType: 'json',
         });
