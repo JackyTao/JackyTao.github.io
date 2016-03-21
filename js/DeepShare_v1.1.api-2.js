@@ -42,15 +42,12 @@ function DeepShare(app_id) {
 
     var _createWorker = function(params, deepinfos) {
         if (!(params instanceof Array)) {
-            for (var i = 0; i < params.length; i++) {
-                var item = params[i];
-                item.app_id = app_id;
-                var worker = new DeepShareWorker(item);
-                // Be careful, worker only has the read access!!
-                worker.base = instance;
-                worker.SetBindInfo(deepinfos);
-                workers[0] = worker;
-            }
+            params.app_id = app_id;
+            var worker = new DeepShareWorker(params);
+            // Be careful, worker only has the read access!!
+            worker.base = instance;
+            worker.SetBindInfo(deepinfos);
+            workers[0] = worker;
         } else {
             /*
             for (var i = 0; i < params.length; i++) {
@@ -335,7 +332,7 @@ function DeepShareWorker(params) {
             _AppData.download_url_android   = params.download_url_android;
         }
         if (!IsNullOrUndefined(params.channels)) {
-            _AppData.channels     = JSON.stringify(params.channels);
+            _AppData.channels     = params.channels;
         }
 
         if (!IsNullOrUndefined(params.callbacks)) {
@@ -720,7 +717,7 @@ function DeepShareWorker(params) {
             }
         } else {
             if (_Params.is_universal_link) {
-                _gotoUrl(_Params.ds_urls[deeplink_id]);
+                _gotoUrl(_Params.ds_url || _Params.ds_urls[deeplink_id]);
             } else {
                 _gotoTip(tag, dst);
             }
@@ -857,7 +854,7 @@ function DeepShareWorker(params) {
 
 
                     // TODO: universal link problem!
-                    _gotoUrl(_Params.ds_urls[deeplink_id]);
+                    _gotoUrl(_Params.ds_url || _Params.ds_urls[deeplink_id]);
                     /*
                     if (_env.cookieEnabled()){
                         DeepShare.dsLogDebug("cookie Enabled; AppInsStatus:" + _Params.app_ins_status);
