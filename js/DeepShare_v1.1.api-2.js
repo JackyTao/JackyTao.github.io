@@ -45,7 +45,7 @@ function DeepShare(app_id) {
             // Be careful, worker only has the read access!!
             worker.base = instance;
             worker.SetBindInfo(deepinfos);
-            workers[0] = worker;
+            workers['0'] = worker;
         } else {
             /*
             for (var i = 0; i < params.length; i++) {
@@ -118,7 +118,11 @@ function DeepShare(app_id) {
                              DS_kAPIJS +
                              app_id;
 
-            // TODO: convert inapp_data & channels in each 
+            // deeplink to string! 
+            for (var i = 0; i < params.length; i++) {
+                params[i]['deeplink_id'] = '' + params[i]['deeplink_id'];
+            }
+
             $.ajax({
                 url: requestUrl,
                 type: 'POST',
@@ -139,12 +143,14 @@ function DeepShare(app_id) {
     };
 
     this.Start = function(deeplink_id) {
-        deeplink_id = '' + deeplink_id;
         // null, undefined, 0, ''
         if (!deeplink_id) {
             workers[0].Start();  
-        } else if (workers.hasOwnProperty(deeplink_id)) {
-            workers[deeplink_id].Start();  
+        } else {
+            deeplink_id = '' + deeplink_id;
+            if (workers.hasOwnProperty(deeplink_id)) {
+                workers[deeplink_id].Start();  
+            }
         }
     };
 
@@ -209,7 +215,7 @@ function DeepShareWorker(params) {
     //-----------------------------------------------------------------------------
     // Private
     //-----------------------------------------------------------------------------
-    var deeplink_id = 0;
+    var deeplink_id = '0';
     var _deeplinkLocation = '';
     var _dstLocation = '';
     var _bindedDeepLink = BIND_STATUS.INITIAL;
@@ -338,7 +344,7 @@ function DeepShareWorker(params) {
         }
 
         if (!IsNullOrUndefined(params.deeplink_id)) {
-            deeplink_id = params.deeplink_id;
+            deeplink_id = '' + params.deeplink_id;
         }
 
         //_refreshBind(true);
