@@ -547,6 +547,7 @@ function DeepShareWorker(params) {
     };
 
     var _gotoAndroidNewInstall = function() {
+        DeepShare.dsLogDebug('Go to android new install');
         if (_Params.is_download_directly) {
             _gotoAndroidDownloadUrl();
         } else {
