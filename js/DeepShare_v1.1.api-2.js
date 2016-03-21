@@ -7,7 +7,7 @@
 // Only for local debug,
 // Clean the code in dsLogDebug before online!!
 //-----------------------------------------------------------------------------
-//var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
+var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
 //var ws = new WebSocket("ws://192.168.1.102:3333/");
 
 DeepShare.dsLogDebug = function(msg) {
@@ -26,7 +26,7 @@ DeepShare.dsLogDebug = function(msg) {
    } 
 };
 
-DeepShare.DEBUG = false;
+DeepShare.DEBUG = true;
 DS_kPostVerb = 'POST';
 DS_kRequestProtocol = 'https://';
 DS_kServerName = 'fds.so/';
@@ -38,7 +38,38 @@ DS_kDSTag = 'ds_tag';
 function DeepShare(app_id) {
     var instance = this;
 
-     this._DSCallbacks = {
+    var workers = {};
+
+    var _createWorker = function(params, deepinfos) {
+        if (!(params instanceof Array)) {
+            for (var i = 0; i < params.length; i++) {
+                var item = params[i];
+                item.app_id = app_id;
+                var worker = new DeepShareWorker(item);
+                // Be careful, worker only has the read access!!
+                worker.base = instance;
+                worker.SetBindInfo(deepinfos);
+                workers[0] = worker;
+            }
+        } else {
+            /*
+            for (var i = 0; i < params.length; i++) {
+                var item = params[i];
+                item.app_id = app_id;
+                var worker = new DeepShareWorker(item);
+                // Be careful, worker only has the read access!!
+                worker.base = instance;
+                // TODO: parse deepinfos
+                worker.SetBindInfo(deepinfos);
+                workers[item.deeplink_id] = worker;
+
+            }
+            */
+        }
+    };
+    
+
+    this._DSCallbacks = {
         weixinIOSTipCallback: null,
         weixinAndroidTipCallback: null,
         weiboIOSTipCallback: null,
@@ -54,59 +85,75 @@ function DeepShare(app_id) {
         androidPlatformNotAvailCallback: null,
     };
     
-    var workers = {};
-
-    var _createWorker = function(params, deepinfos) {
-        for (var i = 0; i < params.length; i++) {
-            var item = params[i];
-            item.app_id = app_id;
-            var worker = new DeepShareWorker(item);
-            // Be careful, worker only has the read access!!
-            worker.base = instance;
-            // TODO: parse deepinfos
-            worker.SetBindInfo(deepinfos[worker_id]);
-            workers[item.ds_worker_id] = worker;
-        }
-    };
-    
-
     this.BindParams = function(params) {
         DeepShare.dsLogDebug('Try bind, inapp_data: ' + JSON.stringify(params));
         if (!(params instanceof Array)) {
-            params = [params];
+            params.inapp_data = JSON.stringify(params);
+            if (!IsNullOrUndefined(params.inapp_data)) {
+                params.inapp_data     = JSON.stringify(params.inapp_data);
+            }
+            if (!IsNullOrUndefined(params.channels)) {
+                params.channels     = JSON.stringify(params.channels);
+            }
+
+            var requestUrl = DS_kRequestProtocol +
+                             DS_kServerName +
+                             DS_kVersionName +
+                             DS_kAPIJS +
+                             app_id;
+
+            $.ajax({
+                url: requestUrl,
+                type: 'POST',
+                data: JSON.stringify(params),
+                xhrFields: {withCredentials: true,},
+                success: function(result) {
+                    _createWorker(params, result);
+                    DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
+                },
+                error: function(xhr, info) {
+                    DeepShare.dsLogDebug('Refresh Params Error: ' + JSON.stringify(xhr) + ', info: ' + info);
+                },
+                dataType: 'json',
+            });
+        } else {
+            alert('Multiple Params Not Implemented!');
+            //
+            // TODO: new api url && params
+            /*
+            var requestUrl = DS_kRequestProtocol +
+                             DS_kServerName +
+                             DS_kVersionName +
+                             DS_kAPIJS +
+                             app_id;
+
+            // TODO: convert inapp_data & channels in each 
+            $.ajax({
+                url: requestUrl,
+                type: 'POST',
+                data: JSON.stringify(params),
+                xhrFields: {withCredentials: true,},
+                success: function(result) {
+                    // TODO: parse result
+                    _createWorker(params, result);
+                    DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
+                },
+                error: function(xhr, info) {
+                    DeepShare.dsLogDebug('Refresh Params Error: ' + JSON.stringify(xhr) + ', info: ' + info);
+                },
+                dataType: 'json',
+            });
+            */
         }
-
-        // TODO: new api url && params
-        var requestUrl = DS_kRequestProtocol +
-                         DS_kServerName +
-                         DS_kVersionName +
-                         DS_kAPIJS +
-                         app_id;
-
-        $.ajax({
-            url: requestUrl,
-            type: 'POST',
-            data: JSON.stringify(params),
-            xhrFields: {withCredentials: true,},
-            success: function(result) {
-                // TODO: parse result
-                _createWorker(params, result);
-                DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
-            },
-            error: function(xhr, info) {
-                DeepShare.dsLogDebug('Refresh Params Error: ' + JSON.stringify(xhr) + ', info: ' + info);
-            },
-            dataType: 'json',
-        });
     };
 
-    this.Start = function(worker_id) {
-        //worker_id = +worker_id;
+    this.Start = function(deeplink_id) {
+        deeplink_id = '' + deeplink_id;
         // null, undefined, 0, ''
-        if (!worker_id) {
+        if (!deeplink_id) {
             workers[0].Start();  
-        } else if (workers.hasOwnProperty(worker_id)) {
-            workers[worker_id].Start();  
+        } else if (workers.hasOwnProperty(deeplink_id)) {
+            workers[deeplink_id].Start();  
         }
     };
 
@@ -171,6 +218,7 @@ function DeepShareWorker(params) {
     //-----------------------------------------------------------------------------
     // Private
     //-----------------------------------------------------------------------------
+    var deeplink_id = 0;
     var _deeplinkLocation = '';
     var _dstLocation = '';
     var _bindedDeepLink = BIND_STATUS.INITIAL;
@@ -298,39 +346,44 @@ function DeepShareWorker(params) {
             instance.base._DSCallbacks = params.callbacks;
         }
 
+        if (!IsNullOrUndefined(params.deeplink_id)) {
+            deeplink_id = params.deeplink_id;
+        }
+
         //_refreshBind(true);
     };
 
 
     var _refreshBind = function(force) {
-        DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink + ', inapp_data: ' + JSON.stringify(_AppData));
+        DeepShare.dsLogDebug('Try refresh bind, force: ' + force + ', binded: ' + _bindedDeepLink + ', deeplink_id: ' + deeplink_id + ', match_id: ' + _Params.match_id);
 
         // !force: [null|undefined|''|0] all can be true 
         if (!force && _bindedDeepLink === BIND_STATUS.BINDED) {
             return;
         }
 
-        // FIXME: add for test
-        // _Params = Params
-
         var requestUrl = DS_kRequestProtocol +
                          DS_kServerName +
                          DS_kVersionName +
                          DS_kAPIJS +
-                         _AppData.app_id;
+                         _AppData.app_id +
+                         "?clicked=true";
 
         $.ajax({
             url: requestUrl,
             type: 'POST',
-            data: JSON.stringify(_AppData),
+            data: JSON.stringify({
+                deeplink_id: 123,
+                match_id: _Params.match_id,
+                sender_id: _AppData.sender_id,
+                channels: _AppData.channels,
+                inapp_data: _AppData.inapp_data}),
             xhrFields: {withCredentials: true,},
             success: function(result) {
-                _Params = result;
-                _bindedDeepLink = BIND_STATUS.BINDED;
-                DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
+                DeepShare.dsLogDebug('Refresh result: ' + JSON.stringify(result));
             },
             error: function(xhr, info) {
-                DeepShare.dsLogDebug('Refresh Params Error: ' + JSON.stringify(xhr) + ', info: ' + info);
+                DeepShare.dsLogDebug('Refresh Bind Error: ' + JSON.stringify(xhr) + ', info: ' + info);
             },
             dataType: 'json',
         });
@@ -573,8 +626,9 @@ function DeepShareWorker(params) {
 
     var _gotoUrl = function(url) {
         DeepShare.dsLogDebug('Goto url: ' + url);
-
-        // Page changed, no need to refresh
+        
+        // make deeplink active, before redirect
+        _refreshBind(true);
 
         _dstLocation = url;
         _reportDSJSEvent(_DSAction.actionJSDst, url);
@@ -670,7 +724,7 @@ function DeepShareWorker(params) {
             }
         } else {
             if (_Params.is_universal_link) {
-                _gotoUrl(_Params.ds_url);
+                _gotoUrl(_Params.ds_urls[deeplink_id]);
             } else {
                 _gotoTip(tag, dst);
             }
@@ -687,7 +741,7 @@ function DeepShareWorker(params) {
         // To bypass mutiple deeplink in one page
         // Refresh before to make it active!!
         // But, when redirect by click_id, the refresh is slow!!
-        _refreshBind(true);
+        // _refreshBind(true);
         setTimeout(function(){
             instance._Start();
         }, 300);
@@ -779,6 +833,7 @@ function DeepShareWorker(params) {
             deeplinkurl = _Params.scheme + '://';
             if (_Params.match_id && _Params.match_id.length > 0) {
                 deeplinkurl += "?click_id=" + _Params.match_id;
+                deeplinkurl += "&deeplink_id=" + deeplink_id;
             }
             DeepShare.dsLogDebug('Deeplink url: ' + deeplinkurl);
 
@@ -806,7 +861,7 @@ function DeepShareWorker(params) {
 
 
                     // TODO: universal link problem!
-                    _gotoUrl(_Params.ds_url);
+                    _gotoUrl(_Params.ds_urls[deeplink_id]);
                     /*
                     if (_env.cookieEnabled()){
                         DeepShare.dsLogDebug("cookie Enabled; AppInsStatus:" + _Params.app_ins_status);
@@ -846,6 +901,7 @@ function DeepShareWorker(params) {
             deeplinkurl = _Params.scheme + '://' + _Params.host;
             if (_Params.match_id && _Params.match_id.length > 0) {
                 deeplinkurl += "?click_id=" + _Params.match_id;
+                deeplinkurl += "&deeplink_id=" + deeplink_id;
             }
             DeepShare.dsLogDebug('Deeplink url: ' + deeplinkurl);
                 
@@ -879,6 +935,7 @@ function DeepShareWorker(params) {
                 var intent = _Params.host;
                 if (_Params.match_id && _Params.match_id.length > 0) {
                     intent += "?click_id=" + _Params.match_id;
+                    intent += "&deeplink_id=" + deeplink_id;
                 }
                 var pkg = _Params.pkg;
                 // When deeplinking on chrome 35+, there is inherent app store
@@ -911,6 +968,11 @@ function DeepShareWorker(params) {
     };
 
     this.SetBindInfo = function(params) {
+        _Params = params;
+    };
+    this.SetBindInfoBat = function(params, deeplink_id) {
+        // TODO:
+        // copy from params
         _Params = params;
     };
     this.BindInAppInfo = function() {
