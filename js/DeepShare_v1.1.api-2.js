@@ -5,10 +5,8 @@
 
 //-----------------------------------------------------------------------------
 // Only for local debug,
-// Clean the code in dsLogDebug before online!!
 //-----------------------------------------------------------------------------
 var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
-//var ws = new WebSocket("ws://192.168.1.102:3333/");
 
 DeepShare.dsLogDebug = function(msg) {
     // FIXME: clean before online
@@ -717,7 +715,7 @@ function DeepShareWorker(params) {
             }
         } else {
             if (_Params.is_universal_link) {
-                _gotoUrl(_Params.ds_url || _Params.ds_urls[deeplink_id]);
+                _gotoUrl(_Params.ds_url || _Params.ds_urls[deeplink_id] || '');
             } else {
                 _gotoTip(tag, dst);
             }
@@ -854,7 +852,7 @@ function DeepShareWorker(params) {
 
 
                     // TODO: universal link problem!
-                    _gotoUrl(_Params.ds_url || _Params.ds_urls[deeplink_id]);
+                    _gotoUrl(_Params.ds_url || _Params.ds_urls[deeplink_id] || '');
                     /*
                     if (_env.cookieEnabled()){
                         DeepShare.dsLogDebug("cookie Enabled; AppInsStatus:" + _Params.app_ins_status);
