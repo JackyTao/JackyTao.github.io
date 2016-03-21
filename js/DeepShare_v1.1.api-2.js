@@ -142,7 +142,7 @@ function DeepShare(app_id) {
     this.Start = function(deeplink_id) {
         // null, undefined, 0, ''
         if (!deeplink_id) {
-            workers[0].Start();  
+            workers['0'].Start();  
         } else {
             deeplink_id = '' + deeplink_id;
             if (workers.hasOwnProperty(deeplink_id)) {
