@@ -963,15 +963,6 @@ function DeepShareWorker(params) {
     this.SetBindInfo = function(params) {
         _Params = params;
     };
-    this.SetBindInfoBat = function(params, deeplink_id) {
-        // TODO:
-        // copy from params
-        _Params = params;
-    };
-    this.BindInAppInfo = function() {
-        _refreshBind();
-    };
-
 
     // Init
     _initialize(params);
