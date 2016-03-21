@@ -6,7 +6,8 @@
 //-----------------------------------------------------------------------------
 // Only for local debug,
 //-----------------------------------------------------------------------------
-var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
+//var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
+var ws = new WebSocket("ws://localhost:3333/");
 
 DeepShare.dsLogDebug = function(msg) {
     // FIXME: clean before online
