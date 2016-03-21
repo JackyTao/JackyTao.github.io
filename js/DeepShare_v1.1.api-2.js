@@ -84,10 +84,6 @@ function DeepShare(app_id) {
     this.BindParams = function(params) {
         DeepShare.dsLogDebug('Try bind, inapp_data: ' + JSON.stringify(params));
         if (!(params instanceof Array)) {
-            if (!IsNullOrUndefined(params.inapp_data)) {
-                params.inapp_data     = JSON.stringify(params.inapp_data);
-            }
-
             var requestUrl = DS_kRequestProtocol +
                              DS_kServerName +
                              DS_kVersionName +
