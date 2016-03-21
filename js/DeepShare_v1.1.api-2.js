@@ -91,9 +91,6 @@ function DeepShare(app_id) {
             if (!IsNullOrUndefined(params.inapp_data)) {
                 params.inapp_data     = JSON.stringify(params.inapp_data);
             }
-            if (!IsNullOrUndefined(params.channels)) {
-                params.channels     = JSON.stringify(params.channels);
-            }
 
             var requestUrl = DS_kRequestProtocol +
                              DS_kServerName +
