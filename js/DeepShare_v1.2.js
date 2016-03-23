@@ -45,7 +45,6 @@ function DeepShare(app_id) {
             worker.SetBindInfo(deepinfos);
             workers['0'] = worker;
         } else {
-            /*
             for (var i = 0; i < params.length; i++) {
                 var item = params[i];
                 item.app_id = app_id;
@@ -57,7 +56,6 @@ function DeepShare(app_id) {
                 workers[item.deeplink_id] = worker;
 
             }
-            */
         }
     };
     
@@ -102,10 +100,8 @@ function DeepShare(app_id) {
                 dataType: 'json',
             });
         } else {
-            alert('Multiple Params Not Implemented!');
-            //
+            //alert('Multiple Params Not Implemented!');
             // TODO: new api url && params
-            /*
             var requestUrl = DS_kRequestProtocol +
                              DS_kServerName +
                              DS_kVersionName +
@@ -123,7 +119,6 @@ function DeepShare(app_id) {
                 data: JSON.stringify(params),
                 xhrFields: {withCredentials: true,},
                 success: function(result) {
-                    // TODO: parse result
                     _createWorker(params, result);
                     DeepShare.dsLogDebug('Params from api:' + JSON.stringify(params) + JSON.stringify(result));
                 },
@@ -132,7 +127,6 @@ function DeepShare(app_id) {
                 },
                 dataType: 'json',
             });
-            */
         }
     };
 
