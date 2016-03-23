@@ -191,6 +191,12 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'https://github.com/avelino/awesome-go', 'name': 'goawesome', 'category': '', 'info': ''}
             ]
         }, {
+            title: 'work'
+            content: [
+                {'href': 'http://qdu.cloudapp.net/', 'name': '发布平台', 'category': '', 'info': ''}
+                {'href': 'http://mm.misingulariti.io', 'name': 'mm', 'category': '', 'info': ''}
+            ]
+        }, {
             title: '找钱'
             content: [
                 {'href': 'https://www.freelancer.cn', 'name': 'freelancer', 'category': '', 'info': ''},

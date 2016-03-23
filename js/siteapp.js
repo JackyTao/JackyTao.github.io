@@ -801,6 +801,21 @@
           }
         ]
       }, {
+        title: 'work',
+        content: [
+          {
+            'href': 'http://qdu.cloudapp.net/',
+            'name': '发布平台',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://mm.misingulariti.io',
+            'name': 'mm',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
         title: '找钱',
         content: [
           {
