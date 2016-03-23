@@ -7,11 +7,9 @@
 // Only for local debug,
 //-----------------------------------------------------------------------------
 //var ws = new WebSocket("ws://" + window.location.hostname + ":3333/");
-var ws = new WebSocket("ws://192.168.1.102:3333/");
-ws.onerror = function() {console.log('ws error');};
+var ws = new WebSocket("ws://172.11.23.26:3333/");
 
 DeepShare.dsLogDebug = function(msg) {
-    // FIXME: clean before online
    if (DeepShare.DEBUG) {
         // Print log on server by websocket
         var d = new Date();
@@ -20,13 +18,12 @@ DeepShare.dsLogDebug = function(msg) {
         } else {
             //alert('ws broken!!!');
         }
-
-        // Or use alert
         //alert(msg);
    } 
 };
 
 DeepShare.DEBUG = true;
+
 DS_kPostVerb = 'POST';
 DS_kRequestProtocol = 'https://';
 DS_kServerName = 'fds.so/';
@@ -44,7 +41,6 @@ function DeepShare(app_id) {
         if (!(params instanceof Array)) {
             params.app_id = app_id;
             var worker = new DeepShareWorker(params);
-            // Be careful, worker only has the read access!!
             worker.base = instance;
             worker.SetBindInfo(deepinfos);
             workers['0'] = worker;
@@ -313,7 +309,7 @@ function DeepShareWorker(params) {
             _AppData.app_id = params.app_id;
         }
         if (!IsNullOrUndefined(params.inapp_data)) {
-            _AppData.inapp_data     = JSON.stringify(params.inapp_data);
+            _AppData.inapp_data     = params.inapp_data;
         }
         if (!IsNullOrUndefined(params.sender_id)) {
             _AppData.sender_id      = params.sender_id;
@@ -368,7 +364,7 @@ function DeepShareWorker(params) {
             url: requestUrl,
             type: 'POST',
             data: JSON.stringify({
-                deeplink_id: 123,
+                deeplink_id: deeplink_id,
                 match_id: _Params.match_id,
                 sender_id: _AppData.sender_id,
                 channels: _AppData.channels,

@@ -100,16 +100,14 @@
         // wait just to see the full log!!
         // Entrance call
         var deepshare = new DeepShare(getParameterByName('appid'));
-        //deepshare.BindParams([params1, params2]);
-        deepshare.BindParams(params1);
+        deepshare.BindParams([params1, params2]);
+        //deepshare.BindParams(params1);
         $('#openurl1').click(function() {
             deepshare.Start();
         });
-        /*
         $('#openurl2').click(function() {
             deepshare.Start(1);
         });
-        */
     }, 2000);
 
 </script>
