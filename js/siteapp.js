@@ -809,7 +809,7 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://mm.misingulariti.io',
+            'href': 'http://mm.misingulariti.io/singulariti',
             'name': 'mm',
             'category': '',
             'info': ''

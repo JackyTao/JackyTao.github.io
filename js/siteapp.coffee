@@ -194,7 +194,7 @@ siteapp.controller 'SiteController', ($scope) ->
             title: 'work'
             content: [
                 {'href': 'http://qdu.cloudapp.net/', 'name': '发布平台', 'category': '', 'info': ''}
-                {'href': 'http://mm.misingulariti.io', 'name': 'mm', 'category': '', 'info': ''}
+                {'href': 'http://mm.misingulariti.io/singulariti', 'name': 'mm', 'category': '', 'info': ''}
             ]
         }, {
             title: '找钱'
