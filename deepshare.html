@@ -79,17 +79,17 @@
 
     // Generate by 3rd party
     var params1 = {
-            inapp_data : JSON.stringify({
+            inapp_data : {
             name: getParameterByName('name'),
-        }),
+        },
         sender_id : getParameterByName('sender_id'),
         app_id: getParameterByName('appid'),
         channels: ['top', 'down'],
     }
     var params2 = {
-        inapp_data : JSON.stringify({
+        inapp_data : {
             name: 'mkdir',
-        }),
+        },
         sender_id : getParameterByName('sender_id'),
         app_id: getParameterByName('appid'),
     }
