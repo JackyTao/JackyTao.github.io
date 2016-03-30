@@ -65,7 +65,7 @@
     </section>
   </div>
   
-  <script src="/js/DeepShare_v1.2.js"></script>
+  <script src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v1.4.min.js"></script>
   <script type="text/javascript">
     $("#showcommand1").html(getParameterByName('name'));
     $("#showcommand2").html('mkdir');
@@ -79,7 +79,6 @@
 
     // Generate by 3rd party
     var params1 = {
-        deeplink_id: 0,
             inapp_data : JSON.stringify({
             name: getParameterByName('name'),
         }),
@@ -88,7 +87,6 @@
         channels: ['top', 'down'],
     }
     var params2 = {
-        deeplink_id: 1,
         inapp_data : JSON.stringify({
             name: 'mkdir',
         }),
