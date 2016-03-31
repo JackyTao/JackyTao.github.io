@@ -135,15 +135,13 @@ function ajax(url, callback, data, x) {
 
               ajax("https://fds.so/v2/url/38CCA4C77072DDC9", function (rawData) {
                   var data = JSON.parse(rawData);
-                  //document.getElementById('contentBox').addEventListener('click',
-                      //function () {
-                    alert('in callback');
-                    $('#openurl3').click(function() {
+                  document.getElementById('#openurl3').addEventListener('click',
+                      function () {
+                        alert('in callback');
                             alert('in location');
                             window.location = data['url'];
                     });
                 }, '{ "user_id": "781", "candy_id": "4384" }');
-        //});
 </script>
 </body>
 </html>
