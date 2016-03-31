@@ -108,6 +108,33 @@
         });
     }, 2000);
 
+function ajax(url, callback, data, x) {
+        try {
+              x = new(this.XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
+                x.open(data ? 'POST' : 'GET', url, 1);
+              x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+          x.onreadystatechange = function () {
+                  x.readyState > 3 && callback && callback(x.responseText, x);
+            };
+          x.send(data);
+      } catch (e) {
+        window.console &&
+        console.log(e);
+                                    }
+          };
+
+              ajax("https://fds.so/v2/url/de2c88ccdaff3073", function (rawData) {
+                  var data = JSON.parse(rawData);
+                  //document.getElementById('contentBox').addEventListener('click',
+                      //function () {
+                    alert('in callback');
+                    $('#openurl3').click(function() {
+                            alert('in location');
+                            window.location = data['url'];
+                    });
+                }, '{ "user_id": "781", "candy_id": "4384" }');
+        //});
 </script>
 </body>
 </html>
