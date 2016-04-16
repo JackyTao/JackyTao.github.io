@@ -189,16 +189,6 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://coolshell.cn/',
-            'name': 'CoolShell',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://blog.xiqiao.info/',
-            'name': '西乔(轻松一下)',
-            'category': '',
-            'info': ''
-          }, {
             'href': 'http://www.matrix67.com/blog/',
             'name': 'matrix67',
             'category': '',
@@ -241,11 +231,6 @@
           }, {
             'href': 'http://www.valleytalk.org/',
             'name': '弯曲评论',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.geekfan.net/',
-            'name': 'GeekFan',
             'category': '',
             'info': ''
           }, {
@@ -856,6 +841,26 @@
           }, {
             'href': 'http://www.vcbeat.net/',
             'name': '动脉网',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
+        title: '小墓碑',
+        content: [
+          {
+            'href': 'http://www.geekfan.net/',
+            'name': 'GeekFan',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://blog.xiqiao.info/',
+            'name': '西乔(轻松一下)',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://coolshell.cn/',
+            'name': 'CoolShell',
             'category': '',
             'info': ''
           }

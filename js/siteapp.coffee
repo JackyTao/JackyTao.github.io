@@ -43,8 +43,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://stackexchange.com', 'name': 'StackExchange', 'category': '技术', 'info': '比StackOverflow更牛逼'}
                 {'href': 'http://www.infoq.com/cn/', 'name': 'InfoQ', 'category': '技术 前沿', 'info': '如果你想成为架构师'}
                 {'href': 'http://www.51cto.com/', 'name': '51CTO', 'category': '', 'info': ''}
-                {'href': 'http://coolshell.cn/', 'name': 'CoolShell', 'category': '', 'info': ''}
-                {'href': 'http://blog.xiqiao.info/', 'name': '西乔(轻松一下)', 'category': '', 'info': ''}
                 {'href': 'http://www.matrix67.com/blog/', 'name': 'matrix67', 'category': '', 'info': ''}
                 {'href': 'http://www.changhai.org/', 'name': '卢昌海', 'category': '', 'info': ''}
                 {'href': 'http://highscalability.com/', 'name': 'highscalability', 'category': '', 'info': ''}
@@ -54,7 +52,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.tuicool.com/mags/', 'name': '编程狂人', 'category': '', 'info': ''}
                 {'href': 'http://www.tuicool.com/mags/design', 'name': '设计匠艺', 'category': '', 'info': ''}
                 {'href': 'http://www.valleytalk.org/', 'name': '弯曲评论', 'category': '', 'info': ''}
-                {'href': 'http://www.geekfan.net/', 'name': 'GeekFan', 'category': '', 'info': ''}
                 {'href': 'http://teahour.fm/', 'name': 'teahour.fm', 'category': '', 'info': ''}
                 {'href': 'http://ourjs.com/', 'name': 'ourjs', 'category': '', 'info': ''}
                 {'href': 'http://www.reddit.com/r/javascript', 'name': 'reddit/javascript', 'category': '', 'info': ''}
@@ -207,6 +204,13 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},
                 {'href': 'http://www.hibor.com.cn/', 'name': '行业报告', 'category': '', 'info': ''},
                 {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
+            ]
+        }, {
+            title: '小墓碑'
+            content: [
+                {'href': 'http://www.geekfan.net/', 'name': 'GeekFan', 'category': '', 'info': ''}
+                {'href': 'http://blog.xiqiao.info/', 'name': '西乔(轻松一下)', 'category': '', 'info': ''}
+                {'href': 'http://coolshell.cn/', 'name': 'CoolShell', 'category': '', 'info': ''}
             ]
         }
     ]
