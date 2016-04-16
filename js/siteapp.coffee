@@ -7,8 +7,9 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://news.ycombinator.com', 'name': 'Hacker News', 'category': '技术 & 行业', 'info': '黑客和创业: 请认准，教父的网站'}
                 {'href': 'http://g.zhutao.xyz', 'name': 'google', 'category': '', 'info': ''}
                 {'href': 'http://highscalability.com/', 'name': 'highscalability', 'category': '', 'info': ''}
-                {'href': 'http://www.infoq.com/cn/', 'name': 'InfoQ', 'category': '技术 前沿', 'info': '如果你想成为架构师'}
                 {'href': 'http://www.huxiu.com', 'name': '虎嗅', 'category': '', 'info': ''}
+                {'href': 'http://www.36kr.com', 'name': '36KR', 'category': '', 'info': ''}
+                {'href': 'http://www.infoq.com/cn/', 'name': 'InfoQ', 'category': '技术 前沿', 'info': '如果你想成为架构师'}
                 {'href': 'http://www.tmtpost.com', 'name': '钛媒体', 'category': '', 'info': ''}
                 {'href': 'http://baijia.baidu.com', 'name': '百度百家', 'category': '', 'info': ''}
                 {'href': 'http://www.iresearch.cn', 'name': '艾瑞', 'category': '', 'info': ''}
@@ -73,7 +74,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.svpg.com/', 'name': 'svpg', 'category': '', 'info': ''}
                 {'href': 'http://next.36kr.com', 'name': 'NEXT', 'category': '', 'info': ''}
                 {'href': 'http://www.iheima.com/', 'name': '创业家', 'category': '', 'info': ''}
-                {'href': 'http://www.36kr.com', 'name': '36KR', 'category': '', 'info': ''}
                 {'href': 'http://www.businessinsider.com/', 'name': 'BI', 'category': '', 'info': ''}
                 {'href': 'http://www.pingwest.com', 'name': 'PingWest', 'category': '', 'info': ''}
                 {'href': 'http://www.tmtpost.com', 'name': '钛媒体', 'category': '', 'info': ''}
@@ -90,6 +90,7 @@ siteapp.controller 'SiteController', ($scope) ->
         }, {
             title: 'study'
             content: [
+                {'href': 'http://open.163.com/', 'name': '网易公开课', 'category': '', 'info': ''}
                 {'href': 'https://www.edx.org/', 'name': 'edx', 'category': '', 'info': ''}
                 {'href': 'http://readfree.me/', 'name': 'Read Free', 'category': '', 'info': ''}
                 {'href': 'http://www.jikexueyuan.com/', 'name': '极客学院', 'category': '', 'info': ''}
@@ -97,8 +98,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'https://www.coursera.org/', 'name': 'coursera', 'category': '', 'info': ''}
                 {'href': 'https://www.udacity.com/', 'name': 'udacity', 'category': '', 'info': ''}
                 {'href': 'https://www.khanacademy.org/', 'name': 'khan', 'category': '', 'info': ''}
-                {'href': 'https://www.udemy.com/', 'name': 'udemy', 'category': '', 'info': ''}
-                {'href': 'http://open.163.com/', 'name': '网易公开课', 'category': '', 'info': ''}
                 {'href': 'https://www.udemy.com/', 'name': 'udemy', 'category': '', 'info': ''}
                 {'href': 'http://www.duobei.com', 'name': '多贝', 'category': '', 'info': ''}
                 {'href': 'http://speakerdeck.com', 'name': 'speakerdeck', 'category': '', 'info': ''}
@@ -131,19 +130,6 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'https://readthedocs.org', 'name': 'readthedocs', 'category': '', 'info': ''},
                 {'href': 'https://www.debuggex.com/', 'name': '调试正则表达式', 'category': '', 'info': ''},
                 {'href': 'http://chrome-extension-downloader.com/', 'name': 'downloadcrx', 'category': '', 'info': ''},
-            ]
-        }, {
-            title: '医疗'
-            content: [
-                {'href': 'http://www.healthpoint.cn/', 'name': '健康点', 'category': '', 'info': ''},
-                {'href': 'http://www.cn-healthcare.com/', 'name': '健康界', 'category': '', 'info': ''},
-                {'href': 'http://share.cn-healthcare.com/', 'name': '医享库', 'category': '', 'info': ''},
-                {'href': 'http://www.yx129.com/', 'name': '医享网', 'category': '', 'info': ''},
-                {'href': 'http://www.yigoonet.com/', 'name': '医谷', 'category': '', 'info': ''},
-                {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
-                {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},
-                {'href': 'http://www.hibor.com.cn/', 'name': '行业报告', 'category': '', 'info': ''},
-                {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
             ]
         }, {
             title: 'cloud'
@@ -208,6 +194,19 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://www.vchello.cn/', 'name': '微投网', 'category': '', 'info': ''},
                 {'href': 'http://itjuzi.com/', 'name': 'IT桔子', 'category': '', 'info': ''},
                 {'href': 'http://top100.exponentialorgs.com/', 'name': '独角兽', 'category': '', 'info': ''},
+            ]
+        }, {
+            title: '医疗'
+            content: [
+                {'href': 'http://www.healthpoint.cn/', 'name': '健康点', 'category': '', 'info': ''},
+                {'href': 'http://www.cn-healthcare.com/', 'name': '健康界', 'category': '', 'info': ''},
+                {'href': 'http://share.cn-healthcare.com/', 'name': '医享库', 'category': '', 'info': ''},
+                {'href': 'http://www.yx129.com/', 'name': '医享网', 'category': '', 'info': ''},
+                {'href': 'http://www.yigoonet.com/', 'name': '医谷', 'category': '', 'info': ''},
+                {'href': 'http://www.geekheal.com/', 'name': '奇点', 'category': '', 'info': ''},
+                {'href': 'http://www.medicool.cn/Drlist.aspx', 'name': 'Dr2', 'category': '', 'info': ''},
+                {'href': 'http://www.hibor.com.cn/', 'name': '行业报告', 'category': '', 'info': ''},
+                {'href': 'http://www.vcbeat.net/', 'name': '动脉网', 'category': '', 'info': ''},
             ]
         }
     ]

@@ -24,15 +24,20 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.infoq.com/cn/',
-            'name': 'InfoQ',
-            'category': '技术 前沿',
-            'info': '如果你想成为架构师'
-          }, {
             'href': 'http://www.huxiu.com',
             'name': '虎嗅',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://www.36kr.com',
+            'name': '36KR',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.infoq.com/cn/',
+            'name': 'InfoQ',
+            'category': '技术 前沿',
+            'info': '如果你想成为架构师'
           }, {
             'href': 'http://www.tmtpost.com',
             'name': '钛媒体',
@@ -324,11 +329,6 @@
             'category': '',
             'info': ''
           }, {
-            'href': 'http://www.36kr.com',
-            'name': '36KR',
-            'category': '',
-            'info': ''
-          }, {
             'href': 'http://www.businessinsider.com/',
             'name': 'BI',
             'category': '',
@@ -394,6 +394,11 @@
         title: 'study',
         content: [
           {
+            'href': 'http://open.163.com/',
+            'name': '网易公开课',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://www.edx.org/',
             'name': 'edx',
             'category': '',
@@ -426,16 +431,6 @@
           }, {
             'href': 'https://www.khanacademy.org/',
             'name': 'khan',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'https://www.udemy.com/',
-            'name': 'udemy',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://open.163.com/',
-            'name': '网易公开课',
             'category': '',
             'info': ''
           }, {
@@ -581,56 +576,6 @@
           }, {
             'href': 'http://chrome-extension-downloader.com/',
             'name': 'downloadcrx',
-            'category': '',
-            'info': ''
-          }
-        ]
-      }, {
-        title: '医疗',
-        content: [
-          {
-            'href': 'http://www.healthpoint.cn/',
-            'name': '健康点',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.cn-healthcare.com/',
-            'name': '健康界',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://share.cn-healthcare.com/',
-            'name': '医享库',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.yx129.com/',
-            'name': '医享网',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.yigoonet.com/',
-            'name': '医谷',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.geekheal.com/',
-            'name': '奇点',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.medicool.cn/Drlist.aspx',
-            'name': 'Dr2',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.hibor.com.cn/',
-            'name': '行业报告',
-            'category': '',
-            'info': ''
-          }, {
-            'href': 'http://www.vcbeat.net/',
-            'name': '动脉网',
             'category': '',
             'info': ''
           }
@@ -861,6 +806,56 @@
           }, {
             'href': 'http://top100.exponentialorgs.com/',
             'name': '独角兽',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
+        title: '医疗',
+        content: [
+          {
+            'href': 'http://www.healthpoint.cn/',
+            'name': '健康点',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.cn-healthcare.com/',
+            'name': '健康界',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://share.cn-healthcare.com/',
+            'name': '医享库',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.yx129.com/',
+            'name': '医享网',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.yigoonet.com/',
+            'name': '医谷',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.geekheal.com/',
+            'name': '奇点',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.medicool.cn/Drlist.aspx',
+            'name': 'Dr2',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.hibor.com.cn/',
+            'name': '行业报告',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://www.vcbeat.net/',
+            'name': '动脉网',
             'category': '',
             'info': ''
           }
