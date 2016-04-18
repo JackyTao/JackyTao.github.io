@@ -74,9 +74,9 @@
     </section>
   </div>
   
-  <script src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v1.4.min.js"></script>
+  <script src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v1.7.min.js"></script>
   <script type="text/javascript">
-    $("#showcommand1").html(getParameterByName('name'));
+    $("#showcommand1").html('grep');
     $("#showcommand2").html('mkdir');
 	function getParameterByName(name) {
 	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -88,8 +88,8 @@
 
     // Generate by 3rd party
     var params1 = {
-            inapp_data : {
-            name: getParameterByName('name'),
+        inapp_data : {
+            name: 'grep',
         },
         sender_id : getParameterByName('sender_id'),
         app_id: getParameterByName('appid'),
@@ -106,7 +106,7 @@
     setTimeout(function(){
         // wait just to see the full log!!
         // Entrance call
-        var deepshare = new DeepShare(getParameterByName('appid'));
+        var deepshare = new DeepShare('6d94c60fec9c03a5');
         deepshare.BindParams([params1, params2]);
         //deepshare.BindParams(params1);
         $('#openurl1').click(function() {
