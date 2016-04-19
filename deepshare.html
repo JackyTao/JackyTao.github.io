@@ -74,7 +74,8 @@
     </section>
   </div>
   
-  <script src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v1.7.min.js"></script>
+  <script src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v1.7.2.debug.min.js"></script>
+
   <script type="text/javascript">
     $("#showcommand1").html('grep');
     $("#showcommand2").html('mkdir');
@@ -116,32 +117,6 @@
             deepshare.Start(1);
         });
     }, 2000);
-
-function ajax(url, callback, data, x) {
-        try {
-              x = new(this.XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
-                x.open(data ? 'POST' : 'GET', url, 1);
-              x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-            x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-          x.onreadystatechange = function () {
-                  x.readyState > 3 && callback && callback(x.responseText, x);
-            };
-          x.send(data);
-      } catch (e) {
-        window.console &&
-        console.log(e);
-                                    }
-          };
-
-              ajax("https://fds.so/v2/url/38CCA4C77072DDC9", function (rawData) {
-                  var data = JSON.parse(rawData);
-                  document.getElementById('openurl3').addEventListener('click',
-                      function () {
-                        alert('in callback');
-                            alert('in location');
-                            window.location = data['url'];
-                    });
-                }, '{ "user_id": "781", "candy_id": "4384" }');
 </script>
 </body>
 </html>
