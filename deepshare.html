@@ -93,7 +93,6 @@
             name: 'grep',
         },
         sender_id : getParameterByName('sender_id'),
-        app_id: getParameterByName('appid'),
         channels: ['top', 'down'],
     }
     var params2 = {
@@ -101,13 +100,12 @@
             name: 'mkdir',
         },
         sender_id : getParameterByName('sender_id'),
-        app_id: getParameterByName('appid'),
     }
 
     setTimeout(function(){
         // wait just to see the full log!!
         // Entrance call
-        var deepshare = new DeepShare('6d94c60fec9c03a5');
+        var deepshare = new DeepShare('38CCA4C77072DDC9');
         deepshare.BindParams([params1, params2]);
         //deepshare.BindParams(params1);
         $('#openurl1').click(function() {
