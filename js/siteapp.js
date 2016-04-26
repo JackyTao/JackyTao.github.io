@@ -73,6 +73,11 @@
             'name': '前端学习',
             'category': '',
             'info': ''
+          }, {
+            'href': 'http://fm.museekly.com/',
+            'name': 'soundcloud',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
