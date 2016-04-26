@@ -63,6 +63,11 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://pycoders.com/archive/', 'name': 'pycoders', 'category': '', 'info': ''}
             ] 
         }, {
+            title: 'forum'
+            content: [
+                {'href': 'http://www.tvbian.com/', 'name': '点子', 'category': '', 'info': ''}
+            ]
+        }, {
             title: 'mediaSites'
             content: [
                 {'href': 'http://www.woshipm.com', 'name': '人人都是产品经理', 'category': '', 'info': ''}

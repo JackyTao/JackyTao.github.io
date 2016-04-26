@@ -281,6 +281,16 @@
           }
         ]
       }, {
+        title: 'forum',
+        content: [
+          {
+            'href': 'http://www.tvbian.com/',
+            'name': '点子',
+            'category': '',
+            'info': ''
+          }
+        ]
+      }, {
         title: 'mediaSites',
         content: [
           {
