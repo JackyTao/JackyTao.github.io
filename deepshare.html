@@ -118,9 +118,11 @@
         // Entrance call
         var deepshare = new DeepShare('38CCA4C77072DDC9');
         deepshare.SetCallbackWeixinIOSTip(function() {
+            alert('calling: callback weixin ios tip, redirect to baidu');
             window.location = "http://www.baidu.com";    
         });
         deepshare.SetCallbackWeixinAndroidTip(function() {
+            alert('calling: callback weixin android tip, redirect to sohu');
             window.location = "http://m.sohu.com";    
         });
         deepshare.BindParams([params1, params2]);
