@@ -105,6 +105,8 @@
         },
         sender_id : getParameterByName('sender_id'),
         channels: ['top', 'down'],
+        download_url_android: 'http://www.baidu.com?android',
+        download_url_ios: 'http://www.baidu.com?ios',
     }
     var params2 = {
         inapp_data : {
@@ -121,14 +123,6 @@
 
         // kong kong hu
         //var deepshare = new DeepShare('6d94c60fec9c03a5');
-        deepshare.SetCallbackWeixinIOSTip(function() {
-            alert('calling: callback weixin ios tip, redirect to baidu');
-            window.location = "http://www.baidu.com";    
-        });
-        deepshare.SetCallbackWeixinAndroidTip(function() {
-            alert('calling: callback weixin android tip, redirect to sohu');
-            window.location = "http://m.sohu.com";    
-        });
         deepshare.BindParams([params1, params2]);
         //deepshare.BindParams(params1);
         $('#openurl1').click(function() {
