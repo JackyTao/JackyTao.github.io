@@ -283,6 +283,11 @@
             'name': 'pycoders',
             'category': '',
             'info': ''
+          }, {
+            'href': 'https://www.livecoding.tv',
+            'name': 'livecoding',
+            'category': '',
+            'info': ''
           }
         ]
       }, {
@@ -576,6 +581,11 @@
           }, {
             'href': 'http://chrome-extension-downloader.com/',
             'name': 'downloadcrx',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.theatlas.com/',
+            'name': 'searchcharts',
             'category': '',
             'info': ''
           }

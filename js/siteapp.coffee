@@ -62,6 +62,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://genius.com/', 'name': 'genius', 'category': '', 'info': ''}
                 {'href': 'https://platform.html5.org/', 'name': 'html5', 'category': '', 'info': ''}
                 {'href': 'http://pycoders.com/archive/', 'name': 'pycoders', 'category': '', 'info': ''}
+                {'href': 'https://www.livecoding.tv', 'name': 'livecoding', 'category': '', 'info': ''}
             ] 
         }, {
             title: 'forum'
@@ -133,6 +134,7 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'https://readthedocs.org', 'name': 'readthedocs', 'category': '', 'info': ''},
                 {'href': 'https://www.debuggex.com/', 'name': '调试正则表达式', 'category': '', 'info': ''},
                 {'href': 'http://chrome-extension-downloader.com/', 'name': 'downloadcrx', 'category': '', 'info': ''},
+                {'href': 'https://www.theatlas.com/', 'name': 'searchcharts', 'category': '', 'info': ''},
             ]
         }, {
             title: 'cloud'
