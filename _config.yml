@@ -80,3 +80,8 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "README.md", "LICENSE", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+
+
+# deepshare
+deepshare:
+    jsurl: http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v2.3.debug.min.js

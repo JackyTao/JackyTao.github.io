@@ -84,8 +84,11 @@
     <img src="/images/urlqr.png" class="img-rounded" style="height:auto; width:100%;">
     <p class="text-center" style="clear:both; margin-top:14.5%;">长按二维码跳转</p>
   </div>
+  <div>
+    deepshare js: {{ site.deepshare.jsurl }}
+  </div>
   
-  <script src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v2.3.debug.min.js"></script>
+  <script src="{{ site.deepshare.jsurl }}"></script>
 
   <script type="text/javascript">
     $("#showcommand1").html('grep');
