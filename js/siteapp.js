@@ -464,6 +464,11 @@
         title: 'tools',
         content: [
           {
+            'href': 'https://fast.com/',
+            'name': 'fast:测网速',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'https://developers.google.com/speed/pagespeed/insights/',
             'name': 'googleinsight',
             'category': '',
