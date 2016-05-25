@@ -78,6 +78,16 @@
             'name': 'soundcloud',
             'category': '',
             'info': ''
+          }, {
+            'href': 'https://www.crunchbase.com/',
+            'name': 'crunchbase',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'http://techcrunch.com/',
+            'name': 'techcrunch',
+            'category': '',
+            'info': ''
           }
         ]
       }, {

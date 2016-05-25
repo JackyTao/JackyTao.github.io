@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>DeepShare Testing</title>
   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="/js/jquery.qrcode.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <style>
@@ -44,9 +45,16 @@
               <a class="btn btn-primary" href="deepshare.html">JS SDK</a>
           </div>
           <div class="entrance-item col-sm-4">
-              <a class="btn btn-primary" href="deepshare.html">JS SDK</a>
+              <a id="gen-qrcode" class="btn btn-primary"
+                  href="javascript:;">生成qrcode</a>
+              <div id="qrcode"></div>
           </div>
       </div>
   </div>
+  <script>
+      $('#gen-qrcode').on('click', function() {
+            $('#qrcode').qrcode('http://deepshare.io'); 
+      });
+  </script>
 </body>
 </html>

@@ -18,6 +18,8 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://pmdaniu.com/', 'name': '产品大牛', 'category': '', 'info': ''}
                 {'href': 'http://www.runoob.com/', 'name': '前端学习', 'category': '', 'info': ''}
                 {'href': 'http://fm.museekly.com/', 'name': 'soundcloud', 'category': '', 'info': ''}
+                {'href': 'https://www.crunchbase.com/', 'name': 'crunchbase', 'category': '', 'info': ''}
+                {'href': 'http://techcrunch.com/', 'name': 'techcrunch', 'category': '', 'info': ''}
             ]
         }, {
             title: 'techSites'
