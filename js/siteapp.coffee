@@ -126,6 +126,8 @@ siteapp.controller 'SiteController', ($scope) ->
                 {'href': 'http://b3c4.com/', 'name': '导航', 'category': '', 'info': ''},
                 {'href': 'http://www.mmtrix.com/', 'name': '性能魔方', 'category': '', 'info': ''},
                 {'href': 'http://apistore.baidu.com/', 'name': 'Api Store', 'category': '', 'info': ''},
+                {'href': 'http://apifood.co/', 'name': 'Api food', 'category': '', 'info': ''},
+                {'href': 'https://www.publicapis.com/', 'name': 'pulicapis', 'category': '', 'info': ''},
                 {'href': 'http://www.devstore.cn/', 'name': 'Dev Store', 'category': '', 'info': ''},
                 {'href': 'http://devdocs.io/', 'name': 'Dev Docs', 'category': '', 'info': ''},
                 {'href': 'https://www.taskworld.com/', 'name': 'TaskWorld', 'category': '', 'info': ''},

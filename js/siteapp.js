@@ -544,6 +544,16 @@
             'category': '',
             'info': ''
           }, {
+            'href': 'http://apifood.co/',
+            'name': 'Api food',
+            'category': '',
+            'info': ''
+          }, {
+            'href': 'https://www.publicapis.com/',
+            'name': 'pulicapis',
+            'category': '',
+            'info': ''
+          }, {
             'href': 'http://www.devstore.cn/',
             'name': 'Dev Store',
             'category': '',
