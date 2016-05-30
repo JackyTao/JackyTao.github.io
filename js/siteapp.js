@@ -124,6 +124,11 @@
             'category': '技术',
             'info': ''
           }, {
+            'href': 'http://gank.io/',
+            'name': '干货',
+            'category': '技术',
+            'info': ''
+          }, {
             'href': 'https://www.gitbook.com/explore',
             'name': 'gitbook',
             'category': '技术',
