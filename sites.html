@@ -93,19 +93,19 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/react-with-addons.js"></script>
     <script src="js/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script src="js/browser.min.js"></script>
     <script type="text/babel">
         var SiteList = React.createClass({
             render: function() {
                 var nodes = this.props.data.map(function(site) {
                     return (
-                        <div key={site.href} className="col-md-3 col-xs-6 card">
+                    <div key={site.href} className="col-md-3 col-xs-6 card">
                             <h3><a target="_blank" href={site.href}>{site.name}</a></h3>
                         </div>
                     );
                 }); 
                 return (
-                    <div class="row">{nodes}</div> 
+                    <div className="row">{nodes}</div> 
                 );
             }, 
         });
@@ -128,7 +128,7 @@
                 }); 
 
                 return (
-                    <div class="row">{nodes}</div>
+                    <div className="row">{nodes}</div>
                 );
             },
          
