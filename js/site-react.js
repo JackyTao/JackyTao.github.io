@@ -69,6 +69,7 @@ var CategoryList = React.createClass({
 module.exports = CategoryList;
 
 },{"react":169}],2:[function(require,module,exports){
+var React = require('react');
 var ReactDOM = require('react-dom');
 var CategoryList = require('./components/categorylist.jsx');
 
@@ -118,7 +119,7 @@ var data = [{
 
 ReactDOM.render(React.createElement(CategoryList, { data: data }), document.getElementById('recommend-sites'));
 
-},{"./components/categorylist.jsx":1,"react-dom":4}],3:[function(require,module,exports){
+},{"./components/categorylist.jsx":1,"react":169,"react-dom":4}],3:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};

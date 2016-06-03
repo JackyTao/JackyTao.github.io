@@ -55,7 +55,7 @@ gulp.task('default', function () {
         entries: ['./js/src/site.jsx'],
     });
 
-    return b
+    return browserify('./js/src/site.jsx') 
         .transform(babelify, {presets: ["react"]})
         .bundle()
         .pipe(source('site-react.js'))

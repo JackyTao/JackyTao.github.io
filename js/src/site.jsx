@@ -1,3 +1,6 @@
+// need when exist jsx , even not used literally !!!
+var React = require('react');
+
 var ReactDOM = require('react-dom');
 var CategoryList = require('./components/categorylist.jsx');
 
