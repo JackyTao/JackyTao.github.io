@@ -60,6 +60,6 @@ gulp.task('default', function () {
         .bundle()
         .pipe(source('site-react.js'))
         .pipe(buffer())
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./js/'));
 });
