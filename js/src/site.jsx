@@ -13,7 +13,12 @@ var hashHistory = require('react-router').hashHistory;
 var CategoryList = require('./components/categorylist.jsx').CategoryList;
 var HealthCategoryList = require('./components/categorylist.jsx').HealthCategoryList;
 
+var Provider = require('react-redux').Provider;
+var createStore = require('redux').createStore;
 
+var SiteReducer = require('./components/categorylist.jsx').SiteReducer;
+
+var store = createStore(SiteReducer);
 /*
 ReactDOM.render(
     <CategoryList data={data} />,
@@ -32,15 +37,18 @@ var SiteNav = React.createClass({
     },
 });
 
+
 ReactDOM.render(
-    <Router history={hashHistory}> 
-        <Route path="/">
-            /*<IndexRoute component={CategoryList}/>*/
-            <IndexRedirect to="/index"/>
-            <Route path="/index" component={CategoryList}/>
-            <Route path="/health" component={HealthCategoryList}/>
-        </Route>
-    </Router>,
+    <Provider store={store}>
+        <Router history={hashHistory}> 
+            <Route path="/">
+                /*<IndexRoute component={CategoryList}/>*/
+                <IndexRedirect to="/index"/>
+                <Route path="/index" component={CategoryList}/>
+                <Route path="/health" component={HealthCategoryList}/>
+            </Route>
+        </Router>
+    </Provider>,
     document.getElementById('recommend-sites')
 );
 ReactDOM.render(

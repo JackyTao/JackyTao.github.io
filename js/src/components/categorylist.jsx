@@ -2,6 +2,47 @@ var React = require('react');
 var siteData = require('./site-model.js');
 var healthSiteData = require('./health-site-model.js');
 
+var connect = require('react-redux').connect;
+
+var mapStateToProps = function(state) {
+    return {conf: state};
+};
+
+var mapDispatchToProps = function(dispatch) {
+    return {
+        onInputChange1: function(e) {
+            dispatch({
+                type: 'UPDATE_CONF',
+                data: {conf1: e.target.value},
+            }); 
+        }, 
+        onInputChange2: function(e) {
+            dispatch({
+                type: 'UPDATE_CONF',
+                data: {conf2: e.target.value},
+            }); 
+        }, 
+        onInputChange3: function(e) {
+            dispatch({
+                type: 'UPDATE_CONF',
+                data: {conf3: e.target.value},
+            }); 
+        }, 
+    };
+};
+
+var SiteReducer = function(state={}, action) {
+    // Define initialize here !
+    if (action.type == 'INIAL') {
+        return Object.assign({}, state, {
+        
+        });
+    } else if (action.type == 'UPDATE_CONF') {
+        return Object.assign({}, state, action.data);
+    } else {
+        return state;
+    }
+};
 
 var SiteList = React.createClass({
     render: function() {
@@ -48,7 +89,15 @@ var CreateCategoryList = function(data) {
             }); 
 
             return (
-                <div className="row">{nodes}</div>
+                <div>
+                    <input type="text" value={this.props.conf.conf1} onChange={this.props.onInputChange1}/>
+                    <input type="text" value={this.props.conf.conf2} onChange={this.props.onInputChange2}/>
+                    <input type="text" value={this.props.conf.conf3} onChange={this.props.onInputChange3}/>
+                    <div>{this.props.conf.conf1}</div>
+                    <div>{this.props.conf.conf2}</div>
+                    <div>{this.props.conf.conf3}</div>
+                    <div className="row">{nodes}</div>
+                </div>
             );
         },
      
@@ -59,6 +108,7 @@ var CategoryList = CreateCategoryList(siteData);
 var HealthCategoryList = CreateCategoryList(healthSiteData); 
 
 module.exports = {
-    CategoryList: CategoryList,
-    HealthCategoryList: HealthCategoryList,
+    SiteReducer: SiteReducer,
+    CategoryList: connect(mapStateToProps, mapDispatchToProps)(CategoryList),
+    HealthCategoryList: connect(mapStateToProps, mapDispatchToProps)(HealthCategoryList),
 };

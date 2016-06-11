@@ -56,10 +56,11 @@ gulp.task('default', function () {
     //process.env.NODE_ENV = 'production';
 
     return browserify('./js/src/site.jsx') 
-        .transform(babelify, {presets: ["react"]})
+        .transform(babelify, {presets: ["react", 'es2015']})
         .bundle()
         .pipe(source('site-react.js'))
         .pipe(buffer())
         .pipe(uglify())
+        //.pipe(uglify().on('error', gutil.log))
         .pipe(gulp.dest('./js/'));
 });
