@@ -51,14 +51,15 @@ gulp.task('default-error', function () {
 });
 
 gulp.task('default', function () {
-    var b = browserify({
-        entries: ['./js/src/site.jsx'],
-    });
+    // when uglify used, react will alert use react production, which is
+    // trigger by NODE_ENV
+    //process.env.NODE_ENV = 'production';
 
     return browserify('./js/src/site.jsx') 
         .transform(babelify, {presets: ["react"]})
         .bundle()
         .pipe(source('site-react.js'))
         .pipe(buffer())
+        //.pipe(uglify())
         .pipe(gulp.dest('./js/'));
 });

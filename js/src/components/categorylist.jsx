@@ -1,4 +1,6 @@
 var React = require('react');
+var siteData = require('./site-model.js');
+var healthSiteData = require('./health-site-model.js');
 
 
 var SiteList = React.createClass({
@@ -11,38 +13,52 @@ var SiteList = React.createClass({
             );
         }); 
         return (
-            <div className="row">{nodes}</div> 
+            <div>{nodes}</div> 
         );
     }, 
 });
 
-var CategoryList = React.createClass({
-    getInitialState: function() {
-        return {data: []};
-    },
-    componentDidMount: function() {
-    },
-    render: function() {
-        var nodes = this.props.data.map(function(category) {
-            return (
-                <div key={category.title}>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h2 className="page-header">
-                                {category.title}
-                            </h2>
+
+var CreateCategoryList = function(data) {
+    return React.createClass({
+        getDefaultProps: function() {
+            return {
+                data: data,
+            };                 
+        },
+        getInitialState: function() {
+            return {data: []};
+        },
+        componentDidMount: function() {
+        },
+        render: function() {
+            var nodes = this.props.data.map(function(category) {
+                return (
+                    <div key={category.title}>
+                        <div>
+                            <div className="col-lg-12">
+                                <h2 className="page-header">
+                                    {category.title}
+                                </h2>
+                            </div>
                         </div>
-                    </div>
-                    <SiteList data={category.content}/>
-                </div>               
-            ); 
-        }); 
+                        <SiteList data={category.content}/>
+                    </div>               
+                ); 
+            }); 
 
-        return (
-            <div className="row">{nodes}</div>
-        );
-    },
- 
-});
+            return (
+                <div className="row">{nodes}</div>
+            );
+        },
+     
+    });
+};
 
-module.exports = CategoryList;
+var CategoryList = CreateCategoryList(siteData);
+var HealthCategoryList = CreateCategoryList(healthSiteData); 
+
+module.exports = {
+    CategoryList: CategoryList,
+    HealthCategoryList: HealthCategoryList,
+};
