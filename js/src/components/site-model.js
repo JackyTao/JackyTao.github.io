@@ -68,6 +68,7 @@ var techData = [
     }, {
         title: 'tools',
         content: [
+        {'href': 'http://logio.org/', 'name': 'logio', 'category': '', 'info': ''},,
         {'href': 'https://hyperdev.com', 'name': 'hyperdev:实时生成网站', 'category': '', 'info': ''},,
         {'href': 'https://fast.com/', 'name': 'fast:测网速', 'category': '', 'info': ''},,
         {'href': 'https://developers.google.com/speed/pagespeed/insights/', 'name': 'googleinsight', 'category': '', 'info': ''},,
