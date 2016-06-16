@@ -1,5 +1,6 @@
 var React = require('react');
-var siteData = require('./site-model.js');
+var techData = require('./site-model.js').techData;
+var otherData = require('./site-model.js').otherData;
 var healthSiteData = require('./health-site-model.js');
 
 var connect = require('react-redux').connect;
@@ -104,11 +105,13 @@ var CreateCategoryList = function(data) {
     });
 };
 
-var CategoryList = CreateCategoryList(siteData);
+var CategoryList = CreateCategoryList(techData);
+var NewsCategoryList = CreateCategoryList(otherData);
 var HealthCategoryList = CreateCategoryList(healthSiteData); 
 
 module.exports = {
     SiteReducer: SiteReducer,
     CategoryList: connect(mapStateToProps, mapDispatchToProps)(CategoryList),
+    NewsCategoryList: connect(mapStateToProps, mapDispatchToProps)(NewsCategoryList),
     HealthCategoryList: connect(mapStateToProps, mapDispatchToProps)(HealthCategoryList),
 };

@@ -1,4 +1,4 @@
-var data = [
+var techData = [
     {
         title: 'everydaySites',
         content: [
@@ -66,49 +66,6 @@ var data = [
         {'href': 'https://www.livecoding.tv', 'name': 'livecoding', 'category': '', 'info': ''},
         ]
     }, {
-        title: 'forum',
-        content: [
-        {'href': 'http://www.tvbian.com/', 'name': '点子', 'category': '', 'info': ''},
-        ]
-    }, {
-        title: 'mediaSites',
-        content: [
-        {'href': 'http://www.woshipm.com', 'name': '人人都是产品经理', 'category': '', 'info': ''},
-        {'href': 'http://www.huxiu.com', 'name': '虎嗅', 'category': '', 'info': ''},
-        {'href': 'http://www.cyzone.cn/', 'name': '创业帮', 'category': '', 'info': ''},
-        {'href': 'http://www.svpg.com/', 'name': 'svpg', 'category': '', 'info': ''},
-        {'href': 'http://next.36kr.com', 'name': 'NEXT', 'category': '', 'info': ''},
-        {'href': 'http://www.iheima.com/', 'name': '创业家', 'category': '', 'info': ''},
-        {'href': 'http://www.businessinsider.com/', 'name': 'BI', 'category': '', 'info': ''},
-        {'href': 'http://www.pingwest.com', 'name': 'PingWest', 'category': '', 'info': ''},
-        {'href': 'http://www.tmtpost.com', 'name': '钛媒体', 'category': '', 'info': ''},
-        {'href': 'http://www.bianews.com', 'name': '鞭牛士', 'category': '', 'info': ''},
-        {'href': 'http://www.yixieshi.com', 'name': '互联网一些事', 'category': '', 'info': ''},
-        {'href': 'http://www.alibuybuy.com/', 'name': '互联玩的那些事', 'category': '', 'info': ''},
-        {'href': 'http://www.geekpark.net', 'name': '极客公园', 'category': '', 'info': ''},
-        {'href': 'http://www.iimedia.cn/', 'name': '艾媒网', 'category': '', 'info': ''},
-        {'href': 'http://baijia.baidu.com', 'name': '百度百家', 'category': '', 'info': ''},
-        {'href': 'http://www.iresearch.cn', 'name': '艾瑞', 'category': '', 'info': ''},
-        {'href': 'http://www.kuailiyu.com', 'name': '快鲤鱼', 'category': '', 'info': ''},
-        {'href': 'http://zaodula.com', 'name': '早读啦', 'category': '', 'info': ''},
-        ]
-    }, {
-        title: 'study',
-        content: [
-        {'href': 'http://open.163.com/', 'name': '网易公开课', 'category': '', 'info': ''},
-        {'href': 'https://www.edx.org/', 'name': 'edx', 'category': '', 'info': ''},
-        {'href': 'http://readfree.me/', 'name': 'Read Free', 'category': '', 'info': ''},
-        {'href': 'http://www.jikexueyuan.com/', 'name': '极客学院', 'category': '', 'info': ''},
-        {'href': 'http://study.163.com', 'name': '网易云课堂', 'category': '', 'info': ''},
-        {'href': 'https://www.coursera.org/', 'name': 'coursera', 'category': '', 'info': ''},
-        {'href': 'https://www.udacity.com/', 'name': 'udacity', 'category': '', 'info': ''},
-        {'href': 'https://www.khanacademy.org/', 'name': 'khan', 'category': '', 'info': ''},
-        {'href': 'https://www.udemy.com/', 'name': 'udemy', 'category': '', 'info': ''},
-        {'href': 'http://www.duobei.com', 'name': '多贝', 'category': '', 'info': ''},
-        {'href': 'http://speakerdeck.com', 'name': 'speakerdeck', 'category': '', 'info': ''},
-        {'href': 'http://www.swiftv.cn/', 'name': 'swiftv', 'category': '', 'info': ''},
-        ],
-    }, {
         title: 'tools',
         content: [
         {'href': 'https://hyperdev.com', 'name': 'hyperdev:实时生成网站', 'category': '', 'info': ''},,
@@ -156,6 +113,72 @@ var data = [
         {'href': 'http://gizwits.com/', 'name': '机智云', 'category': '', 'info': ''},,
         ],
     }, {
+        title: 'awesomes',
+        content: [
+        {'href': 'http://vimawesome.com', 'name': 'vimawesome', 'category': '', 'info': ''},
+        {'href': 'https://github.com/avelino/awesome-go', 'name': 'goawesome', 'category': '', 'info': ''},
+        ],
+    }, {
+        title: 'work',
+        content: [
+        {'href': 'http://qdu.cloudapp.net/', 'name': '发布平台', 'category': '', 'info': ''},
+        {'href': 'http://mm.misingulariti.io/singulariti', 'name': 'mm', 'category': '', 'info': ''},
+        ],
+    }, {
+        title: '小墓碑',
+        content: [
+        {'href': 'http://www.geekfan.net/', 'name': 'GeekFan', 'category': '', 'info': ''},
+        {'href': 'http://blog.xiqiao.info/', 'name': '西乔(轻松一下)', 'category': '', 'info': ''},
+        {'href': 'http://coolshell.cn/', 'name': 'CoolShell', 'category': '', 'info': ''},
+        ],
+    }
+];
+
+var otherData = [
+    {
+        title: 'forum',
+        content: [
+        {'href': 'http://www.tvbian.com/', 'name': '点子', 'category': '', 'info': ''},
+        ]
+    }, {
+        title: 'mediaSites',
+        content: [
+        {'href': 'http://www.woshipm.com', 'name': '人人都是产品经理', 'category': '', 'info': ''},
+        {'href': 'http://www.huxiu.com', 'name': '虎嗅', 'category': '', 'info': ''},
+        {'href': 'http://www.cyzone.cn/', 'name': '创业帮', 'category': '', 'info': ''},
+        {'href': 'http://www.svpg.com/', 'name': 'svpg', 'category': '', 'info': ''},
+        {'href': 'http://next.36kr.com', 'name': 'NEXT', 'category': '', 'info': ''},
+        {'href': 'http://www.iheima.com/', 'name': '创业家', 'category': '', 'info': ''},
+        {'href': 'http://www.businessinsider.com/', 'name': 'BI', 'category': '', 'info': ''},
+        {'href': 'http://www.pingwest.com', 'name': 'PingWest', 'category': '', 'info': ''},
+        {'href': 'http://www.tmtpost.com', 'name': '钛媒体', 'category': '', 'info': ''},
+        {'href': 'http://www.bianews.com', 'name': '鞭牛士', 'category': '', 'info': ''},
+        {'href': 'http://www.yixieshi.com', 'name': '互联网一些事', 'category': '', 'info': ''},
+        {'href': 'http://www.alibuybuy.com/', 'name': '互联玩的那些事', 'category': '', 'info': ''},
+        {'href': 'http://www.geekpark.net', 'name': '极客公园', 'category': '', 'info': ''},
+        {'href': 'http://www.iimedia.cn/', 'name': '艾媒网', 'category': '', 'info': ''},
+        {'href': 'http://baijia.baidu.com', 'name': '百度百家', 'category': '', 'info': ''},
+        {'href': 'http://www.iresearch.cn', 'name': '艾瑞', 'category': '', 'info': ''},
+        {'href': 'http://www.kuailiyu.com', 'name': '快鲤鱼', 'category': '', 'info': ''},
+        {'href': 'http://zaodula.com', 'name': '早读啦', 'category': '', 'info': ''},
+        ]
+    }, {
+        title: 'study',
+        content: [
+        {'href': 'http://open.163.com/', 'name': '网易公开课', 'category': '', 'info': ''},
+        {'href': 'https://www.edx.org/', 'name': 'edx', 'category': '', 'info': ''},
+        {'href': 'http://readfree.me/', 'name': 'Read Free', 'category': '', 'info': ''},
+        {'href': 'http://www.jikexueyuan.com/', 'name': '极客学院', 'category': '', 'info': ''},
+        {'href': 'http://study.163.com', 'name': '网易云课堂', 'category': '', 'info': ''},
+        {'href': 'https://www.coursera.org/', 'name': 'coursera', 'category': '', 'info': ''},
+        {'href': 'https://www.udacity.com/', 'name': 'udacity', 'category': '', 'info': ''},
+        {'href': 'https://www.khanacademy.org/', 'name': 'khan', 'category': '', 'info': ''},
+        {'href': 'https://www.udemy.com/', 'name': 'udemy', 'category': '', 'info': ''},
+        {'href': 'http://www.duobei.com', 'name': '多贝', 'category': '', 'info': ''},
+        {'href': 'http://speakerdeck.com', 'name': 'speakerdeck', 'category': '', 'info': ''},
+        {'href': 'http://www.swiftv.cn/', 'name': 'swiftv', 'category': '', 'info': ''},
+        ],
+    }, {
         title: 'wearable',
         content: [
         {'href': 'http://mashable.com/category/wearable-tech/', 'name': 'mashable', 'category': '', 'info': ''},,
@@ -179,18 +202,6 @@ var data = [
         {'href': 'https://fds.so/d/38CCA4C77072DDC9/3T9riEAiKQ', 'name': 'testuniversallink', 'category': '', 'info': ''},
         {'href': 'https://fds.so/d/e107dd56b99058c0/3TcS53JX1K', 'name': 'testuniversallink-cao', 'category': '', 'info': ''},
         {'href': 'http://api.super.haomee.cn/?m=Html&a=appDownload', 'name': 'test: chaonengbu', 'category': '', 'info': ''},
-        ],
-    }, {
-        title: 'awesomes',
-        content: [
-        {'href': 'http://vimawesome.com', 'name': 'vimawesome', 'category': '', 'info': ''},
-        {'href': 'https://github.com/avelino/awesome-go', 'name': 'goawesome', 'category': '', 'info': ''},
-        ],
-    }, {
-        title: 'work',
-        content: [
-        {'href': 'http://qdu.cloudapp.net/', 'name': '发布平台', 'category': '', 'info': ''},
-        {'href': 'http://mm.misingulariti.io/singulariti', 'name': 'mm', 'category': '', 'info': ''},
         ],
     }, {
         title: '找钱',
@@ -228,4 +239,7 @@ var data = [
     }
 ];
 
-module.exports = data;
+module.exports = {
+    techData: techData,
+    otherData: otherData,
+};
