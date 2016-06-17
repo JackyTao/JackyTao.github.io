@@ -85,3 +85,4 @@ exclude: ["lib", "config.rb", "Gemfile", "Capfile", "README.md", "LICENSE", "Gem
 # deepshare
 deepshare:
     jsurl: http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v2.5.1.debug.min.js
+    jsurlNoJq: http://qn.fds.so/deepshare_v2.6.1.debug.min.js 
