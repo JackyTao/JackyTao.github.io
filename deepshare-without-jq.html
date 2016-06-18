@@ -93,8 +93,8 @@ layout: ds
   <script src="{{ site.deepshare.jsurlNoJq }}"></script>
 
   <script type="text/javascript">
-    document.getElementById('showcommand1') = 'grep';
-    document.getElementById('showcommand2') = 'mkdir';
+    document.getElementById('showcommand1').innerHTML = 'grep';
+    document.getElementById('showcommand2').innerHTML = 'mkdir';
 	function getParameterByName(name) {
 	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
