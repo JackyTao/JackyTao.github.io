@@ -128,10 +128,10 @@ layout: ds
         //var deepshare = new DeepShare('6d94c60fec9c03a5');
         deepshare.BindParams([params1, params2]);
         //deepshare.BindParams(params1);
-        document.getElementById('openurl1').click(function() {
+        document.getElementById('openurl1').onclick(function() {
             deepshare.Start();
         });
-        document.getElementById('openurl2').click(function() {
+        document.getElementById('openurl2').onclick(function() {
             deepshare.Start(1);
         });
     }, 2000);
