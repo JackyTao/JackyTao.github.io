@@ -7,7 +7,6 @@ layout: ds
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title>Linux Command</title>
-  <script src="/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <style type="text/css">
     .btn {
@@ -94,8 +93,8 @@ layout: ds
   <script src="{{ site.deepshare.jsurlNoJq }}"></script>
 
   <script type="text/javascript">
-    $("#showcommand1").html('grep');
-    $("#showcommand2").html('mkdir');
+    document.getElementById('showcommand1') = 'grep';
+    document.getElementById('showcommand2') = 'mkdir';
 	function getParameterByName(name) {
 	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
