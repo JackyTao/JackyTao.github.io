@@ -22,7 +22,7 @@
     </div>
     <section>
       <div class="row col-lg-6 col-lg-offset-1">
-        <h4>appid</h4>
+        <h4>appid - 输入所需生成链接的appid</h4>
         <input class="form-control appid" placeholder="请输入需要生成链接的APPID">
         <h4>跳转链接</h4>
         <input class="form-control dslink">
@@ -41,6 +41,7 @@
 
   <script type="text/javascript">
     var deepshareurl;
+    $('.appid').val('38CCA4C77072DDC9');
 
     function generateUrl(){
         var appid = $('.appid').val();
