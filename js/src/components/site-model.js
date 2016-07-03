@@ -68,6 +68,7 @@ var techData = [
     }, {
         title: 'tools',
         content: [
+        {'href': 'http://www.qqxiuzi.cn/daohang.htm', 'name': '各种小工具', 'category': '', 'info': ''},
         {'href': 'http://logio.org/', 'name': 'logio', 'category': '', 'info': ''},
         {'href': 'https://hyperdev.com', 'name': 'hyperdev:实时生成网站', 'category': '', 'info': ''},
         {'href': 'https://fast.com/', 'name': 'fast:测网速', 'category': '', 'info': ''},
