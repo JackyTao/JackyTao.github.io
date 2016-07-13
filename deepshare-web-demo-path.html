@@ -46,7 +46,7 @@
     function generateUrl(){
         var appid = $('.appid').val();
         $('.dslink').val("Waiting for response");
-        $.post('https://fds.so/v2/url/' + appid, '{}', function(result) {
+        $.post('https://fds.so/v2/url/' + appid, '{"inapp_data": {"name":"mkdir"}}', function(result) {
             $('.dslink').val(result.path);
             deepshareurl = 'https://jump.jumei.com' + result.path;
         }).error(function() {
