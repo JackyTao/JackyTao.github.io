@@ -23,7 +23,9 @@
     <section>
       <div class="row col-lg-6 col-lg-offset-1">
         <h4>appid - 输入所需生成链接的appid</h4>
-        <input class="form-control appid" placeholder="请输入需要生成链接的APPID">
+        <input id="appid" class="form-control" placeholder="请输入需要生成链接的APPID">
+        <h4>param</h4>
+        <input id="param" class="form-control" placeholder='{"name": "mkdir"}'>
         <h4>跳转链接</h4>
         <input class="form-control dslink">
       </div>
@@ -41,12 +43,15 @@
 
   <script type="text/javascript">
     var deepshareurl;
-    $('.appid').val('38CCA4C77072DDC9');
+    $('#appid').val('38CCA4C77072DDC9');
+    $('#param').val('{"name": "mkdir"}');
 
     function generateUrl(){
-        var appid = $('.appid').val();
+        var appid = $('#appid').val();
+        var param = $('#param').val();
+
         $('.dslink').val("Waiting for response");
-        $.post('https://fds.so/v2/url/' + appid, '{}', function(result) {
+        $.post('https://fds.so/v2/url/' + appid, param, function(result) {
             $('.dslink').val(result.url);
             deepshareurl = result.url;
         }).error(function() {
