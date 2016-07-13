@@ -25,7 +25,7 @@
         <h4>appid - 输入所需生成链接的appid</h4>
         <input id="appid" class="form-control" placeholder="请输入需要生成链接的APPID">
         <h4>param</h4>
-        <input id="param" class="form-control" placeholder='{"name": "mkdir"}'>
+        <input id="param" class="form-control" placeholder='{"inapp_data": {"name":"mkdir"}}'>
         <h4>跳转链接</h4>
         <input class="form-control dslink">
       </div>
@@ -44,7 +44,7 @@
   <script type="text/javascript">
     var deepshareurl;
     $('#appid').val('38CCA4C77072DDC9');
-    $('#param').val('{"name": "mkdir"}');
+    $('#param').val('{"inapp_data": {"name":"mkdir"}}');
 
     function generateUrl(){
         var appid = $('#appid').val();
