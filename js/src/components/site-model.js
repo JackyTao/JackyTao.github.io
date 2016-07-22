@@ -69,6 +69,7 @@ var techData = [
         title: 'tools',
         content: [
         {'href': 'https://tinypng.com/', 'name': 'tinypng', 'category': '', 'info': ''},
+        {'href': 'http://www.draw.io/', 'name': 'drawio', 'category': '', 'info': ''},
         {'href': 'https://www.startssl.com/', 'name': 'ssl证书', 'category': '', 'info': ''},
         {'href': 'http://www.qqxiuzi.cn/daohang.htm', 'name': '各种小工具', 'category': '', 'info': ''},
         {'href': 'http://logio.org/', 'name': 'logio', 'category': '', 'info': ''},
