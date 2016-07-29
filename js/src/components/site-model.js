@@ -68,6 +68,7 @@ var techData = [
     }, {
         title: 'tools',
         content: [
+        {'href': 'https://www.materialpalette.com/', 'name': '配色', 'category': '', 'info': ''},
         {'href': 'https://tinypng.com/', 'name': 'tinypng', 'category': '', 'info': ''},
         {'href': 'http://www.draw.io/', 'name': 'drawio', 'category': '', 'info': ''},
         {'href': 'https://www.startssl.com/', 'name': 'ssl证书', 'category': '', 'info': ''},
