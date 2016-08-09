@@ -18,6 +18,7 @@ var techData = [
         {'href': 'http://fm.museekly.com/', 'name': 'soundcloud', 'category': '', 'info': ''},
         {'href': 'https://www.crunchbase.com/', 'name': 'crunchbase', 'category': '', 'info': ''},
         {'href': 'http://techcrunch.com/', 'name': 'techcrunch', 'category': '', 'info': ''},
+        {'href': 'http://www.iheima.com/', 'name': '黑马网', 'category': '', 'info': ''},
         ],
     }, {
         title: 'techSites',
