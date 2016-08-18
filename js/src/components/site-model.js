@@ -179,6 +179,7 @@ var otherData = [
     }, {
         title: 'study',
         content: [
+        {'href': 'https://80000hours.org/', 'name': '80000hours', 'category': '', 'info': ''},
         {'href': 'http://open.163.com/', 'name': '网易公开课', 'category': '', 'info': ''},
         {'href': 'https://www.edx.org/', 'name': 'edx', 'category': '', 'info': ''},
         {'href': 'http://readfree.me/', 'name': 'Read Free', 'category': '', 'info': ''},
