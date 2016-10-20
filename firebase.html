@@ -91,35 +91,19 @@ layout: ds
     deepshare js: {{ site.deepshare.jsurl }}
   </div>
 
-
-  <script src="{{ site.deepshare.jsurl }}"></script>
-
-  <script type="text/javascript">
-    $("#showcommand1").html('grep');
-    $("#showcommand2").html('mkdir');
-	function getParameterByName(name) {
-	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-	        results = regex.exec(location.search);
-	    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
-
-
-    // Generate by 3rd party
-    setTimeout(function(){
-        // wait just to see the full log!!
-        // Entrance call
-        // linux command
-        var deepshare = new DeepShare(getParameterByName('appid') || '38CCA4C77072DDC9');
-        deepshare.BindParams({});
-
-        // kong kong hu
-        //var deepshare = new DeepShare('6d94c60fec9c03a5');
-        //deepshare.BindParams(params1);
-        $('#openurl1').click(function() {
-            deepshare.Start();
-        });
-    }, 2000);
-</script>
+   
+<script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAvadE07HAsRwmfoPZPLSs8sj7BwsfoQQc",
+    authDomain: "test-76158.firebaseapp.com",
+    databaseURL: "https://test-76158.firebaseio.com",
+    storageBucket: "test-76158.appspot.com",
+    messagingSenderId: "477256328504"
+  };
+  firebase.initializeApp(config);
+  firebase.auth();
+</script> 
 </body>
 </html>
