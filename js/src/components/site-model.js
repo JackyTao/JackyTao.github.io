@@ -87,6 +87,7 @@ var techData = [
         {'href': 'http://appmarketingstack.com/', 'name': 'app marketing', 'category': '', 'info': ''},
         {'href': 'http://finda.photo/', 'name': 'findaphoto', 'category': '', 'info': ''},
         {'href': 'http://stackshare.io/', 'name': 'stackshare', 'category': '', 'info': '各种工具'},
+        {'href': 'https://founderkit.com/', 'name': 'founderkit', 'category': '', 'info': '各种工具'},
         {'href': 'http://www.startupfuckingadvice.com/', 'name': 'startupfuckingadvice', 'category': '', 'info': ''},
         {'href': 'http://www.iconfont.cn/', 'name': 'iconfont', 'category': '', 'info': ''},
         {'href': 'http://caniuse.com/', 'name': 'caniuse: browsersupportcheck', 'category': '', 'info': ''},
