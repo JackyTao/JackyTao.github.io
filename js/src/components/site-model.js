@@ -3,6 +3,7 @@ var techData = [
         title: 'everydaySites',
         content: [
         {'href': 'http://news.ycombinator.com', 'name': 'Hacker News', 'category': '技术 & 行业', 'info': '黑客和创业: 请认准，教父的网站'},
+        {'href': 'http://hackernewsbooks.com/', 'name': 'Hacker News Book', 'category': '技术 & 行业', 'info': '黑客和创业: 请认准，教父的网站'},
         {'href': 'http://g.zhutao.xyz', 'name': 'google', 'category': '', 'info': ''},
         {'href': 'http://highscalability.com/', 'name': 'highscalability', 'category': '', 'info': ''},
         {'href': 'http://www.huxiu.com', 'name': '虎嗅', 'category': '', 'info': ''},
