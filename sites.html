@@ -86,15 +86,13 @@
                         </div>
                     </div>
 
+                    <div v-for="site in category.content" className="col-md-3 col-xs-6 card">
+                        <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
+                    </div>
                 </div>               
             </div>               
         </template>
 
-        <!--
-                <div v-for="site in category.content" className="col-md-3 col-xs-6 card">
-                    <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
-                </div>
-        -->
         <div id="recommend-sites"> </div>
 
         <hr>
