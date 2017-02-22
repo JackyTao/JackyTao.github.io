@@ -26,7 +26,7 @@ var techData = require('./site-model.js').techData;
 
 module.exports =  {
     data: function() {
-        return { categories: healthSiteData };
+        return { categories: techData };
     }
 }
 </script>
