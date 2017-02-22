@@ -76,15 +76,17 @@
         <router-view></router-view>
 
         <template id="vue-tpl-sites">
-            <div v-for="category in categories">
-                <div>
-                    <div className="col-lg-12">
-                        <h2 className="page-header">
-                            {{category.title}}
-                        </h2>
+            <div>
+                <div v-for="category in categories">
+                    <div>
+                        <div className="col-lg-12">
+                            <h2 className="page-header">
+                                {{category.title}}
+                            </h2>
+                        </div>
                     </div>
-                </div>
 
+                </div>               
             </div>               
         </template>
 
