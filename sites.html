@@ -103,13 +103,15 @@
                 <div>
                     {{category.content}}
                 </div>
-                <div v-for="site in category.content" class="col-md-3 col-xs-6 card">
-                    <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
-                </div>
             </div>               
         </div>               
     </template>
 
+    <!--
+                <div v-for="site in category.content" class="col-md-3 col-xs-6 card">
+                    <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
+                </div>
+    -->
     <!-- JavaScript -->
     <!-- bootstrap.js need jquery -->
     <script src="js/jquery-1.10.2.js"></script>
