@@ -450,9 +450,7 @@ const routes = [
     }, 
     {path: '/health', component: Health, }, 
 ]; 
-const router = new VueRouter({
-    routes 
-});
+const router = new VueRouter({ routes });
 const app = new Vue({
       router
 }).$mount('#vue-app');
