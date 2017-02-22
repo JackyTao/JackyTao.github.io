@@ -66,7 +66,7 @@
 
         <div id="site-nav"> </div>
         <div id="site-nav-vue">
-            <ul role="nav" className="nav nav-tabs">
+            <ul role="nav" class="nav nav-tabs">
                 <li><router-link to="/index">站点</router-link></li>
                 <li><router-link to="/news">资讯</router-link></li>
                 <li><router-link to="/health">健康站点</router-link></li>
@@ -75,23 +75,6 @@
 
         <router-view></router-view>
 
-        <template id="vue-tpl-sites">
-            <div>
-                <div v-for="category in categories">
-                    <div>
-                        <div class="col-lg-12">
-                            <h2 class="page-header">
-                                {{category.title}}
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div v-for="site in category.content" class="col-md-3 col-xs-6 card">
-                        <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
-                    </div>
-                </div>               
-            </div>               
-        </template>
 
         <div id="recommend-sites"> </div>
 
@@ -111,6 +94,23 @@
 
     </div>
     <!-- /container -->
+    <template id="vue-tpl-sites">
+        <div>
+            <div v-for="category in categories">
+                <div>
+                    <div class="col-lg-12">
+                        <h2 class="page-header">
+                            {{category.title}}
+                        </h2>
+                    </div>
+                </div>
+
+                <div v-for="site in category.content" class="col-md-3 col-xs-6 card">
+                    <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
+                </div>
+            </div>               
+        </div>               
+    </template>
 
     <!-- JavaScript -->
     <!-- bootstrap.js need jquery -->
