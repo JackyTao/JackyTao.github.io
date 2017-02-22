@@ -72,14 +72,8 @@
                 <li><router-link to="/health">健康站点</router-link></li>
             </ul>
         </div>
-        <router-view>
-            <div>
-                <div v-for="site in sites" className="col-md-3 col-xs-6 card">
-                    <h3><a target="_blank" href={{site.href}}>{{site.name}}</a></h3>
-                    <h3>{{ a }}</h3>
-                </div>
-            </div>
-        </router-view>
+
+        <router-view></router-view>
 
         <template id="vue-tpl-sites">
             <div v-for="category in categories">
