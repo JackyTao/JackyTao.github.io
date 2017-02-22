@@ -75,7 +75,7 @@ gulp.task('default', function () {
         .bundle()
         .pipe(source('vue-site.js'))
         .pipe(buffer())
-        .pipe(uglify())
+        //.pipe(uglify())
         //.pipe(uglify().on('error', gutil.log))
         .pipe(gulp.dest('./js/'));
 });
