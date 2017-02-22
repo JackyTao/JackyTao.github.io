@@ -22,11 +22,11 @@
 </template>
 
 <script>
-var techData = require('./site-model.js').techData;
+var healthData = require('./health-site-model.js');
 
 module.exports =  {
     data: function() {
-        return { categories: techData };
+        return { categories: healthData };
     }
 }
 </script>

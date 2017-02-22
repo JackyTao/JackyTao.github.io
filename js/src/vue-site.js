@@ -4,6 +4,9 @@ var healthSiteData = require('./components/health-site-model.js');
 var VueRouter = require('vue-router');
 var Vue = require('vue');
 var Health = require('./components/sites.vue');
+Health.data = function() {
+    return otherData;
+};
 
 Vue.use(VueRouter);
 

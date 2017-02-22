@@ -400,11 +400,11 @@ module.exports = {
 //
 //
 
-var techData = require('./site-model.js').techData;
+var healthData = require('./health-site-model.js');
 
 module.exports =  {
     data: function() {
-        return { categories: techData };
+        return { categories: healthData };
     }
 }
 
@@ -424,13 +424,16 @@ if (module.hot) {(function () {  var hotAPI = require("vueify/node_modules/vue-h
     hotAPI.reload("data-v-f6c158ae", __vue__options__)
   }
 })()}
-},{"./site-model.js":2,"vue":7,"vueify/node_modules/vue-hot-reload-api":8}],4:[function(require,module,exports){
+},{"./health-site-model.js":1,"vue":7,"vueify/node_modules/vue-hot-reload-api":8}],4:[function(require,module,exports){
 var techData = require('./components/site-model.js').techData;
 var otherData = require('./components/site-model.js').otherData;
 var healthSiteData = require('./components/health-site-model.js');
 var VueRouter = require('vue-router');
 var Vue = require('vue');
 var Health = require('./components/sites.vue');
+Health.data = function() {
+    return otherData;
+};
 
 Vue.use(VueRouter);
 
