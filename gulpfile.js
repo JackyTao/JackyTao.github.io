@@ -5,6 +5,7 @@ var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
 var babelify = require('babelify');
+var vueify = require('vueify');
 
 // depracated
 //var reactify = require('reactify');
@@ -71,7 +72,8 @@ gulp.task('default', function () {
     //process.env.NODE_ENV = 'production';
 
     return browserify('./js/src/vue-site.js') 
-        .transform(babelify, {presets: ['es2015']})
+        .transform(vueify)
+        //.transform(babelify, {presets: ['es2015']})
         .bundle()
         .pipe(source('vue-site.js'))
         .pipe(buffer())
