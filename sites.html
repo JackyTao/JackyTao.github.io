@@ -60,7 +60,6 @@
         </div>
         
         <div class="realtimeuserscounter realtimeuserscounter--styled"></div>
-        <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
 
 
         <div id="site-nav"> </div>
@@ -73,21 +72,18 @@
         </div>
 
         <router-view></router-view>
-
-
-        <div id="recommend-sites"> </div>
-
         <hr/>
+        <div class="social-share"></div>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Jacky Zhu 2015</p>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <div class="social-share"></div>
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Jacky Zhu 2015</p>
-            </div>
-        </div>
-    </footer>
     <!-- /container -->
     <template id="vue-tpl-sites">
         <div>
@@ -109,22 +105,13 @@
         </div>               
     </template>
 
-    <!--
-                <div v-for="site in category.content" class="col-md-3 col-xs-6 card">
-                    <h3><a target="_blank" :href="site.href">{{site.name}}</a></h3>
-                </div>
-    -->
-    <!-- JavaScript -->
     <!-- bootstrap.js need jquery -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
 
-    <!--
-    <script src="js/site-react.js"></script>
-    -->
-
     <!-- share.js -->
     <script src="js/share.min.js"></script>
     <script src="js/vue-site.js"></script>
+    <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
 </body>
 </html>
