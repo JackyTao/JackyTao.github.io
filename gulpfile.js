@@ -50,7 +50,7 @@ gulp.task('default-error', function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('default', function () {
+gulp.task('react', function () {
     // when uglify used, react will alert use react production, which is
     // trigger by NODE_ENV
     //process.env.NODE_ENV = 'production';
@@ -59,6 +59,21 @@ gulp.task('default', function () {
         .transform(babelify, {presets: ["react", 'es2015']})
         .bundle()
         .pipe(source('site-react.js'))
+        .pipe(buffer())
+        .pipe(uglify())
+        //.pipe(uglify().on('error', gutil.log))
+        .pipe(gulp.dest('./js/'));
+});
+
+gulp.task('default', function () {
+    // when uglify used, react will alert use react production, which is
+    // trigger by NODE_ENV
+    //process.env.NODE_ENV = 'production';
+
+    return browserify('./js/src/vue-site.js') 
+        .transform(babelify, {presets: ['es2015']})
+        .bundle()
+        .pipe(source('vue-react.js'))
         .pipe(buffer())
         .pipe(uglify())
         //.pipe(uglify().on('error', gutil.log))
