@@ -98,15 +98,17 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
 
+    <!--
     <script src="js/site-react.js"></script>
+    -->
 
     <!-- share.js -->
     <script src="js/share.min.js"></script>
     <script>
         const routes = [
-            {path: '/index', component: {template: 'index'}}, 
-            {path: '/news', component: {template: 'news'}}, 
-            {path: '/health', component: {template: 'health'}}, 
+            {path: '/index', component: {template: '<div>index</div>'}}, 
+            {path: '/news', component: {template: '<div>news</div>'}}, 
+            {path: '/health', component: {template: '<div>health</div>'}}, 
         ]; 
         const router = new VueRouter({
             routes 
