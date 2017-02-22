@@ -72,7 +72,14 @@
                 <li><router-link to="/health">健康站点</router-link></li>
             </ul>
         </div>
-        <router-view></router-view>
+        <router-view>
+            <div>
+                <div v-for="site in sites" className="col-md-3 col-xs-6 card">
+                    <h3><a target="_blank" href={{site.href}}>{{site.name}}</a></h3>
+                    <h3>{{ a }}</h3>
+                </div>
+            </div>
+        </router-view>
 
         <div id="recommend-sites"> </div>
 
@@ -106,9 +113,9 @@
     <script src="js/share.min.js"></script>
     <script>
         const routes = [
-            {path: '/index', component: {template: '<div>index</div>'}}, 
-            {path: '/news', component: {template: '<div>news</div>'}}, 
-            {path: '/health', component: {template: '<div>health</div>'}}, 
+            {path: '/index', component: {template: '<div>index</div>'}, data: {'a': 'aa'}}, 
+            {path: '/news', component: {template: '<div>news</div>'}, data: {'a': 'aa'}}, 
+            {path: '/health', component: {template: '<div>health</div>'}, data: {'a': 'aa'}}, 
         ]; 
         const router = new VueRouter({
             routes 
