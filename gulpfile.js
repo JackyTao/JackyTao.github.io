@@ -73,7 +73,7 @@ gulp.task('default', function () {
     return browserify('./js/src/vue-site.js') 
         .transform(babelify, {presets: ['es2015']})
         .bundle()
-        .pipe(source('vue-react.js'))
+        .pipe(source('vue-site.js'))
         .pipe(buffer())
         .pipe(uglify())
         //.pipe(uglify().on('error', gutil.log))
