@@ -432,6 +432,8 @@ var VueRouter = require('vue-router');
 var Vue = require('vue');
 var Health = require('./components/sites.vue');
 
+Vue.use(VueRouter);
+
 const routes = [
     {path: '/index',
         component: {template: '#vue-tpl-sites', data: function() {
