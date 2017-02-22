@@ -83,6 +83,7 @@
 
         <template id="vue-tpl-sites">
             <div>
+                <div>{{ a }}</div>
                 <div v-for="site in sites" className="col-md-3 col-xs-6 card">
                     <h3><a target="_blank" href={{site.href}}>{{site.name}}</a></h3>
                     <h3>{{ a }}</h3>
@@ -122,9 +123,21 @@
     <script src="js/share.min.js"></script>
     <script>
         const routes = [
-            {path: '/index', component: {template: '#vue-tpl-sites', data: {'a': 'aa'}}}, 
-            {path: '/news', component: {template: '#vue-tpl-sites', data: {'a': 'aa'}}}, 
-            {path: '/health', component: {template: '#vue-tpl-sites', data: {'a': 'aa'}}}, 
+            {path: '/index',
+                component: {template: '#vue-tpl-sites', data: function() {
+                    return {'a': 'aa'};
+                }}
+            }, 
+            {path: '/news',
+                component: {template: '#vue-tpl-sites', data: function() {
+                    return {'a': 'aa'};
+                }}
+            }, 
+            {path: '/health',
+                component: {template: '#vue-tpl-sites', data: function() {
+                    return {'a': 'aa'};
+                }}
+            }, 
         ]; 
         const router = new VueRouter({
             routes 
