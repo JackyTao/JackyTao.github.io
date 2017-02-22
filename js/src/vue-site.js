@@ -5,17 +5,17 @@ var healthSiteData = require('./components/health-site-model.js');
 const routes = [
     {path: '/index',
         component: {template: '#vue-tpl-sites', data: function() {
-            return {'a': 'aa'};
+            return {'a': 'aaa'};
         }}
     }, 
     {path: '/news',
         component: {template: '#vue-tpl-sites', data: function() {
-            return {'a': 'bb'};
+            return {'a': 'bbb'};
         }}
     }, 
     {path: '/health',
         component: {template: '#vue-tpl-sites', data: function() {
-            return {'a': 'cc'};
+            return {'a': 'ccc'};
         }}
     }, 
 ]; 
