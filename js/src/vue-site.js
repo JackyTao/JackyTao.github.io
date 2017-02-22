@@ -16,6 +16,7 @@ const routes = [
             return {categories: otherData}; 
         }}
     }, 
+    {path: '/health', component: Health, }, 
 ]; 
 const router = new VueRouter({
     routes 
